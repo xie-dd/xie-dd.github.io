@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://xie-dd.github.io/posts/50640/</loc>
+    <loc>https://xie-dd.github.io/posts/63230/</loc>
     
     <lastmod>2023-10-20</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://xie-dd.github.io/posts/63230/</loc>
+    <loc>https://xie-dd.github.io/posts/50640/</loc>
     
     <lastmod>2023-10-20</lastmod>
     
@@ -119,6 +119,13 @@
 
   
   <url>
+    <loc>https://xie-dd.github.io/tags/hexo/</loc>
+    <lastmod>2023-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://xie-dd.github.io/tags/Anaconda/</loc>
     <lastmod>2023-10-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -133,13 +140,6 @@
   </url>
   
   <url>
-    <loc>https://xie-dd.github.io/tags/hexo/</loc>
-    <lastmod>2023-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://xie-dd.github.io/tags/Python%EF%BC%8C%E8%AF%AD%E9%9B%80/</loc>
     <lastmod>2023-10-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -148,6 +148,13 @@
   
   <url>
     <loc>https://xie-dd.github.io/tags/test/</loc>
+    <lastmod>2023-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xie-dd.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2023-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -174,24 +181,17 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://xie-dd.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2023-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://xie-dd.github.io/categories/python/</loc>
+    <loc>https://xie-dd.github.io/categories/hexo/</loc>
     <lastmod>2023-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://xie-dd.github.io/categories/hexo/</loc>
+    <loc>https://xie-dd.github.io/categories/python/</loc>
     <lastmod>2023-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
