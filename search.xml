@@ -85,31 +85,6 @@
     
     
     <entry>
-      <title>加油吧</title>
-      <link href="/posts/36073/"/>
-      <url>/posts/36073/</url>
-      
-        <content type="html"><![CDATA[<p>content</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> test </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> test </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo配置参考网站</title>
       <link href="/posts/50640/"/>
       <url>/posts/50640/</url>
@@ -152,6 +127,31 @@
         <tags>
             
             <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>加油吧</title>
+      <link href="/posts/36073/"/>
+      <url>/posts/36073/</url>
+      
+        <content type="html"><![CDATA[<p>content</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> test </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> test </tag>
             
         </tags>
       
