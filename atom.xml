@@ -6,7 +6,7 @@
   <link href="https://xie-dd.github.io/atom.xml" rel="self"/>
   
   <link href="https://xie-dd.github.io/"/>
-  <updated>2023-10-27T03:42:45.587Z</updated>
+  <updated>2023-10-27T10:39:44.175Z</updated>
   <id>https://xie-dd.github.io/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>Anaconda新建并使用新环境</title>
     <link href="https://xie-dd.github.io/posts/8412/"/>
     <id>https://xie-dd.github.io/posts/8412/</id>
-    <published>2023-10-27T03:42:39.052Z</published>
-    <updated>2023-10-27T03:42:45.587Z</updated>
+    <published>2023-10-27T10:39:44.175Z</published>
+    <updated>2023-10-27T10:39:44.175Z</updated>
     
     <content type="html"><![CDATA[<h3 id="新建环境"><a href="#新建环境" class="headerlink" title="新建环境"></a>新建环境</h3><ol><li>开始菜单打开 Anaconda Navigator — Environments — Create</li><li>填写名称 env_xdd，选择 python 版本 —  Create</li><li>耐心等待即可</li></ol><h3 id="安装需要的包到新环境"><a href="#安装需要的包到新环境" class="headerlink" title="安装需要的包到新环境"></a>安装需要的包到新环境</h3><ol><li>开始菜单打开 Anaconda Prompt</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">activate env_xdd</span><br><span class="line">conda install numpy</span><br><span class="line">或  pip install numpy</span><br></pre></td></tr></table></figure><ol start="2"><li>此时在 Anaconda Navigator 中即可看到  env_xdd 环境已经安装好了 numpy ,在本地文件夹 E:\anaconda3\envs\env_xdd\Lib\site-packages 也可以看到</li></ol><h3 id="在-Jupyter-notebook-启动新环境"><a href="#在-Jupyter-notebook-启动新环境" class="headerlink" title="在 Jupyter notebook 启动新环境"></a>在 Jupyter notebook 启动新环境</h3><ol><li>开始菜单打开 Anaconda Prompt，依次输入</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">activate env_xdd</span><br><span class="line">conda install ipykernel</span><br><span class="line">conda install -c conda-forge nb_conda</span><br><span class="line">pip install --upgrade --user nbconvert</span><br><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure><h3 id="导出导入新环境"><a href="#导出导入新环境" class="headerlink" title="导出导入新环境"></a>导出导入新环境</h3><ol><li>导出：在 Anaconda Navigator 选择一个环境—点击 Backup—选择 Local drive—Backup—得到一个 yaml 文件</li><li>导入：打开  Anaconda Navigator —点击 Import —选择 yaml 文件—设置新环境名字—Import</li></ol>]]></content>
     
@@ -51,13 +51,13 @@
     <published>2023-10-24T16:00:00.000Z</published>
     <updated>2023-10-25T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>10:25 <a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310260907528.jpg">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310260907528.jpg</a><br><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310260853595.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310260853595.png</a></p>]]></content>
+    <content type="html"><![CDATA[<hr><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271832779.png" alt="车女孩">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271832779.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271832779.png</a>))</p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271832246.png" alt="樱岛麻衣">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271832246.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271832246.png</a>))</p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271834863.png" alt="绫华">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271834863.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271834863.png</a>))</p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271835559.png" alt="雷电将军">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271835559.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271835559.png</a>))</p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271835900.png" alt="雷电将军">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271835900.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271835900.png</a>))</p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271835854.png" alt="刻晴">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271835854.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271835854.png</a>))</p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271836990.png" alt="神里绫华">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271836990.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271836990.png</a>))</p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271837520.png" alt="樱岛麻衣">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271837520.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271837520.png</a>))</p>]]></content>
     
     
       
       
     <summary type="html">&lt;hr&gt;
-&lt;p&gt;10:25 &lt;a href=&quot;https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310260907528.jpg&quot;&gt;https://mypic2016.oss-cn-beijing.aliyuncs.co</summary>
+&lt;p&gt;&lt;img src=&quot;/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271832779.png&quot; alt=&quot;车女孩&quot;&gt;](&lt;a href=&quot;https://mypic2016.oss-cn-</summary>
       
     
     
@@ -290,7 +290,7 @@
     <link href="https://xie-dd.github.io/posts/28980/"/>
     <id>https://xie-dd.github.io/posts/28980/</id>
     <published>2023-10-20T16:00:00.000Z</published>
-    <updated>2023-10-27T03:42:45.616Z</updated>
+    <updated>2023-10-27T10:39:44.169Z</updated>
     
     <content type="html"><![CDATA[<p>测试函数，测试图片&#x2F;&#x2F;OK<br><img src="https://cdn.nlark.com/yuque/0/2023/png/1488614/1697884004448-37db6ec9-aeb9-4e4f-83de-2e5a68b8b632.png#averageHue=%23d8eafa&clientId=u1db192b4-1a2a-4&from=paste&height=195&id=u793e0384&originHeight=292&originWidth=601&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=49094&status=done&style=none&taskId=ub86fc646-b791-48fa-b474-212db4c36c8&title=&width=400.6666666666667" alt="image.png"></p><p>测试表格&#x2F;&#x2F;OK</p><table><thead><tr><th>1</th><th>1</th><th>1</th></tr></thead><tbody><tr><td>2</td><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td><td>3</td></tr></tbody></table><p>测试行内代码<code>dddd </code>&#x2F;&#x2F;OK</p><p><strong>加粗：AAA&#x2F;&#x2F;OK</strong><br><em>斜体： AAA&#x2F;&#x2F;OK</em><br><em><strong>加粗斜体：AAA&#x2F;&#x2F;OK</strong></em><br><em><strong>文字颜色&#x2F;&#x2F;NOT OK</strong></em><br><em><strong>文字背景色**</strong>&#x2F;&#x2F;NOT OK**</em></p><p><em><strong>分栏 &#x2F;&#x2F;NOT OK</strong></em><br>第一栏<br>第一栏<br>第 2 栏<br>第一栏</p>]]></content>
     
