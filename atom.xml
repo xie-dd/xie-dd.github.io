@@ -120,9 +120,9 @@
     <category term="Github" scheme="https://20161101.xyz/categories/Github/"/>
     
     
-    <category term="Github" scheme="https://20161101.xyz/tags/Github/"/>
-    
     <category term="Github Action" scheme="https://20161101.xyz/tags/Github-Action/"/>
+    
+    <category term="Github" scheme="https://20161101.xyz/tags/Github/"/>
     
   </entry>
   
@@ -320,11 +320,11 @@
     <category term="hexo" scheme="https://20161101.xyz/categories/hexo/"/>
     
     
-    <category term="Github Action" scheme="https://20161101.xyz/tags/Github-Action/"/>
-    
     <category term="hexo" scheme="https://20161101.xyz/tags/hexo/"/>
     
     <category term="Github Page" scheme="https://20161101.xyz/tags/Github-Page/"/>
+    
+    <category term="Github Action" scheme="https://20161101.xyz/tags/Github-Action/"/>
     
     <category term="语雀" scheme="https://20161101.xyz/tags/%E8%AF%AD%E9%9B%80/"/>
     
