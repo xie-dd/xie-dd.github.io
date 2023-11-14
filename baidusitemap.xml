@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://20161101.xyz/posts/28980/</loc>
-    <lastmod>2023-11-01</lastmod>
+    <loc>https://20161101.xyz/posts/29073/</loc>
+    <lastmod>2023-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://20161101.xyz/posts/63230/</loc>
+    <lastmod>2023-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://20161101.xyz/posts/43836/</loc>
+    <lastmod>2023-11-04</lastmod>
   </url>
   <url>
     <loc>https://20161101.xyz/posts/35646/</loc>
     <lastmod>2023-10-30</lastmod>
   </url>
   <url>
-    <loc>https://20161101.xyz/posts/51788/</loc>
+    <loc>https://20161101.xyz/posts/53105/</loc>
     <lastmod>2023-10-30</lastmod>
   </url>
   <url>
@@ -23,10 +31,6 @@
   <url>
     <loc>https://20161101.xyz/posts/1745/</loc>
     <lastmod>2023-10-26</lastmod>
-  </url>
-  <url>
-    <loc>https://20161101.xyz/posts/43836/</loc>
-    <lastmod>2023-10-25</lastmod>
   </url>
   <url>
     <loc>https://20161101.xyz/posts/63781/</loc>
@@ -49,7 +53,7 @@
     <lastmod>2023-10-22</lastmod>
   </url>
   <url>
-    <loc>https://20161101.xyz/posts/63230/</loc>
+    <loc>https://20161101.xyz/posts/28980/</loc>
     <lastmod>2023-10-20</lastmod>
   </url>
 </urlset> 
