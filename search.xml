@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Texlive + TeX studio 安装</title>
+      <link href="/posts/26366/"/>
+      <url>/posts/26366/</url>
+      
+        <content type="html"><![CDATA[<h3 id="安装-Texlive"><a href="#安装-Texlive" class="headerlink" title="安装 Texlive"></a>安装 Texlive</h3><ol><li>下载：<a href="https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images">texlive.iso</a></li><li>装载 iso 文件，管理员身份运行 <strong>install-tl-windows.bat</strong></li><li>可以默认安装到 C 盘，也可以更改安装路径</li><li>耐心等待，安装界面会显示<strong>已用&#x2F;安装预计时间</strong>，我的显示预计 1 小时 34 分钟</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Installing [2165/4490, time/total: 43:49/01:34:05]: l2tabu-italian [252k]</span><br><span class="line">Installing [2166/4490, time/total: 43:50/01:34:06]: l2tabu-spanish [223k]</span><br></pre></td></tr></table></figure><ol start="5"><li>安装完成后会显示</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">欢迎进入 TeX Live 的世界！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">See C:/texlive/2023/index.html for links to documentation.</span><br><span class="line">The TeX Live web site (https://tug.org/texlive/) contains any updates and corrections. TeX Live is a joint project of the TeX user groups around the world; please consider supporting it by joining the group best for you. The list of groups is available on the web at https://tug.org/usergroups.html.</span><br><span class="line">Logfile: C:/texlive/2023/install-tl.log</span><br><span class="line">Installed on platform windows at C:/texlive/2023</span><br></pre></td></tr></table></figure><ol start="6"><li>验证是否安装成功：win+R—cmd—latex -v</li></ol><h3 id="安装-TeX-studio"><a href="#安装-TeX-studio" class="headerlink" title="安装 TeX studio"></a>安装 TeX studio</h3><ol><li>下载：<a href="https://texstudio.sourceforge.net/">https://texstudio.sourceforge.net</a></li><li>正常安装即可</li></ol><h3 id="TeX-studio-简单配置"><a href="#TeX-studio-简单配置" class="headerlink" title="TeX studio 简单配置"></a>TeX studio 简单配置</h3><ul><li>中文界面：Options—Gereral—Language—<code>zh_CN</code></li><li>添加段落行号：选项—设置—编辑器—显示行号：<code>所有行号</code></li><li>撰写中文论文，将默认编译器改为<code>Xelatex</code>。如果撰写英文论文，将默认编译器改为<code>Pdflatex</code></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> latex </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> latex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>obsidian阿里云OSS同步</title>
       <link href="/posts/7106/"/>
       <url>/posts/7106/</url>
@@ -282,7 +307,7 @@
       <link href="/posts/43836/"/>
       <url>/posts/43836/</url>
       
-        <content type="html"><![CDATA[<hr><p><img src="/"><br><img src="/" alt="刻晴"></p><p><img src="/" alt="神里绫华"></p><p><img src="/" alt="樱岛麻衣"><br><img src="/g"></p><p>&#x2F;小猫<img src="/"></p><p>&#x2F;王昭君<br><img src="/"></p><p>&#x2F;白鹤亮神女<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031808558.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031808558.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031808558.png</a>))<br>&#x2F;神里绫华<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031812999.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031812999.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031812999.png</a>))<br>&#x2F;刻晴<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031815445.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031815445.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031815445.png</a>))</p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png</a>))<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png</a>))<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png</a>))</p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311051517579.jpg">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311051517579.jpg">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311051517579.jpg</a>))</p>]]></content>
+        <content type="html"><![CDATA[<hr><p><img src="/"><br><img src="/" alt="刻晴"></p><p><img src="/" alt="神里绫华"></p><p><img src="/" alt="樱岛麻衣"><br><img src="/g"></p><p>&#x2F;小猫<img src="/"></p><p>&#x2F;王昭君<br><img src="/"></p><p>&#x2F;白鹤亮神女<br><img src="/"><br>&#x2F;神里绫华<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031812999.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031812999.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031812999.png</a>))<br>&#x2F;刻晴<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031815445.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031815445.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031815445.png</a>))</p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png</a>))<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png</a>))<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png</a>))</p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311051517579.jpg">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311051517579.jpg">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311051517579.jpg</a>))</p>]]></content>
       
       
       <categories>
