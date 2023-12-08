@@ -42,6 +42,25 @@
   </entry>
   
   <entry>
+    <title>为hexo添加404页面</title>
+    <link href="https://19970622.xyz/posts/61991/"/>
+    <id>https://19970622.xyz/posts/61991/</id>
+    <published>2023-12-07T16:00:00.000Z</published>
+    <updated>2023-12-07T16:00:00.000Z</updated>
+    
+    
+    
+    
+    <category term="hexo" scheme="https://19970622.xyz/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://19970622.xyz/tags/hexo/"/>
+    
+    <category term="404" scheme="https://19970622.xyz/tags/404/"/>
+    
+  </entry>
+  
+  <entry>
     <title>obsidian阿里云OSS同步</title>
     <link href="https://19970622.xyz/posts/7106/"/>
     <id>https://19970622.xyz/posts/7106/</id>
@@ -117,11 +136,11 @@
     <category term="hexo" scheme="https://19970622.xyz/categories/hexo/"/>
     
     
+    <category term="github" scheme="https://19970622.xyz/tags/github/"/>
+    
     <category term="hexo" scheme="https://19970622.xyz/tags/hexo/"/>
     
     <category term="gitee" scheme="https://19970622.xyz/tags/gitee/"/>
-    
-    <category term="github" scheme="https://19970622.xyz/tags/github/"/>
     
   </entry>
   
@@ -225,11 +244,11 @@
     <category term="matlab" scheme="https://19970622.xyz/categories/matlab/"/>
     
     
-    <category term="二进制" scheme="https://19970622.xyz/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
-    
     <category term="fortran" scheme="https://19970622.xyz/tags/fortran/"/>
     
     <category term="matlab" scheme="https://19970622.xyz/tags/matlab/"/>
+    
+    <category term="二进制" scheme="https://19970622.xyz/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
     
   </entry>
   
@@ -280,11 +299,11 @@
     <category term="fortran" scheme="https://19970622.xyz/categories/fortran/"/>
     
     
-    <category term="dll" scheme="https://19970622.xyz/tags/dll/"/>
-    
     <category term="vs" scheme="https://19970622.xyz/tags/vs/"/>
     
     <category term="fortran" scheme="https://19970622.xyz/tags/fortran/"/>
+    
+    <category term="dll" scheme="https://19970622.xyz/tags/dll/"/>
     
   </entry>
   
@@ -396,9 +415,9 @@
     <category term="python" scheme="https://19970622.xyz/categories/python/"/>
     
     
-    <category term="语雀" scheme="https://19970622.xyz/tags/%E8%AF%AD%E9%9B%80/"/>
-    
     <category term="python" scheme="https://19970622.xyz/tags/python/"/>
+    
+    <category term="语雀" scheme="https://19970622.xyz/tags/%E8%AF%AD%E9%9B%80/"/>
     
   </entry>
   
@@ -450,11 +469,11 @@
     <category term="python" scheme="https://19970622.xyz/categories/python/"/>
     
     
-    <category term="hexo" scheme="https://19970622.xyz/tags/hexo/"/>
+    <category term="python" scheme="https://19970622.xyz/tags/python/"/>
     
     <category term="git" scheme="https://19970622.xyz/tags/git/"/>
     
-    <category term="python" scheme="https://19970622.xyz/tags/python/"/>
+    <category term="hexo" scheme="https://19970622.xyz/tags/hexo/"/>
     
   </entry>
   
@@ -538,41 +557,15 @@
     <category term="hexo" scheme="https://19970622.xyz/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="https://19970622.xyz/tags/hexo/"/>
-    
-    <category term="语雀" scheme="https://19970622.xyz/tags/%E8%AF%AD%E9%9B%80/"/>
-    
     <category term="github" scheme="https://19970622.xyz/tags/github/"/>
     
     <category term="github action" scheme="https://19970622.xyz/tags/github-action/"/>
     
-    <category term="github page" scheme="https://19970622.xyz/tags/github-page/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试文档</title>
-    <link href="https://19970622.xyz/posts/28980/"/>
-    <id>https://19970622.xyz/posts/28980/</id>
-    <published>2023-10-20T16:00:00.000Z</published>
-    <updated>2023-10-20T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>测试函数，测试图片&#x2F;&#x2F;OK<br><img src="https://cdn.nlark.com/yuque/0/2023/png/1488614/1697884004448-37db6ec9-aeb9-4e4f-83de-2e5a68b8b632.png#averageHue=%23d8eafa&clientId=u1db192b4-1a2a-4&from=paste&height=195&id=u793e0384&originHeight=292&originWidth=601&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=49094&status=done&style=none&taskId=ub86fc646-b791-48fa-b474-212db4c36c8&title=&width=400.6666666666667" alt="image.png"></p><p>测试表格&#x2F;&#x2F;OK</p><table><thead><tr><th>1</th><th>1</th><th>1</th></tr></thead><tbody><tr><td>2</td><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td><td>3</td></tr></tbody></table><p>测试行内代码<code>dddd </code>&#x2F;&#x2F;OK</p><p><strong>加粗：AAA&#x2F;&#x2F;OK</strong><br><em>斜体： AAA&#x2F;&#x2F;OK</em><br><em><strong>加粗斜体：AAA&#x2F;&#x2F;OK</strong></em><br><em><strong>文字颜色&#x2F;&#x2F;NOT OK</strong></em><br><em><strong>文字背景色**</strong>&#x2F;&#x2F;NOT OK**</em></p><p><em><strong>分栏 &#x2F;&#x2F;NOT OK</strong></em><br>第一栏<br>第一栏<br>第 2 栏<br>第一栏</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;测试函数，测试图片&amp;#x2F;&amp;#x2F;OK&lt;br&gt;&lt;img src=&quot;https://cdn.nlark.com/yuque/0/2023/png/1488614/1697884004448-37db6ec9-aeb9-4e4f-83de-2e5a68b8b632.pn</summary>
-      
-    
-    
-    
-    <category term="hexo" scheme="https://19970622.xyz/categories/hexo/"/>
-    
-    
     <category term="hexo" scheme="https://19970622.xyz/tags/hexo/"/>
     
-    <category term="test" scheme="https://19970622.xyz/tags/test/"/>
+    <category term="github page" scheme="https://19970622.xyz/tags/github-page/"/>
+    
+    <category term="语雀" scheme="https://19970622.xyz/tags/%E8%AF%AD%E9%9B%80/"/>
     
   </entry>
   
