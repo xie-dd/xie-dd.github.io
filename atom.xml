@@ -6,7 +6,7 @@
   <link href="https://19970622.xyz/atom.xml" rel="self"/>
   
   <link href="https://19970622.xyz/"/>
-  <updated>2023-12-24T16:00:00.000Z</updated>
+  <updated>2024-01-07T23:07:39.409Z</updated>
   <id>https://19970622.xyz/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://19970622.xyz/posts/0/"/>
+    <id>https://19970622.xyz/posts/0/</id>
+    <published>2024-01-07T23:07:34.301Z</published>
+    <updated>2024-01-07T23:07:39.409Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第-1-步安装小米感应钥匙"><a href="#第-1-步安装小米感应钥匙" class="headerlink" title="第 1 步安装小米感应钥匙"></a>第 1 步安装小米感应钥匙</h2><h3 id="方法-1-从微软应用商店安装"><a href="#方法-1-从微软应用商店安装" class="headerlink" title="方法 1 从微软应用商店安装"></a>方法 1 从微软应用商店安装</h3><p>在商店搜索<code>小米感应钥匙</code>安装即可</p><h3 id="方法-2-从第三方网站下载并安装"><a href="#方法-2-从第三方网站下载并安装" class="headerlink" title="方法 2 从第三方网站下载并安装"></a>方法 2 从第三方网站下载并安装</h3><ol><li>打开网站：<a href="https://www.crxsoso.com/search">https://www.crxsoso.com/search</a></li><li>搜索小米感应钥匙</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202401072154811.png#id=fhByP&originHeight=87&originWidth=1229&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202401072155782.png#id=on0Te&originHeight=186&originWidth=1897&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p><ol start="3"><li>点击下载的按钮—F12—依次点击 123—获得下载链接—输入到浏览器—下载到小米感应钥匙的安装包</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202401072157958.png#id=qYBjG&originHeight=926&originWidth=3042&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p><ol start="4"><li>双击压缩包安装软件</li></ol><h3 id="方法-3-网盘"><a href="#方法-3-网盘" class="headerlink" title="方法 3 网盘"></a>方法 3 网盘</h3><p>小米感应钥匙 2.4.0.0：<a href="https://xdd1997.lanzouo.com/iuA4S1kebn6b">https://xdd1997.lanzouo.com/iuA4S1kebn6b</a></p><h2 id="第-2-步安装小米感应钥匙"><a href="#第-2-步安装小米感应钥匙" class="headerlink" title="第 2 步安装小米感应钥匙"></a>第 2 步安装小米感应钥匙</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;第-1-步安装小米感应钥匙&quot;&gt;&lt;a href=&quot;#第-1-步安装小米感应钥匙&quot; class=&quot;headerlink&quot; title=&quot;第 1 步安装小米感应钥匙&quot;&gt;&lt;/a&gt;第 1 步安装小米感应钥匙&lt;/h2&gt;&lt;h3 id=&quot;方法-1-从微软应用商店安装&quot;&gt;&lt;a hr</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>获取cookie的方法</title>
@@ -536,37 +556,6 @@
     <category term="git" scheme="https://19970622.xyz/tags/git/"/>
     
     <category term="hexo" scheme="https://19970622.xyz/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>右键上传文件到蓝奏云</title>
-    <link href="https://19970622.xyz/posts/22078/"/>
-    <id>https://19970622.xyz/posts/22078/</id>
-    <published>2023-10-21T16:00:00.000Z</published>
-    <updated>2023-10-22T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p><a href="https://github.com/zaxtyson/LanZouCloud-API">https://github.com/zaxtyson/LanZouCloud-API</a></p></blockquote><ol><li>安装依赖</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install lanzou-api</span><br></pre></td></tr></table></figure><ol start="2"><li>使用 Cookie 登陆。点击<a href="https://up.woozooo.com/">https://up.woozooo.com/</a>登陆自己的蓝奏云账户—F12—应用—存储—Cookie—<a href="https://up.woozooo.com/---%E8%8E%B7%E5%8F%96">https://up.woozooo.com/---获取</a> ylogin 与 phpdisk_info</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310222128550.png#id=bDQ3B&originHeight=415&originWidth=1066&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from lanzou.api import LanZouCloud</span><br><span class="line"></span><br><span class="line">lzy = LanZouCloud()</span><br><span class="line">cookie = &#123;&#x27;ylogin&#x27;: &#x27;******&#x27;, &#x27;phpdisk_info&#x27;: &#x27;***&#x27;&#125;</span><br><span class="line">print(lzy.login_by_cookie(cookie) == LanZouCloud.SUCCESS)</span><br><span class="line"># True</span><br></pre></td></tr></table></figure><ol start="3"><li>上传文件</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from lanzou.api import LanZouCloud</span><br><span class="line"></span><br><span class="line">lzy = LanZouCloud()</span><br><span class="line">cookie = &#123;&#x27;ylogin&#x27;: &#x27;***&#x27;, &#x27;phpdisk_info&#x27;: &#x27;***&#x27;&#125;</span><br><span class="line">print(lzy.login_by_cookie(cookie) == LanZouCloud.SUCCESS)</span><br><span class="line"># True</span><br><span class="line"></span><br><span class="line">code = lzy.upload_file(r&quot;D:\\AAA.rar&quot;)</span><br><span class="line">print(code)</span><br></pre></td></tr></table></figure><p>报错，未解决，已经报错到 github issue</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/zaxtyson/LanZouCloud-API&quot;&gt;https://github.com/zaxtyson/LanZouCloud-API&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;</summary>
-      
-    
-    
-    
-    <category term="未分类" scheme="https://19970622.xyz/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-    
-    <category term="蓝奏云" scheme="https://19970622.xyz/tags/%E8%93%9D%E5%A5%8F%E4%BA%91/"/>
-    
-    <category term="右键" scheme="https://19970622.xyz/tags/%E5%8F%B3%E9%94%AE/"/>
-    
-    <category term="网盘" scheme="https://19970622.xyz/tags/%E7%BD%91%E7%9B%98/"/>
     
   </entry>
   
