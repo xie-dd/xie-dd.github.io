@@ -1,6 +1,7 @@
 https://19970622.xyz/posts/33441/
 https://19970622.xyz/posts/45582/
 https://19970622.xyz/posts/43315/
+https://19970622.xyz/posts/32603/
 https://19970622.xyz/posts/50990/
 https://19970622.xyz/posts/56223/
 https://19970622.xyz/posts/23222/
@@ -82,6 +83,7 @@ https://19970622.xyz/tags/A/
 https://19970622.xyz/tags/B/
 https://19970622.xyz/tags/C/
 https://19970622.xyz/tags/%E5%BD%B1%E8%A7%86/
+https://19970622.xyz/tags/%E9%92%89%E9%92%89/
 https://19970622.xyz/categories/hexo/
 https://19970622.xyz/categories/python/
 https://19970622.xyz/categories/fortran/
