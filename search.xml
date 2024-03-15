@@ -421,11 +421,11 @@
       
         <tags>
             
+            <tag> github </tag>
+            
             <tag> hexo </tag>
             
             <tag> gitee </tag>
-            
-            <tag> github </tag>
             
         </tags>
       
@@ -533,11 +533,11 @@
       
         <tags>
             
-            <tag> 二进制 </tag>
-            
             <tag> fortran </tag>
             
             <tag> matlab </tag>
+            
+            <tag> 二进制 </tag>
             
         </tags>
       
@@ -589,11 +589,11 @@
       
         <tags>
             
-            <tag> dll </tag>
-            
             <tag> vs </tag>
             
             <tag> fortran </tag>
+            
+            <tag> dll </tag>
             
         </tags>
       
@@ -699,9 +699,9 @@
       
         <tags>
             
-            <tag> 语雀 </tag>
-            
             <tag> python </tag>
+            
+            <tag> 语雀 </tag>
             
         </tags>
       
@@ -753,11 +753,11 @@
       
         <tags>
             
-            <tag> hexo </tag>
+            <tag> python </tag>
             
             <tag> git </tag>
             
-            <tag> python </tag>
+            <tag> hexo </tag>
             
         </tags>
       
@@ -838,15 +838,15 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
-            <tag> 语雀 </tag>
-            
             <tag> github </tag>
             
             <tag> github action </tag>
             
+            <tag> hexo </tag>
+            
             <tag> github page </tag>
+            
+            <tag> 语雀 </tag>
             
         </tags>
       
