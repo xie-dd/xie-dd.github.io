@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>标题</title>
+      <link href="/posts/38167/"/>
+      <url>/posts/38167/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ol><li>有个 Python 安装在了 C:\Python38\python.exe，这里有很多包，如 numpy 等</li><li>现在要在 D:\AA 文件夹建立一个 aa.py 文件，想使用 C:\Python38\python.exe 环境</li></ol><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li>在 D:\AA 里面，右键 Open Folder as PyCharm</li><li>打开 Pycharm 后，文件—设置—项目***-Python 解释器—添加解释器—添加本地解释器—Virtualenv 环境—现有—三个点—选择 C:\Python38\python.exe—确定</li><li>等待即可，真的要等待好长时间，如果原环境较大，不如新建一个环境</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403182149128.png#id=JPm3u&originHeight=92&originWidth=1695&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 未分类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> A </tag>
+            
+            <tag> B </tag>
+            
+            <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python推送消息到企业微信</title>
       <link href="/posts/45582/"/>
       <url>/posts/45582/</url>
@@ -492,7 +521,7 @@
       <link href="/posts/29073/"/>
       <url>/posts/29073/</url>
       
-        <content type="html"><![CDATA[<h2 id="视频相关"><a href="#视频相关" class="headerlink" title="视频相关"></a>视频相关</h2><p><a href="https://www.aikanbot.com/">爱看机器人-ikanbot.com</a><br><a href="https://www.0855666.com/">0855 影视-0855666.com</a></p><h2 id="网盘资源"><a href="#网盘资源" class="headerlink" title="网盘资源"></a>网盘资源</h2><h3 id="在花盘-阿里云盘资源"><a href="#在花盘-阿里云盘资源" class="headerlink" title="在花盘-阿里云盘资源"></a><a href="https://www.yppan.com/">在花盘-阿里云盘资源</a></h3><blockquote><p>阿里云盘，内容来源于 TG</p></blockquote><h3 id="云盘资源分享社区可用地址"><a href="#云盘资源分享社区可用地址" class="headerlink" title="云盘资源分享社区可用地址"></a><a href="https://www.kdocs.cn/l/ce6gIRGCAzW3">云盘资源分享社区可用地址</a></h3><blockquote><p>含阿里云盘与夸克网盘资源</p></blockquote><ul><li><a href="https://yunpan1.xyz/">https://yunpan1.xyz/</a></li></ul><h3 id="易搜-网盘搜索"><a href="#易搜-网盘搜索" class="headerlink" title="易搜-网盘搜索"></a><a href="https://yiso.fun/">易搜-网盘搜索</a></h3><blockquote><p>阿里云盘资源，需要登陆</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="在线视频网站"><a href="#在线视频网站" class="headerlink" title="在线视频网站"></a>在线视频网站</h2><p><a href="https://www.aikanbot.com/">爱看机器人-ikanbot.com</a><br><a href="https://www.0855666.com/">0855 影视-0855666.com</a></p><h2 id="网盘资源"><a href="#网盘资源" class="headerlink" title="网盘资源"></a>网盘资源</h2><h3 id="在花盘-阿里云盘资源"><a href="#在花盘-阿里云盘资源" class="headerlink" title="在花盘-阿里云盘资源"></a><a href="https://www.yppan.com/">在花盘-阿里云盘资源</a></h3><blockquote><p>阿里云盘，内容来源于 TG</p></blockquote><h3 id="云盘资源分享社区可用地址"><a href="#云盘资源分享社区可用地址" class="headerlink" title="云盘资源分享社区可用地址"></a><a href="https://www.kdocs.cn/l/ce6gIRGCAzW3">云盘资源分享社区可用地址</a></h3><blockquote><p>含阿里云盘与夸克网盘资源</p></blockquote><ul><li><a href="https://yunpan1.xyz/">https://yunpan1.xyz/</a></li></ul><h3 id="易搜-网盘搜索"><a href="#易搜-网盘搜索" class="headerlink" title="易搜-网盘搜索"></a><a href="https://yiso.fun/">易搜-网盘搜索</a></h3><blockquote><p>阿里云盘资源，需要登陆</p></blockquote><h3 id="夸父资源盘"><a href="#夸父资源盘" class="headerlink" title="夸父资源盘"></a>夸父资源盘</h3><blockquote><p><a href="www.kuafuzys.com">www.kuafuzys.com </a><br>code:一@二@数字</p></blockquote>]]></content>
       
       
       <categories>
