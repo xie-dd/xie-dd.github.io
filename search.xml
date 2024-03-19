@@ -33,6 +33,33 @@
     
     
     <entry>
+      <title>Pycharm配置与若干问题</title>
+      <link href="/posts/53523/"/>
+      <url>/posts/53523/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一般使用教程"><a href="#一般使用教程" class="headerlink" title="一般使用教程"></a>一般使用教程</h2><ol><li>下载社区版：<a href="https://www.jetbrains.com/pycharm/download/">https://www.jetbrains.com/pycharm/download/</a></li><li>随便安装到一个地方就行</li></ol><h2 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h2><p>“File&#x2F;文件”—“Settings&#x2F;设置”—“Editor&#x2F;编辑器”—“Color Scheme&#x2F;配色方案”<br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403191512523.png#height=300&id=HcGIy&originHeight=472&originWidth=761&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=484"></p><h2 id="项目移动位置"><a href="#项目移动位置" class="headerlink" title="项目移动位置"></a>项目移动位置</h2><blockquote><p>搜索关键词：pycharm, 项目，目录，移动，位置，更换</p></blockquote><ol><li>原本项目在 D:\pythonProject03</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403191601177.png#id=NFxjl&originHeight=199&originWidth=809&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p><ol start="2"><li>现在，因为特殊的原因需要剪切到桌面 D:\Desktop\pythonProject03，也可以理解为换一台电脑</li></ol><p><img src="https://cdn.nlark.com/yuque/0/2024/png/1488614/1710833513827-611a39cb-f5d1-45ae-8ec1-91be9b44af68.png#averageHue=%23fbfaf9&clientId=u7df523ae-cc46-4&from=paste&height=138&id=xwxuH&originHeight=207&originWidth=839&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=17378&status=done&style=none&taskId=uee7653f6-f268-44e7-adb8-4072dd2fc52&title=&width=559.3333333333334" alt="image.png"></p><ol start="3"><li>打开 Pycharm—文件—打开—选择 D:\Desktop\pythonProject03</li><li>注意，此时点击运行是不行的，会报错，还需要按照下面<strong>重新配置解释器</strong></li><li>文件—设置—项目 pythonProject03—Python 解释器—添加解释器—添加本地解释器—选择 Virtualenv 环境—<strong>现有</strong>—选择解释器 D:\Desktop\pythonProject03.venv\Scripts\python.exe（在项目目录下）—确定</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403191606898.png#id=AoCeD&originHeight=256&originWidth=1200&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p><ol start="6"><li>可能还需要点一下，也可能不需要</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403191609035.png#id=wNUG1&originHeight=263&originWidth=1491&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> pycharm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python推送消息到企业微信</title>
       <link href="/posts/45582/"/>
       <url>/posts/45582/</url>
