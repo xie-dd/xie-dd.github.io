@@ -8,23 +8,21 @@
       <link href="/posts/3180/"/>
       <url>/posts/3180/</url>
       
-        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ol><li>有个 Python 安装在了 C:\Python38\python.exe，这里有很多包，如 numpy 等</li><li>现在要在 D:\AA 文件夹建立一个 aa.py 文件，想使用 C:\Python38\python.exe 环境</li></ol><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li>在 D:\AA 里面，右键 Open Folder as PyCharm</li><li>打开 Pycharm 后，文件—设置—项目***-Python 解释器—添加解释器—添加本地解释器—Virtualenv 环境—现有—三个点—选择 C:\Python38\python.exe—确定</li><li>等待即可，真的要等待好长时间，如果原环境较大，不如新建一个环境</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403182149128.png#id=JPm3u&originHeight=92&originWidth=1695&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><ol><li>有个 Python 安装在了 C:\Python38\python.exe，这里有很多包，如 numpy 等</li><li>现在要在 D:\AA 文件夹建立一个 aa.py 文件，想使用 C:\Python38\python.exe 环境</li></ol><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol><li>在 D:\AA 里面，右键 Open Folder as PyCharm</li><li>打开 Pycharm 后，文件—设置—项目***-Python 解释器—添加解释器—添加本地解释器—Virtualenv 环境—**现有**—三个点—选择 C:\Python38\python.exe—确定</li><li>等待即可，真的要等待好长时间，如果原环境较大，不如新建一个环境</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403182149128.png#id=JPm3u&originHeight=92&originWidth=1695&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>]]></content>
       
       
       <categories>
           
-          <category> 未分类 </category>
+          <category> python </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> A </tag>
+            <tag> python </tag>
             
-            <tag> B </tag>
-            
-            <tag> C </tag>
+            <tag> 环境 </tag>
             
         </tags>
       
