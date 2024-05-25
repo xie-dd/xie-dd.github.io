@@ -1,0 +1,411 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Nastran考虑陀螺效应的模态分析 | 有限元分析与编程</title><meta name="author" content="Xdd"><meta name="copyright" content="Xdd"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="no-referrer"><meta name="description" content="本地文件夹Nastran_Rotor 模型介绍 案例出处：rotor_dynamics.pdf—6 Rotordynamics with MSC Patran 空心悬臂转子模型 空心转子长 0.5 米，内径 0.05 米，外径 0.1 米 转子由钢制成 转速为 10,000 RPM 使用 5 个 CBEAM 单元   操作步骤   Step 1 初始化 Patran    Step 2 建立几何">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nastran考虑陀螺效应的模态分析">
+<meta property="og:url" content="https://19970622.xyz/posts/6579/index.html">
+<meta property="og:site_name" content="有限元分析与编程">
+<meta property="og:description" content="本地文件夹Nastran_Rotor 模型介绍 案例出处：rotor_dynamics.pdf—6 Rotordynamics with MSC Patran 空心悬臂转子模型 空心转子长 0.5 米，内径 0.05 米，外径 0.1 米 转子由钢制成 转速为 10,000 RPM 使用 5 个 CBEAM 单元   操作步骤   Step 1 初始化 Patran    Step 2 建立几何">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310250959042.png">
+<meta property="article:published_time" content="2024-01-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-01-27T16:00:00.000Z">
+<meta property="article:author" content="Xdd">
+<meta property="article:tag" content="nastran">
+<meta property="article:tag" content="陀螺效应">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310250959042.png"><link rel="shortcut icon" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310230930281.png"><link rel="canonical" href="https://19970622.xyz/posts/6579/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"NQD8RF9R39","apiKey":"3d4e0abab4490c03a3480485272bd1f7","indexName":"blog_hexo","hits":{"per_page":10},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Nastran考虑陀螺效应的模态分析',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-28 00:00:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="有限元分析与编程" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">54</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310250959042.png')"><nav id="nav"><span id="blog-info"><a href="/" title="有限元分析与编程"><span class="site-name">有限元分析与编程</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Nastran考虑陀螺效应的模态分析</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-27T16:00:00.000Z" title="发表于 2024-01-28 00:00:00">2024-01-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-27T16:00:00.000Z" title="更新于 2024-01-28 00:00:00">2024-01-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/CAE/">CAE</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Nastran考虑陀螺效应的模态分析"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="本地文件夹"><a href="#本地文件夹" class="headerlink" title="本地文件夹"></a>本地文件夹</h2><p>Nastran_Rotor</p>
+<h2 id="模型介绍"><a href="#模型介绍" class="headerlink" title="模型介绍"></a>模型介绍</h2><ul>
+<li>案例出处：rotor_dynamics.pdf—6 Rotordynamics with MSC Patran</li>
+<li>空心悬臂转子模型</li>
+<li>空心转子长 0.5 米，内径 0.05 米，外径 0.1 米</li>
+<li>转子由钢制成</li>
+<li>转速为 10,000 RPM</li>
+<li>使用 5 个 CBEAM 单元</li>
+</ul>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221225848.png#id=DPnTN&originHeight=124&originWidth=745&originalType=binary&ratio=1&rotation=0&showTitle=true&status=done&style=none&title=%E7%A9%BA%E5%BF%83%E6%82%AC%E8%87%82%E8%BD%AC%E5%AD%90" alt="空心悬臂转子" title="空心悬臂转子"></p>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><table>
+<thead>
+<tr>
+<th>Step 1</th>
+<th>初始化 Patran</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Step 2</td>
+<td>建立几何</td>
+</tr>
+<tr>
+<td>Step 3</td>
+<td>定义材料属性</td>
+</tr>
+<tr>
+<td>Step 4</td>
+<td>定义 1D 梁属性</td>
+</tr>
+<tr>
+<td>Step 5</td>
+<td>定义有限元网格</td>
+</tr>
+<tr>
+<td>Step 6</td>
+<td>定义约束</td>
+</tr>
+<tr>
+<td>Step 7</td>
+<td>定义转子</td>
+</tr>
+<tr>
+<td>Step 8</td>
+<td>设置分析</td>
+</tr>
+<tr>
+<td>Step 9</td>
+<td>在 Nastran 求解</td>
+</tr>
+<tr>
+<td>Step 10</td>
+<td>生成模态振型</td>
+</tr>
+<tr>
+<td>Step 11</td>
+<td>生成 Campbell 图</td>
+</tr>
+</tbody></table>
+<h3 id="Step-1-初始化-Patran"><a href="#Step-1-初始化-Patran" class="headerlink" title="Step 1 初始化 Patran"></a>Step 1 初始化 Patran</h3><ol>
+<li>打开 Patran</li>
+<li>File—New—选择路径、设置文件名为 rotor.db —点击 OK</li>
+<li>点击 OK 后进入新界面—在右侧有个 New Model Preference—设置 Tolerance 为 Default—点击 OK</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221236230.png#id=GdDLn&originHeight=560&originWidth=375&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="Step-2-建立几何"><a href="#Step-2-建立几何" class="headerlink" title="Step 2 建立几何"></a>Step 2 建立几何</h3><ol>
+<li>点击 Geometry 选项卡</li>
+<li>点击 Curves — 点击 Line By XYZ—设置&lt;0.5 0 0&gt;与[0 0 0]—点击 Apply</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221240752.png#id=Wwovt&originHeight=484&originWidth=607&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="Step-3-定义材料"><a href="#Step-3-定义材料" class="headerlink" title="Step 3: 定义材料"></a>Step 3: 定义材料</h3><ol>
+<li>Properties—Isotropic—弹出材料设置窗口</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221245262.png#id=uhecV&originHeight=176&originWidth=844&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="2">
+<li>设置 Material Name 为 Steel</li>
+<li>点击 Input Properties—设置弹性模量、泊松比与密度—点击 OK</li>
+<li>点击 Apply</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221251156.png#id=Nc4Qc&originHeight=859&originWidth=1012&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="Step-4-定义-1D-梁属性"><a href="#Step-4-定义-1D-梁属性" class="headerlink" title="Step 4: 定义 1D 梁属性"></a>Step 4: 定义 1D 梁属性</h3><ol>
+<li>点击 Properties — 点击梁 Beam—右侧弹出 Element Properties 窗口</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221254286.png#id=AGG1u&originHeight=215&originWidth=1015&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="2">
+<li>设置 Property Set Name 为 beam_prop</li>
+<li>设置 Options 的第一个框为 General Section (CBEAM)</li>
+<li>点击 Input Properties—弹出 Input Properties 新窗口</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221308533.png#id=jVIcg&originHeight=693&originWidth=466&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="5">
+<li>点击下图 ① 处—弹出窗口—选择 Steel</li>
+<li>在 Bar Orientation 设置&lt;0 1 0&gt;, 即选择 Y 方向为弯曲方向</li>
+<li>点击下图 ③ 处—点击下一页或者上一页—选择空心圆柱截面—设置内径与外径尺寸—点击 OK</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221310788.png#id=ci4yK&originHeight=762&originWidth=706&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221317348.png#id=ciXx6&originHeight=882&originWidth=816&originalType=binary&ratio=1&rotation=0&showTitle=true&status=done&style=none&title=%E6%88%AA%E9%9D%A2%E9%80%89%E6%8B%A9" alt="截面选择" title="截面选择"></p>
+<ol start="8">
+<li>上一步点击 OK 后回到 Element Properties 窗口—点击 Apply</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221321706.png#id=enqPt&originHeight=145&originWidth=331&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="Step-5-生成有限元模型"><a href="#Step-5-生成有限元模型" class="headerlink" title="Step 5: 生成有限元模型"></a>Step 5: 生成有限元模型</h3><ol>
+<li>点击 Meshing —在右侧 Finite Element 窗口按照下面设置</li>
+<li>Action: Create, Object: <strong>Mesh Seed</strong>, Type: Uniform</li>
+<li>勾选 Number of Elements—设置 Number&#x3D;5</li>
+<li>鼠标左键点击窗口的几何线—此时右侧 Curve List 中会出现 Curve 1—点击 Apply</li>
+<li>Action: Create, Object: <strong>Mesh</strong>, Type: <strong>Curve</strong></li>
+<li>按照下图进行设置—点击 Apply</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221333230.png#id=ipJek&originHeight=635&originWidth=458&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="Step-6-定义约束"><a href="#Step-6-定义约束" class="headerlink" title="Step 6: 定义约束"></a>Step 6: 定义约束</h3><ol>
+<li>点击 Loads&#x2F;BCs 选项卡—在右侧弹出新窗口</li>
+<li>Action: Create, Object: Displacement, Type: Nodal</li>
+<li>设置 New Set Name 为 cantilever_Rotor</li>
+<li>点击 Input Data 设置位移与转角均为 0—点击 OK</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221348210.png#id=zjY70&originHeight=631&originWidth=488&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="5">
+<li>点击 Select Application Region—Select: FEM—选择结点—点击 OK</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221349341.png#id=hkFJ6&originHeight=426&originWidth=570&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="6">
+<li>上一步点击 OK 后回到 Load&#x2F;Boundary Conditions 窗口—点击 Apply 完成约束的创建</li>
+</ol>
+<h3 id="Step-7-定义转子"><a href="#Step-7-定义转子" class="headerlink" title="Step 7: 定义转子"></a>Step 7: 定义转子</h3><p>为了使 MSC Patran 捕获转子动力学效应，我们需要定义转子的成分和旋转方向</p>
+<ol>
+<li>Tools—Modeling—Rotor dynamics</li>
+<li>右侧弹出窗口，Action: <strong>Create</strong>, Analysis: <strong>Steady State</strong>, and Object: <strong>Rotor</strong></li>
+<li>设置 Rotor Name 为 hollow_rotor</li>
+<li>设置 Rotor Node List 为 Node 1:6，这一步将会设置 ROTORG 卡片</li>
+<li>设置转子旋转方向，Spin Direction Node 1&#x2F;2 选择 Node 2 与 Node 3</li>
+<li>点击 Spin Profile，设置 Speed Values 为<strong>1.0</strong>， 这是一个乘数—点击 OK</li>
+<li>点击 Apply 完成转子的设置</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/1488614/1708582607531-5bed5135-146d-42f0-847c-faa8d6f59452.png#averageHue=%23dfe7e7&clientId=ud785dc66-2343-4&from=paste&height=382&id=uc6590678&originHeight=573&originWidth=799&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=153077&status=done&style=none&taskId=u8113e689-237f-4aff-8785-4d0ddab48af&title=&width=532.6666666666666" alt="image.png"></p>
+<h3 id="Step-8-设置分析"><a href="#Step-8-设置分析" class="headerlink" title="Step 8: 设置分析"></a>Step 8: 设置分析</h3><ol>
+<li>点击 Analysis 选项卡—Action: Analyze, Object: Entire Model, Method: <strong>Analysis Desk</strong></li>
+<li>设置 Job Name 为 hollow_rotor_test</li>
+<li>点击 Solution Type—弹出 Solution Type 窗口</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221512619.png#id=pLheO&originHeight=713&originWidth=272&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="4">
+<li>在 Solution Type 窗口—选择 complex eigenvalue</li>
+<li>设置 Formulation 为 Direct—点击 Solution Parameters</li>
+<li>设置 Mass Calculations 为 Coupled—点击 complex eigenvalue, 弹出 Eigenvalue Extraction 窗口</li>
+<li>选择 Extraction Method 为 Complex Lanczos—设置 Number of Desired Roots&#x3D;12—点击 OK</li>
+<li>点击 Results Output Format—勾选 XDB—点击 OK</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221514805.png#id=CW2ok&originHeight=568&originWidth=733&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="9">
+<li>继续点击 OK 返回到 Analysis 窗口</li>
+<li>在 Analysis 窗口点击 Subcases—点击 Default—点击 Subcase Parameters 来修改</li>
+<li>勾选 Enable Rotor Dynamics—点击 Specify Spinning Properties</li>
+<li>Option: <strong>Asynchronous <strong>— 选择 hollow_rotor—单位:RPM—Speed:10000，这一步将设置</strong>RGYRO</strong>卡片</li>
+<li>点击 OK 关闭 Spinning Properties 窗口</li>
+<li>点击 OK 关闭 Subcase Parameters 窗口</li>
+<li>点击 Apply 关闭 Subcase 窗口</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221539394.png#id=n7s0c&originHeight=823&originWidth=700&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221539961.png#id=UfMba&originHeight=412&originWidth=696&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="Step-9-使用-Nastran-求解"><a href="#Step-9-使用-Nastran-求解" class="headerlink" title="Step 9: 使用 Nastran 求解"></a>Step 9: 使用 Nastran 求解</h3><ol>
+<li>检查右侧 Analysis 窗口—Action: Analyze, Object: Entire Model, Method: <strong>Analysis Desk，</strong>这样只生成 BDF 文件而不计算</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221546859.png#id=UoDEf&originHeight=142&originWidth=1026&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="2">
+<li>打开 Nastran 软件</li>
+<li>点击 File…, 选择上面的 BDF 文件</li>
+<li>设置 Optional keywords 为<code>memorymax=0.2*physical</code></li>
+<li>点击 Run</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221551580.png#id=Wlel5&originHeight=329&originWidth=614&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="6">
+<li>求解完成后，生成的结果如下</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221557677.png#id=YGFBA&originHeight=232&originWidth=1021&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="Step-10-生成振型"><a href="#Step-10-生成振型" class="headerlink" title="Step 10: 生成振型"></a>Step 10: 生成振型</h3><ol>
+<li>点击 Analysis 选项卡—Access Results:<strong>XDB</strong></li>
+<li>点击 Select Results File—选择 hollow_rotor_test.xdb—点击 OK 再点击 Apply</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221557208.png#id=BEx16&originHeight=150&originWidth=728&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221558189.png#id=OrJ7U&originHeight=639&originWidth=710&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ol start="3">
+<li>点击 Results 选项卡—点击选项卡下面的 Fringe&#x2F;Deformation</li>
+<li>在 Select Result Cases field 中点击 Mode 1 来绘制第一阶振型</li>
+<li>保存振型：File—Images</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221605715.png#id=pWg2d&originHeight=470&originWidth=559&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="Step-11-生成-Campbell-图"><a href="#Step-11-生成-Campbell-图" class="headerlink" title="Step 11: 生成 Campbell 图"></a>Step 11: 生成 Campbell 图</h3><p>目前，MSC Patran 不包括在 MSC Nastran 中启动坎贝尔图生成的功能，这需要手动修改 BDF 文件，需要修改 3 处<br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221220244.png#id=RKJN3&originHeight=295&originWidth=789&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ASSIGN  OUTPUT4=&#x27;campbell_freq.op4&#x27;,UNIT=71,FORM=FORMATTED,DELETE $ MODE FREQS</span><br><span class="line">ASSIGN  OUTPUT4=&#x27;campbell_rpm.op4&#x27;,UNIT=72,FORM=FORMATTED,DELETE $ SHAFT SPIN</span><br><span class="line"></span><br><span class="line">CAMPBELL = 100</span><br><span class="line"></span><br><span class="line">CAMPBLL 100     SPEED   11      RPM</span><br><span class="line">DDVAL   11      10000.0 THRU    0.0     BY      -1000.</span><br></pre></td></tr></table></figure>
+
+<p><strong>求解</strong></p>
+<ol>
+<li>复制文件 hollow_rotor_test.bdf 并重命名为 hollow_rotor_test_campbell.bdf</li>
+<li>安装上面的修改方式进行修改</li>
+<li>使用 Nastran 软件来求解 hollow_rotor_test_campbell.bdf</li>
+</ol>
+<p><strong>后处理</strong></p>
+<ol>
+<li>Utilities—Results—Campbell Diagram—打开 Campbell Diagram Creation 选项卡</li>
+<li>依次选择 campbell_rpm.op4 与 campbell_freq.op4 文件</li>
+<li>设置 Rotation Speed Multiplier 为[0 1]</li>
+<li>点击 Apply 即可生成 Campbell 图</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402221621686.png#id=o5EZa&originHeight=597&originWidth=708&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202401291053381.png#id=M22Gc&originHeight=863&originWidth=2871&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><ol>
+<li>自制的六面体实体模型在分析时，计算错误，错误结果如下：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> *** user fatal message 6630 (rotrdr1)</span><br><span class="line">rotor 3 has no associated mass which will result in no gyroscopic terms being calculated.</span><br><span class="line">user action: if there is a physical model of the rotor attached to the grids listed on the rotorg entry via</span><br><span class="line">       r-elements or mpc equations then define the model as a superelement and perform a static</span><br><span class="line">       reduction to the rotorg grids. otherwise, ensure that the rotor model has associated mass.</span><br><span class="line"></span><br><span class="line">转子 3 没有相关的质量，这将导致不计算陀螺仪项。用户操作：如果通过 R 单元或 MPC 方程将转子的物理模型连接到 ROTORORG 条目中列出的网格，则将该模型定义为超单元，并对 ROTORG 网格执行静态约简。否则，请确保转子模型具有关联的质量。</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://19970622.xyz">Xdd</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://19970622.xyz/posts/6579/">https://19970622.xyz/posts/6579/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://19970622.xyz" target="_blank">有限元分析与编程</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/nastran/">nastran</a><a class="post-meta__tags" href="/tags/%E9%99%80%E8%9E%BA%E6%95%88%E5%BA%94/">陀螺效应</a></div><div class="post_share"><div class="social-share" data-image="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310250959042.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956863.png" target="_blank"><img class="post-qr-code-img" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956863.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956689.png" target="_blank"><img class="post-qr-code-img" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956689.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/56223/" title="Python-selenium-遇到的问题"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202402280946389.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Python-selenium-遇到的问题</div></div></a></div><div class="next-post pull-right"><a href="/posts/23222/" title="OptiStruct考虑陀螺效应的模态分析"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403211642362.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">OptiStruct考虑陀螺效应的模态分析</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/33441/" title="Nastran帮助系统"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202401191933036.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-01-26</div><div class="title">Nastran帮助系统</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Xdd</div><div class="author-info__description">为往圣继绝学</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">54</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xie-dd"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><center><b>--- 联系方式 ---<br><font color="#5ea6e5">xdd2026@qq.com</font></b></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.</span> <span class="toc-text">本地文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">模型介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="toc-number">3.</span> <span class="toc-text">操作步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1-%E5%88%9D%E5%A7%8B%E5%8C%96-Patran"><span class="toc-number">3.1.</span> <span class="toc-text">Step 1 初始化 Patran</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2-%E5%BB%BA%E7%AB%8B%E5%87%A0%E4%BD%95"><span class="toc-number">3.2.</span> <span class="toc-text">Step 2 建立几何</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-3-%E5%AE%9A%E4%B9%89%E6%9D%90%E6%96%99"><span class="toc-number">3.3.</span> <span class="toc-text">Step 3: 定义材料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-4-%E5%AE%9A%E4%B9%89-1D-%E6%A2%81%E5%B1%9E%E6%80%A7"><span class="toc-number">3.4.</span> <span class="toc-text">Step 4: 定义 1D 梁属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-5-%E7%94%9F%E6%88%90%E6%9C%89%E9%99%90%E5%85%83%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.5.</span> <span class="toc-text">Step 5: 生成有限元模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-6-%E5%AE%9A%E4%B9%89%E7%BA%A6%E6%9D%9F"><span class="toc-number">3.6.</span> <span class="toc-text">Step 6: 定义约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-7-%E5%AE%9A%E4%B9%89%E8%BD%AC%E5%AD%90"><span class="toc-number">3.7.</span> <span class="toc-text">Step 7: 定义转子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-8-%E8%AE%BE%E7%BD%AE%E5%88%86%E6%9E%90"><span class="toc-number">3.8.</span> <span class="toc-text">Step 8: 设置分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-9-%E4%BD%BF%E7%94%A8-Nastran-%E6%B1%82%E8%A7%A3"><span class="toc-number">3.9.</span> <span class="toc-text">Step 9: 使用 Nastran 求解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-10-%E7%94%9F%E6%88%90%E6%8C%AF%E5%9E%8B"><span class="toc-number">3.10.</span> <span class="toc-text">Step 10: 生成振型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-11-%E7%94%9F%E6%88%90-Campbell-%E5%9B%BE"><span class="toc-number">3.11.</span> <span class="toc-text">Step 11: 生成 Campbell 图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">4.</span> <span class="toc-text">结论</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Xdd</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span> | 豫ICP备<a href="https://beian.miit.gov.cn/" target="_blank">2023031381</a>号</span>
+<span> | <img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311231912584.png" height="16" width="16" style="display:inline-block;"> 豫公网安备<a href="https://beian.mps.gov.cn/#/query/webSearch?code=41140002000710\" target="_blank">41140002000710</a>号</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(()=>{
+  const getGiscusTheme = theme => {
+    return theme === 'dark' ? 'dark' : 'light'
+  }
+
+  const loadGiscus = () => {
+    const config = Object.assign({
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'xie-dd/blog_hexo_comment',
+      'data-repo-id': 'R_kgDOKjyVRg',
+      'data-category-id': 'DIC_kwDOKjyVRs4Car4o',
+      'data-mapping': 'pathname',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true
+    },null)
+
+    const ele = document.createElement('script')
+    for (let key in config) {
+      ele.setAttribute(key, config[key])
+    }
+    document.getElementById('giscus-wrap').appendChild(ele)
+  }
+
+  const changeGiscusTheme = theme => {
+    const sendMessage = message => {
+      const iframe = document.querySelector('iframe.giscus-frame')
+      if (!iframe) return
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app')
+    }
+
+    sendMessage({
+      setConfig: {
+        theme: getGiscusTheme(theme)
+      }
+    });
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if ('Giscus' === 'Giscus' || !false) {
+    if (false) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment= loadGiscus
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>
