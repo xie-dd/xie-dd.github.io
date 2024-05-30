@@ -6,7 +6,7 @@
   <link href="https://19970622.xyz/atom.xml" rel="self"/>
   
   <link href="https://19970622.xyz/"/>
-  <updated>2024-05-24T16:00:00.000Z</updated>
+  <updated>2024-05-29T16:00:00.000Z</updated>
   <id>https://19970622.xyz/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sourcetree登录多账户</title>
+    <link href="https://19970622.xyz/posts/46426/"/>
+    <id>https://19970622.xyz/posts/46426/</id>
+    <published>2024-05-29T16:00:00.000Z</published>
+    <updated>2024-05-29T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="获取-Personal-Access-Token"><a href="#获取-Personal-Access-Token" class="headerlink" title="获取 Personal Access Token"></a>获取 Personal Access Token</h2><ul><li>登录到 Gitee—账户设置—开发者设置—私人令牌—生成新令牌—全选—提交</li><li>登录到 Github—个人头像（右上角）—Settings—Developer Settings—Personal access tokens—generate new token—创建的 Token 的名称随意—全选—提交</li></ul><h2 id="添加账户"><a href="#添加账户" class="headerlink" title="添加账户"></a>添加账户</h2><ol><li>打开 Sourcetree—工具—选项—验证—添加</li><li>按照下面依次操作—输入用户名与 Personal Access Token</li></ol><h4 id="添加-Github-账户"><a href="#添加-Github-账户" class="headerlink" title="添加 Github 账户"></a>添加 Github 账户</h4><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202405302200928.png#id=MKPMJ&originHeight=549&originWidth=1329&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p><h4 id="添加-gitee-账户"><a href="#添加-gitee-账户" class="headerlink" title="添加 gitee 账户"></a>添加 gitee 账户</h4><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202405302141667.png#id=yzzJC&originHeight=546&originWidth=1340&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;获取-Personal-Access-Token&quot;&gt;&lt;a href=&quot;#获取-Personal-Access-Token&quot; class=&quot;headerlink&quot; title=&quot;获取 Personal Access Token&quot;&gt;&lt;/a&gt;获取 Personal Ac</summary>
+      
+    
+    
+    
+    <category term="git" scheme="https://19970622.xyz/categories/git/"/>
+    
+    
+    <category term="git" scheme="https://19970622.xyz/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>mkdocs生成文档</title>
@@ -524,31 +548,6 @@
     <category term="obsidian" scheme="https://19970622.xyz/tags/obsidian/"/>
     
     <category term="OSS" scheme="https://19970622.xyz/tags/OSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>obsidian多设备同步</title>
-    <link href="https://19970622.xyz/posts/52673/"/>
-    <id>https://19970622.xyz/posts/52673/</id>
-    <published>2023-11-26T16:00:00.000Z</published>
-    <updated>2023-11-26T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>203-12-23：建议使用 obsidian+OSS</p><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>obsidian 需要在 Windows 与 Android 同步<br>真心没有语雀好用，希望语雀不要倒闭</p><h2 id="实现方法：坚果云-FolderSync"><a href="#实现方法：坚果云-FolderSync" class="headerlink" title="实现方法：坚果云+FolderSync"></a>实现方法：坚果云+FolderSync</h2><blockquote><p>FolderSync 支持双向，单项向左，单项向右，三种方式同步<br>用着用着发现不能同步了，可能是坚果云同步文件个数&#x2F;时间有限制，需要等一会才行</p></blockquote><ol><li>在 Windows 本地建立 obsidian 的根目录 AAA，将 AAA 设置为自动同步到坚果云</li><li>开启坚果云的 webdav, 获得第三方客户端密码</li><li>在 Android 下载 obsidian 与 FolderSync</li><li>打开 FolderSync 设置安卓手机本地的文件夹 AAA 与坚果云同步，详细参考：<a href="https://help.jianguoyun.com/?p=2887">https://help.jianguoyun.com/?p=2887</a></li><li>打开 Android 的 obsidian，将 AAA 设置为根目录即可</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;更新&quot;&gt;&lt;a href=&quot;#更新&quot; class=&quot;headerlink&quot; title=&quot;更新&quot;&gt;&lt;/a&gt;更新&lt;/h2&gt;&lt;p&gt;203-12-23：建议使用 obsidian+OSS&lt;/p&gt;
-&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;heade</summary>
-      
-    
-    
-    
-    <category term="未分类" scheme="https://19970622.xyz/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-    
-    <category term="obsidian" scheme="https://19970622.xyz/tags/obsidian/"/>
     
   </entry>
   

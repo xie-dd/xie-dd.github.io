@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Sourcetree登录多账户</title>
+      <link href="/posts/46426/"/>
+      <url>/posts/46426/</url>
+      
+        <content type="html"><![CDATA[<h2 id="获取-Personal-Access-Token"><a href="#获取-Personal-Access-Token" class="headerlink" title="获取 Personal Access Token"></a>获取 Personal Access Token</h2><ul><li>登录到 Gitee—账户设置—开发者设置—私人令牌—生成新令牌—全选—提交</li><li>登录到 Github—个人头像（右上角）—Settings—Developer Settings—Personal access tokens—generate new token—创建的 Token 的名称随意—全选—提交</li></ul><h2 id="添加账户"><a href="#添加账户" class="headerlink" title="添加账户"></a>添加账户</h2><ol><li>打开 Sourcetree—工具—选项—验证—添加</li><li>按照下面依次操作—输入用户名与 Personal Access Token</li></ol><h4 id="添加-Github-账户"><a href="#添加-Github-账户" class="headerlink" title="添加 Github 账户"></a>添加 Github 账户</h4><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202405302200928.png#id=MKPMJ&originHeight=549&originWidth=1329&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p><h4 id="添加-gitee-账户"><a href="#添加-gitee-账户" class="headerlink" title="添加 gitee 账户"></a>添加 gitee 账户</h4><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202405302141667.png#id=yzzJC&originHeight=546&originWidth=1340&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mkdocs生成文档</title>
       <link href="/posts/39539/"/>
       <url>/posts/39539/</url>
@@ -601,7 +626,7 @@
       
       <categories>
           
-          <category> 未分类 </category>
+          <category> git </category>
           
       </categories>
       
@@ -742,7 +767,7 @@
       
       <categories>
           
-          <category> 未分类 </category>
+          <category> git </category>
           
       </categories>
       
@@ -764,7 +789,7 @@
       <link href="/posts/43836/"/>
       <url>/posts/43836/</url>
       
-        <content type="html"><![CDATA[<p>鞠婧祎<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403211947924.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403211947924.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403211947924.png</a>))</p><p>刻晴<br><img src="/"></p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png</a>))<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png</a>))<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png</a>))</p><p><img src="/"></p><p>三月七<br><img src="/"><br><img src="/"><br><img src="/"></p>]]></content>
+        <content type="html"><![CDATA[<p>鞠婧祎<br><img src="/"></p><p>刻晴<br><img src="/"></p><p><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031819550.png</a>))<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031820697.png</a>))<br><img src="/%5Bhttps:/mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png">](<a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031821259.png</a>))</p><p><img src="/"></p><p>三月七<br><img src="/"><br><img src="/"><br><img src="/"></p>]]></content>
       
       
       <categories>
