@@ -17,9 +17,9 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>标题</title>
-    <link href="https://19970622.xyz/posts/38167/"/>
-    <id>https://19970622.xyz/posts/38167/</id>
+    <title>为GITEE绑定钉钉机器人/企业微信机器人</title>
+    <link href="https://19970622.xyz/posts/23193/"/>
+    <id>https://19970622.xyz/posts/23193/</id>
     <published>2024-11-20T16:00:00.000Z</published>
     <updated>2024-11-20T16:00:00.000Z</updated>
     
@@ -36,11 +36,15 @@
     <category term="未分类" scheme="https://19970622.xyz/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
     
     
-    <category term="A" scheme="https://19970622.xyz/tags/A/"/>
+    <category term="github" scheme="https://19970622.xyz/tags/github/"/>
     
-    <category term="B" scheme="https://19970622.xyz/tags/B/"/>
+    <category term="gitee" scheme="https://19970622.xyz/tags/gitee/"/>
     
-    <category term="C" scheme="https://19970622.xyz/tags/C/"/>
+    <category term="企业微信" scheme="https://19970622.xyz/tags/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1/"/>
+    
+    <category term="钉钉" scheme="https://19970622.xyz/tags/%E9%92%89%E9%92%89/"/>
+    
+    <category term="机器人" scheme="https://19970622.xyz/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
     
   </entry>
   

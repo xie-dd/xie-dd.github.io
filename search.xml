@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title>标题</title>
-      <link href="/posts/38167/"/>
-      <url>/posts/38167/</url>
+      <title>为GITEE绑定钉钉机器人/企业微信机器人</title>
+      <link href="/posts/23193/"/>
+      <url>/posts/23193/</url>
       
         <content type="html"><![CDATA[<h2 id="GITEE-与钉钉"><a href="#GITEE-与钉钉" class="headerlink" title="GITEE 与钉钉"></a>GITEE 与钉钉</h2><h4 id="钉钉获得-webhook-地址与签名密钥"><a href="#钉钉获得-webhook-地址与签名密钥" class="headerlink" title="钉钉获得 webhook 地址与签名密钥"></a>钉钉获得 webhook 地址与签名密钥</h4><ol><li>钉钉群—设置—机器人—添加机器人—自定义—添加</li><li>设置机器人名称，安全设置选择<code>加签</code>—复制加签的内容(签名密钥)备用</li><li>点击完成获得 webhook 地址</li></ol><h4 id="为-Gitee-添加钉钉-WebHooks"><a href="#为-Gitee-添加钉钉-WebHooks" class="headerlink" title="为 Gitee 添加钉钉 WebHooks"></a>为 Gitee 添加钉钉 WebHooks</h4><ol><li>在 gitee 某仓库<code>设置/管理</code>里面—WebHooks—添加 WebHooks</li><li>URL 中粘贴 webhook 地址—选择签名密钥—粘贴签名密钥</li><li>完成</li></ol><h2 id="GITEE-与企业微信"><a href="#GITEE-与企业微信" class="headerlink" title="GITEE 与企业微信"></a>GITEE 与企业微信</h2><h4 id="企业微信获得-webhook-地址与签名密钥"><a href="#企业微信获得-webhook-地址与签名密钥" class="headerlink" title="企业微信获得 webhook 地址与签名密钥"></a>企业微信获得 webhook 地址与签名密钥</h4><ol><li>手机企业微信—群—群机器人—添加—新建—起个名称</li><li>完成—获得 Webhook 地址</li></ol><h4 id="为-Gitee-添加企业微信-WebHooks"><a href="#为-Gitee-添加企业微信-WebHooks" class="headerlink" title="为 Gitee 添加企业微信 WebHooks"></a>为 Gitee 添加企业微信 WebHooks</h4><ol><li>在 gitee 某仓库<code>设置/管理</code>里面—WebHooks—添加 WebHooks</li><li>URL 中粘贴 webhook 地址—选择 WebHook 密码—WebHook 密码空着即可</li><li>完成</li></ol>]]></content>
       
@@ -20,11 +20,15 @@
       
         <tags>
             
-            <tag> A </tag>
+            <tag> github </tag>
             
-            <tag> B </tag>
+            <tag> gitee </tag>
             
-            <tag> C </tag>
+            <tag> 企业微信 </tag>
+            
+            <tag> 钉钉 </tag>
+            
+            <tag> 机器人 </tag>
             
         </tags>
       
