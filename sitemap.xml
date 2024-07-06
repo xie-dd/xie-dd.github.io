@@ -56,6 +56,15 @@
   </url>
   
   <url>
+    <loc>https://19970622.xyz/posts/2046/</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://19970622.xyz/posts/19489/</loc>
     
     <lastmod>2024-07-03</lastmod>
@@ -825,6 +834,27 @@
   </url>
   
   <url>
+    <loc>https://19970622.xyz/tags/A/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://19970622.xyz/tags/B/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://19970622.xyz/tags/C/</loc>
+    <lastmod>2024-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://19970622.xyz/tags/test/</loc>
     <lastmod>2024-07-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -854,27 +884,6 @@
   
   <url>
     <loc>https://19970622.xyz/tags/cookie/</loc>
-    <lastmod>2024-07-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://19970622.xyz/tags/A/</loc>
-    <lastmod>2024-07-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://19970622.xyz/tags/B/</loc>
-    <lastmod>2024-07-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://19970622.xyz/tags/C/</loc>
     <lastmod>2024-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
