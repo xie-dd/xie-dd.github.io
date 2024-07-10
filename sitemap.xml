@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://19970622.xyz/404.html</loc>
+    
+    <lastmod>2024-07-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://19970622.xyz/baidu_verify_codeva-TIu5oC7xqo.html</loc>
     
     <lastmod>2024-07-10</lastmod>
@@ -30,15 +39,6 @@
   
   <url>
     <loc>https://19970622.xyz/tags/index.html</loc>
-    
-    <lastmod>2024-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://19970622.xyz/404.html</loc>
     
     <lastmod>2024-07-10</lastmod>
     
@@ -790,13 +790,6 @@
   </url>
   
   <url>
-    <loc>https://19970622.xyz/tags/%E5%9B%BE%E7%89%87/</loc>
-    <lastmod>2024-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://19970622.xyz/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2024-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -805,6 +798,13 @@
   
   <url>
     <loc>https://19970622.xyz/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2024-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://19970622.xyz/tags/%E5%9B%BE%E7%89%87/</loc>
     <lastmod>2024-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
