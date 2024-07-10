@@ -47,6 +47,15 @@
   </url>
   
   <url>
+    <loc>https://19970622.xyz/posts/15308/</loc>
+    
+    <lastmod>2024-07-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://19970622.xyz/posts/urls/</loc>
     
     <lastmod>2024-07-07</lastmod>
@@ -57,15 +66,6 @@
   
   <url>
     <loc>https://19970622.xyz/posts/29869/</loc>
-    
-    <lastmod>2024-07-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://19970622.xyz/posts/2046/</loc>
     
     <lastmod>2024-07-05</lastmod>
     
@@ -790,6 +790,13 @@
   </url>
   
   <url>
+    <loc>https://19970622.xyz/tags/%E5%9B%BE%E7%89%87/</loc>
+    <lastmod>2024-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://19970622.xyz/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2024-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -798,13 +805,6 @@
   
   <url>
     <loc>https://19970622.xyz/tags/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2024-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://19970622.xyz/tags/%E5%9B%BE%E7%89%87/</loc>
     <lastmod>2024-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
