@@ -214,14 +214,14 @@
     <link href="https://19970622.xyz/posts/46426/"/>
     <id>https://19970622.xyz/posts/46426/</id>
     <published>2024-05-29T16:00:00.000Z</published>
-    <updated>2024-05-29T16:00:00.000Z</updated>
+    <updated>2024-07-24T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="获取-Personal-Access-Token"><a href="#获取-Personal-Access-Token" class="headerlink" title="获取 Personal Access Token"></a>获取 Personal Access Token</h2><ul><li>登录到 Gitee—账户设置—开发者设置—私人令牌—生成新令牌—全选—提交</li><li>登录到 Github—个人头像（右上角）—Settings—Developer Settings—Personal access tokens—generate new token—创建的 Token 的名称随意—全选—提交</li></ul><h2 id="添加账户"><a href="#添加账户" class="headerlink" title="添加账户"></a>添加账户</h2><ol><li>打开 Sourcetree—工具—选项—验证—添加</li><li>按照下面依次操作—输入用户名与 Personal Access Token</li></ol><h4 id="添加-Github-账户"><a href="#添加-Github-账户" class="headerlink" title="添加 Github 账户"></a>添加 Github 账户</h4><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202405302200928.png#id=MKPMJ&originHeight=549&originWidth=1329&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p><h4 id="添加-gitee-账户"><a href="#添加-gitee-账户" class="headerlink" title="添加 gitee 账户"></a>添加 gitee 账户</h4><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202405302141667.png#id=yzzJC&originHeight=546&originWidth=1340&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="添加-Github-账户"><a href="#添加-Github-账户" class="headerlink" title="添加 Github 账户"></a>添加 Github 账户</h2><h3 id="基于用户名与-Personal-Access-Token"><a href="#基于用户名与-Personal-Access-Token" class="headerlink" title="基于用户名与 Personal Access Token"></a>基于用户名与 Personal Access Token</h3><h4 id="获取-Personal-Access-Token"><a href="#获取-Personal-Access-Token" class="headerlink" title="获取 Personal Access Token"></a>获取 Personal Access Token</h4><p>登录到 Github—个人头像（右上角）—Settings—Developer Settings—Personal access tokens—generate new token—创建的 Token 的名称随意—全选—提交</p><h4 id="Sourcetree-登录账户-Personal-Access-Token"><a href="#Sourcetree-登录账户-Personal-Access-Token" class="headerlink" title="Sourcetree 登录账户 Personal Access Token"></a>Sourcetree 登录账户 Personal Access Token</h4><ol><li>打开 Sourcetree—工具—选项—验证—添加</li><li>按照下面依次操作—输入用户名与 Personal Access Token</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202405302200928.png#id=MKPMJ&originHeight=549&originWidth=1329&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p><h3 id="基于用户名与密码"><a href="#基于用户名与密码" class="headerlink" title="基于用户名与密码"></a>基于用户名与密码</h3><ol><li>打开 Sourcetree—工具—选项—验证—添加</li><li>按照下图操作：托管服务商: <code>Github</code>, 首选协议: <code>HTTPS</code>, 验证：<code>OAuth</code></li><li>点击<code>刷新OAuth令牌</code>—输入用户名与密码即可自动打开浏览器进行验证</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407252049742.png#errorMessage=unknown%20error&id=CcfoH&originHeight=293&originWidth=702&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p><h2 id="添加-Gitee-账户"><a href="#添加-Gitee-账户" class="headerlink" title="添加 Gitee 账户"></a>添加 Gitee 账户</h2><p>这个比较方便，第一次推送时会要求用户输入账号密码，填入 gitee(码云)注册的账号密码即可</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;获取-Personal-Access-Token&quot;&gt;&lt;a href=&quot;#获取-Personal-Access-Token&quot; class=&quot;headerlink&quot; title=&quot;获取 Personal Access Token&quot;&gt;&lt;/a&gt;获取 Personal Ac</summary>
+    <summary type="html">&lt;h2 id=&quot;添加-Github-账户&quot;&gt;&lt;a href=&quot;#添加-Github-账户&quot; class=&quot;headerlink&quot; title=&quot;添加 Github 账户&quot;&gt;&lt;/a&gt;添加 Github 账户&lt;/h2&gt;&lt;h3 id=&quot;基于用户名与-Personal-Access-To</summary>
       
     
     
@@ -229,7 +229,13 @@
     <category term="git" scheme="https://19970622.xyz/categories/git/"/>
     
     
+    <category term="github" scheme="https://19970622.xyz/tags/github/"/>
+    
     <category term="git" scheme="https://19970622.xyz/tags/git/"/>
+    
+    <category term="gitee" scheme="https://19970622.xyz/tags/gitee/"/>
+    
+    <category term="sourcetree" scheme="https://19970622.xyz/tags/sourcetree/"/>
     
   </entry>
   
