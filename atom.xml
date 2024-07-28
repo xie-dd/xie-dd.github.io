@@ -6,7 +6,7 @@
   <link href="https://19970622.xyz/atom.xml" rel="self"/>
   
   <link href="https://19970622.xyz/"/>
-  <updated>2024-07-25T16:00:00.000Z</updated>
+  <updated>2024-11-20T16:00:00.000Z</updated>
   <id>https://19970622.xyz/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>标题</title>
+    <link href="https://19970622.xyz/posts/word-yangsi/"/>
+    <id>https://19970622.xyz/posts/word-yangsi/</id>
+    <published>2024-11-20T16:00:00.000Z</published>
+    <updated>2024-11-20T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="调整样式显示顺序"><a href="#调整样式显示顺序" class="headerlink" title="调整样式显示顺序"></a>调整样式显示顺序</h2><ol><li>打开样式，Ctrl+Shift+Alt+S，</li><li>点击管理样式</li><li>点击推荐—依靠上移，下移，指定值来调整样式的顺序</li></ol><p>补充：这里也可以控制一个样式是否显示在样式栏里面【显示&#x2F;使用前隐藏&#x2F;隐藏】</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407281416959.png#errorMessage=unknown%20error&id=LW0zU&originHeight=862&originWidth=1130&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;调整样式显示顺序&quot;&gt;&lt;a href=&quot;#调整样式显示顺序&quot; class=&quot;headerlink&quot; title=&quot;调整样式显示顺序&quot;&gt;&lt;/a&gt;调整样式显示顺序&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;打开样式，Ctrl+Shift+Alt+S，&lt;/li&gt;
+&lt;li&gt;点击管理样式&lt;/</summary>
+      
+    
+    
+    
+    <category term="未分类" scheme="https://19970622.xyz/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="B" scheme="https://19970622.xyz/tags/B/"/>
+    
+    <category term="A" scheme="https://19970622.xyz/tags/A/"/>
+    
+  </entry>
   
   <entry>
     <title>矢量在三维空间的旋转</title>
@@ -528,32 +556,6 @@
     
     
     <category term="书籍" scheme="https://19970622.xyz/tags/%E4%B9%A6%E7%B1%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python-selenium-遇到的问题</title>
-    <link href="https://19970622.xyz/posts/56223/"/>
-    <id>https://19970622.xyz/posts/56223/</id>
-    <published>2024-02-22T16:00:00.000Z</published>
-    <updated>2024-02-22T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Chrome-闪退"><a href="#Chrome-闪退" class="headerlink" title="Chrome 闪退"></a>Chrome 闪退</h3><p>解决方法：查看 chrome 版本与 chromedriver.exe 版本是否一致</p><ol><li>chrome 浏览器—设置—关于 Chrome, 查看 Chrome 版本</li><li><a href="http://chromedriver.storage.googleapis.com/index.html">http://chromedriver.storage.googleapis.com/index.html</a> — 下载旧版本的 chromedriver.exe</li><li><a href="https://googlechromelabs.github.io/chrome-for-testing">https://googlechromelabs.github.io/chrome-for-testing</a> — 下载较新版本的 chromedriver.exe</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;Chrome-闪退&quot;&gt;&lt;a href=&quot;#Chrome-闪退&quot; class=&quot;headerlink&quot; title=&quot;Chrome 闪退&quot;&gt;&lt;/a&gt;Chrome 闪退&lt;/h3&gt;&lt;p&gt;解决方法：查看 chrome 版本与 chromedriver.exe 版本是否一致</summary>
-      
-    
-    
-    
-    <category term="python" scheme="https://19970622.xyz/categories/python/"/>
-    
-    
-    <category term="python" scheme="https://19970622.xyz/tags/python/"/>
-    
-    <category term="selenium" scheme="https://19970622.xyz/tags/selenium/"/>
     
   </entry>
   

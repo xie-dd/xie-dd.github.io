@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>标题</title>
+      <link href="/posts/word-yangsi/"/>
+      <url>/posts/word-yangsi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="调整样式显示顺序"><a href="#调整样式显示顺序" class="headerlink" title="调整样式显示顺序"></a>调整样式显示顺序</h2><ol><li>打开样式，Ctrl+Shift+Alt+S，</li><li>点击管理样式</li><li>点击推荐—依靠上移，下移，指定值来调整样式的顺序</li></ol><p>补充：这里也可以控制一个样式是否显示在样式栏里面【显示&#x2F;使用前隐藏&#x2F;隐藏】</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407281416959.png#errorMessage=unknown%20error&id=LW0zU&originHeight=862&originWidth=1130&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 未分类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> B </tag>
+            
+            <tag> A </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>矢量在三维空间的旋转</title>
       <link href="/posts/vec-rox/"/>
       <url>/posts/vec-rox/</url>
