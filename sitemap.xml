@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://19970622.xyz/posts/word-yangsi/</loc>
-    
-    <lastmod>2024-11-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://19970622.xyz/baidu_verify_codeva-TIu5oC7xqo.html</loc>
     
     <lastmod>2024-07-28</lastmod>
@@ -50,6 +41,15 @@
     <loc>https://19970622.xyz/404.html</loc>
     
     <lastmod>2024-07-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://19970622.xyz/posts/word-yangsi/</loc>
+    
+    <lastmod>2024-07-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -817,7 +817,7 @@
   </url>
   
   <url>
-    <loc>https://19970622.xyz/tags/A/</loc>
+    <loc>https://19970622.xyz/tags/%E6%A0%B7%E5%BC%8F/</loc>
     <lastmod>2024-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
