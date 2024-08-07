@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Windows 10系统如何扩展右键菜单中&quot;发送到&quot;命令</title>
+      <link href="/posts/sendto/"/>
+      <url>/posts/sendto/</url>
+      
+        <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>自定义编辑右键“发送到”菜单<br><a href="https://iknow.lenovo.com.cn/detail/133730.html">https://iknow.lenovo.com.cn/detail/133730.html</a></p><h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><h3 id="情境-1：发送到文件夹"><a href="#情境-1：发送到文件夹" class="headerlink" title="情境 1：发送到文件夹"></a>情境 1：发送到文件夹</h3><p>Win+E—&gt;shell:sendto<br>右键—&gt;新建快捷方式—&gt;选择一个文件夹—&gt;下一步—&gt;完成<br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408070959375.png#errorMessage=unknown%20error&id=bd2HB&originHeight=273&originWidth=910&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p><p>TODO: 执行 Python 文件</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 未分类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 发送到 </tag>
+            
+            <tag> windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于Word样式</title>
       <link href="/posts/word-yangsi/"/>
       <url>/posts/word-yangsi/</url>
