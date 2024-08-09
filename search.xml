@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>每日计划与回顾</title>
+      <link href="/posts/205501/"/>
+      <url>/posts/205501/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">✅</span></span><br><span class="line"><span class="string">⬜</span></span><br></pre></td></tr></table></figure><h2 id="2024-0810"><a href="#2024-0810" class="headerlink" title="2024-0810"></a>2024-0810</h2><h3 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h3><p>⬜ 找老师看修改意见<br>⬜ 修改第 2 篇论文布局<br>⬜ 测试 damp 与 qrdamp 求解器</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol><li>今日找老师看了修改意见，老师提了一些意见</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 未分类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 每日 </tag>
+            
+            <tag> 计划 </tag>
+            
+            <tag> 总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Windows 10系统如何扩展右键菜单中&quot;发送到&quot;命令</title>
       <link href="/posts/sendto/"/>
       <url>/posts/sendto/</url>
