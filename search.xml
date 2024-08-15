@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Python-vscode</title>
+      <link href="/posts/160701/"/>
+      <url>/posts/160701/</url>
+      
+        <content type="html"><![CDATA[<h2 id="配置中文界面"><a href="#配置中文界面" class="headerlink" title="配置中文界面"></a>配置中文界面</h2><p>打开拓展，搜索 Chinese，安装简中拓展包，重启 VS Code 界面就会变中文</p><h2 id="配置-python-环境"><a href="#配置-python-环境" class="headerlink" title="配置 python 环境"></a>配置 python 环境</h2><ol><li>打开拓展—搜索 Python—安装有星标的拓展（2 个）</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408141604502.png#errorMessage=unknown%20error&id=DVP0w&originHeight=274&originWidth=765&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p><ol start="2"><li>文件—首选项—设置—扩展—Python—Default Interpreter Path—输入 Python 路径</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408141606735.png#errorMessage=unknown%20error&id=k2olJ&originHeight=305&originWidth=974&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> vscode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>检查语雀一个仓库的文档中图片地址</title>
       <link href="/posts/213401/"/>
       <url>/posts/213401/</url>
@@ -37,7 +64,7 @@
       <link href="/posts/205501/"/>
       <url>/posts/205501/</url>
       
-        <content type="html"><![CDATA[<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">✅</span></span><br><span class="line"><span class="string">⬜</span></span><br></pre></td></tr></table></figure><h2 id="2024-0810"><a href="#2024-0810" class="headerlink" title="2024-0810"></a>2024-0810</h2><h3 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h3><p>⬜ 找老师看修改意见<br>⬜ 修改第 2 篇论文布局<br>✅ 测试 damp 与 qrdamp 求解器<br>✅ 计算转速对特征值的影响<br>⬜ 计算最后一个算例<br>✅ 修改第 1 篇论文 Word 乱码</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol><li>完成了部分计划</li></ol><h2 id="2024-0811"><a href="#2024-0811" class="headerlink" title="2024-0811"></a>2024-0811</h2><h3 id="计划-1"><a href="#计划-1" class="headerlink" title="计划"></a>计划</h3><p>✅ 找老师看修改意见<br>⬜ 修改第 2 篇论文布局<br>⬜ 计算最后一个算例</p><h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ol><li>干项目+1 下午</li></ol><h2 id="2024-0812"><a href="#2024-0812" class="headerlink" title="2024-0812"></a>2024-0812</h2><h3 id="计划-2"><a href="#计划-2" class="headerlink" title="计划"></a>计划</h3><p>✅ 修改审稿意见<br>⬜ 计算最后一个算例：KK 不正定</p><h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h3><ol><li>干项目+1 下午</li><li>今天 WQ 师兄生日，去吃了俄餐</li></ol><h2 id="2024-0813"><a href="#2024-0813" class="headerlink" title="2024-0813"></a>2024-0813</h2><p>✅ 找老师看修改意见<br>⬜ 验证 ANSYS 模型在 G&#x2F;S&#x2F;Spin 以及 1000 转速下特征值差距</p><h3 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h3><ol><li>paper-1 回复意见基本完成</li><li>不用纠结原算例 KK 不正定的问题了</li></ol><h2 id="2024-0814"><a href="#2024-0814" class="headerlink" title="2024-0814"></a>2024-0814</h2><p>⬜paper_2 算例 3 使用径向排列的多级结构</p>]]></content>
+        <content type="html"><![CDATA[<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">✅</span></span><br><span class="line"><span class="string">⬜</span></span><br></pre></td></tr></table></figure><h2 id="2024-0810"><a href="#2024-0810" class="headerlink" title="2024-0810"></a>2024-0810</h2><h3 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h3><p>⬜ 找老师看修改意见<br>⬜ 修改第 2 篇论文布局<br>✅ 测试 damp 与 qrdamp 求解器<br>✅ 计算转速对特征值的影响<br>⬜ 计算最后一个算例<br>✅ 修改第 1 篇论文 Word 乱码</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol><li>完成了部分计划</li></ol><h2 id="2024-0811"><a href="#2024-0811" class="headerlink" title="2024-0811"></a>2024-0811</h2><h3 id="计划-1"><a href="#计划-1" class="headerlink" title="计划"></a>计划</h3><p>✅ 找老师看修改意见<br>⬜ 修改第 2 篇论文布局<br>⬜ 计算最后一个算例</p><h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ol><li>干项目+1 下午</li></ol><h2 id="2024-0812"><a href="#2024-0812" class="headerlink" title="2024-0812"></a>2024-0812</h2><h3 id="计划-2"><a href="#计划-2" class="headerlink" title="计划"></a>计划</h3><p>✅ 修改审稿意见<br>⬜ 计算最后一个算例：KK 不正定</p><h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h3><ol><li>干项目+1 下午</li><li>今天 WQ 师兄生日，去吃了俄餐</li></ol><h2 id="2024-0813"><a href="#2024-0813" class="headerlink" title="2024-0813"></a>2024-0813</h2><p>✅ 找老师看修改意见<br>✅ 验证 ANSYS 模型在 G&#x2F;S&#x2F;Spin 以及 1000 转速下特征值差距</p><h3 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h3><ol><li>paper-1 回复意见基本完成</li><li>不用纠结原算例 KK 不正定的问题了</li></ol><h2 id="2024-0814"><a href="#2024-0814" class="headerlink" title="2024-0814"></a>2024-0814</h2><p>⬜paper_2 算例 3 使用径向排列的多级结构</p><h2 id="2024-0815"><a href="#2024-0815" class="headerlink" title="2024-0815"></a>2024-0815</h2><p>⬜ 检查完 paper1 的回复意见</p>]]></content>
       
       
       <categories>
@@ -93,7 +120,7 @@
       <link href="/posts/word-style/"/>
       <url>/posts/word-style/</url>
       
-        <content type="html"><![CDATA[<h2 id="调整样式显示顺序"><a href="#调整样式显示顺序" class="headerlink" title="调整样式显示顺序"></a>调整样式显示顺序</h2><ol><li>打开样式，Ctrl+Shift+Alt+S，</li><li>点击管理样式</li><li>点击推荐—依靠上移，下移，指定值来调整样式的顺序</li></ol><p>补充：这里也可以控制一个样式是否显示在样式栏里面【显示&#x2F;使用前隐藏&#x2F;隐藏】</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407281416959.png#errorMessage=unknown%20error&id=LW0zU&originHeight=862&originWidth=1130&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="调整样式显示顺序"><a href="#调整样式显示顺序" class="headerlink" title="调整样式显示顺序"></a>调整样式显示顺序</h2><ol><li>打开样式，Ctrl+Shift+Alt+S，</li><li>点击管理样式</li><li>点击推荐—依靠上移，下移，指定值来调整样式的顺序</li></ol><p>补充：这里也可以控制一个样式是否显示在样式栏里面【显示&#x2F;使用前隐藏&#x2F;隐藏】</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407281416959.png#errorMessage=unknown%20error&id=LW0zU&originHeight=862&originWidth=1130&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p><h2 id="设置标题序号-多级列表"><a href="#设置标题序号-多级列表" class="headerlink" title="设置标题序号&#x2F;多级列表"></a>设置标题序号&#x2F;多级列表</h2><ol><li>点击多级列表—点击定义新的多级列表</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408141106594.png#errorMessage=unknown%20error&id=MjCxd&originHeight=382&originWidth=1176&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p><ol start="2"><li>点击更多</li><li>循环下图中的 234 步骤，分别为各个标题设置级别与序号</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408141108688.png#errorMessage=unknown%20error&id=TzNVo&originHeight=864&originWidth=898&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p>]]></content>
       
       
       <categories>

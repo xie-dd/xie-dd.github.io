@@ -6,7 +6,7 @@
   <link href="https://19970622.xyz/atom.xml" rel="self"/>
   
   <link href="https://19970622.xyz/"/>
-  <updated>2024-08-08T16:00:00.000Z</updated>
+  <updated>2024-08-13T16:00:00.000Z</updated>
   <id>https://19970622.xyz/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python-vscode</title>
+    <link href="https://19970622.xyz/posts/160701/"/>
+    <id>https://19970622.xyz/posts/160701/</id>
+    <published>2024-08-13T16:00:00.000Z</published>
+    <updated>2024-08-13T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="配置中文界面"><a href="#配置中文界面" class="headerlink" title="配置中文界面"></a>配置中文界面</h2><p>打开拓展，搜索 Chinese，安装简中拓展包，重启 VS Code 界面就会变中文</p><h2 id="配置-python-环境"><a href="#配置-python-环境" class="headerlink" title="配置 python 环境"></a>配置 python 环境</h2><ol><li>打开拓展—搜索 Python—安装有星标的拓展（2 个）</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408141604502.png#errorMessage=unknown%20error&id=DVP0w&originHeight=274&originWidth=765&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p><ol start="2"><li>文件—首选项—设置—扩展—Python—Default Interpreter Path—输入 Python 路径</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408141606735.png#errorMessage=unknown%20error&id=k2olJ&originHeight=305&originWidth=974&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;配置中文界面&quot;&gt;&lt;a href=&quot;#配置中文界面&quot; class=&quot;headerlink&quot; title=&quot;配置中文界面&quot;&gt;&lt;/a&gt;配置中文界面&lt;/h2&gt;&lt;p&gt;打开拓展，搜索 Chinese，安装简中拓展包，重启 VS Code 界面就会变中文&lt;/p&gt;
+&lt;h2 id=</summary>
+      
+    
+    
+    
+    <category term="python" scheme="https://19970622.xyz/categories/python/"/>
+    
+    
+    <category term="python" scheme="https://19970622.xyz/tags/python/"/>
+    
+    <category term="vscode" scheme="https://19970622.xyz/tags/vscode/"/>
+    
+  </entry>
   
   <entry>
     <title>检查语雀一个仓库的文档中图片地址</title>
@@ -51,7 +78,7 @@
     <published>2024-08-08T16:00:00.000Z</published>
     <updated>2024-08-08T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">✅</span></span><br><span class="line"><span class="string">⬜</span></span><br></pre></td></tr></table></figure><h2 id="2024-0810"><a href="#2024-0810" class="headerlink" title="2024-0810"></a>2024-0810</h2><h3 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h3><p>⬜ 找老师看修改意见<br>⬜ 修改第 2 篇论文布局<br>✅ 测试 damp 与 qrdamp 求解器<br>✅ 计算转速对特征值的影响<br>⬜ 计算最后一个算例<br>✅ 修改第 1 篇论文 Word 乱码</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol><li>完成了部分计划</li></ol><h2 id="2024-0811"><a href="#2024-0811" class="headerlink" title="2024-0811"></a>2024-0811</h2><h3 id="计划-1"><a href="#计划-1" class="headerlink" title="计划"></a>计划</h3><p>✅ 找老师看修改意见<br>⬜ 修改第 2 篇论文布局<br>⬜ 计算最后一个算例</p><h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ol><li>干项目+1 下午</li></ol><h2 id="2024-0812"><a href="#2024-0812" class="headerlink" title="2024-0812"></a>2024-0812</h2><h3 id="计划-2"><a href="#计划-2" class="headerlink" title="计划"></a>计划</h3><p>✅ 修改审稿意见<br>⬜ 计算最后一个算例：KK 不正定</p><h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h3><ol><li>干项目+1 下午</li><li>今天 WQ 师兄生日，去吃了俄餐</li></ol><h2 id="2024-0813"><a href="#2024-0813" class="headerlink" title="2024-0813"></a>2024-0813</h2><p>✅ 找老师看修改意见<br>⬜ 验证 ANSYS 模型在 G&#x2F;S&#x2F;Spin 以及 1000 转速下特征值差距</p><h3 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h3><ol><li>paper-1 回复意见基本完成</li><li>不用纠结原算例 KK 不正定的问题了</li></ol><h2 id="2024-0814"><a href="#2024-0814" class="headerlink" title="2024-0814"></a>2024-0814</h2><p>⬜paper_2 算例 3 使用径向排列的多级结构</p>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">✅</span></span><br><span class="line"><span class="string">⬜</span></span><br></pre></td></tr></table></figure><h2 id="2024-0810"><a href="#2024-0810" class="headerlink" title="2024-0810"></a>2024-0810</h2><h3 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h3><p>⬜ 找老师看修改意见<br>⬜ 修改第 2 篇论文布局<br>✅ 测试 damp 与 qrdamp 求解器<br>✅ 计算转速对特征值的影响<br>⬜ 计算最后一个算例<br>✅ 修改第 1 篇论文 Word 乱码</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol><li>完成了部分计划</li></ol><h2 id="2024-0811"><a href="#2024-0811" class="headerlink" title="2024-0811"></a>2024-0811</h2><h3 id="计划-1"><a href="#计划-1" class="headerlink" title="计划"></a>计划</h3><p>✅ 找老师看修改意见<br>⬜ 修改第 2 篇论文布局<br>⬜ 计算最后一个算例</p><h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><ol><li>干项目+1 下午</li></ol><h2 id="2024-0812"><a href="#2024-0812" class="headerlink" title="2024-0812"></a>2024-0812</h2><h3 id="计划-2"><a href="#计划-2" class="headerlink" title="计划"></a>计划</h3><p>✅ 修改审稿意见<br>⬜ 计算最后一个算例：KK 不正定</p><h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h3><ol><li>干项目+1 下午</li><li>今天 WQ 师兄生日，去吃了俄餐</li></ol><h2 id="2024-0813"><a href="#2024-0813" class="headerlink" title="2024-0813"></a>2024-0813</h2><p>✅ 找老师看修改意见<br>✅ 验证 ANSYS 模型在 G&#x2F;S&#x2F;Spin 以及 1000 转速下特征值差距</p><h3 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h3><ol><li>paper-1 回复意见基本完成</li><li>不用纠结原算例 KK 不正定的问题了</li></ol><h2 id="2024-0814"><a href="#2024-0814" class="headerlink" title="2024-0814"></a>2024-0814</h2><p>⬜paper_2 算例 3 使用径向排列的多级结构</p><h2 id="2024-0815"><a href="#2024-0815" class="headerlink" title="2024-0815"></a>2024-0815</h2><p>⬜ 检查完 paper1 的回复意见</p>]]></content>
     
     
       
@@ -105,7 +132,7 @@
     <published>2024-07-27T16:00:00.000Z</published>
     <updated>2024-07-27T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="调整样式显示顺序"><a href="#调整样式显示顺序" class="headerlink" title="调整样式显示顺序"></a>调整样式显示顺序</h2><ol><li>打开样式，Ctrl+Shift+Alt+S，</li><li>点击管理样式</li><li>点击推荐—依靠上移，下移，指定值来调整样式的顺序</li></ol><p>补充：这里也可以控制一个样式是否显示在样式栏里面【显示&#x2F;使用前隐藏&#x2F;隐藏】</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407281416959.png#errorMessage=unknown%20error&id=LW0zU&originHeight=862&originWidth=1130&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="调整样式显示顺序"><a href="#调整样式显示顺序" class="headerlink" title="调整样式显示顺序"></a>调整样式显示顺序</h2><ol><li>打开样式，Ctrl+Shift+Alt+S，</li><li>点击管理样式</li><li>点击推荐—依靠上移，下移，指定值来调整样式的顺序</li></ol><p>补充：这里也可以控制一个样式是否显示在样式栏里面【显示&#x2F;使用前隐藏&#x2F;隐藏】</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407281416959.png#errorMessage=unknown%20error&id=LW0zU&originHeight=862&originWidth=1130&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p><h2 id="设置标题序号-多级列表"><a href="#设置标题序号-多级列表" class="headerlink" title="设置标题序号&#x2F;多级列表"></a>设置标题序号&#x2F;多级列表</h2><ol><li>点击多级列表—点击定义新的多级列表</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408141106594.png#errorMessage=unknown%20error&id=MjCxd&originHeight=382&originWidth=1176&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p><ol start="2"><li>点击更多</li><li>循环下图中的 234 步骤，分别为各个标题设置级别与序号</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408141108688.png#errorMessage=unknown%20error&id=TzNVo&originHeight=864&originWidth=898&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none"></p>]]></content>
     
     
       
@@ -533,36 +560,6 @@
     <category term="python" scheme="https://19970622.xyz/tags/python/"/>
     
     <category term="pycharm" scheme="https://19970622.xyz/tags/pycharm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python推送消息到企业微信</title>
-    <link href="https://19970622.xyz/posts/45582/"/>
-    <id>https://19970622.xyz/posts/45582/</id>
-    <published>2024-03-14T16:00:00.000Z</published>
-    <updated>2024-03-14T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="创建团队与机器人"><a href="#创建团队与机器人" class="headerlink" title="创建团队与机器人"></a>创建团队与机器人</h2><ol><li>手机下载企业微信—设置—全新创建企业</li><li>个人创建团队—输入团队名称与姓名</li><li>全员群—设置—群机器人—添加—新建—输入机器人名字—添加—复制 Webhook 地址待用</li></ol><h2 id="Python-发送消息到机器人"><a href="#Python-发送消息到机器人" class="headerlink" title="Python 发送消息到机器人"></a>Python 发送消息到机器人</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">def send_msg(msg):</span><br><span class="line">webhook=<span class="string">&#x27;&#x27;</span>  # url换成自己群机器人的Webhook</span><br><span class="line">data=&#123;</span><br><span class="line"><span class="string">&#x27;msgtype&#x27;</span>:<span class="string">&#x27;text&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;text&#x27;</span>:&#123;</span><br><span class="line"><span class="string">&#x27;content&#x27;</span>:msg</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">res=requests.post(webhook,json=data)</span><br><span class="line"><span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">res = send_msg(<span class="string">&quot;https://19970622.xyz/&quot;</span>)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;创建团队与机器人&quot;&gt;&lt;a href=&quot;#创建团队与机器人&quot; class=&quot;headerlink&quot; title=&quot;创建团队与机器人&quot;&gt;&lt;/a&gt;创建团队与机器人&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;手机下载企业微信—设置—全新创建企业&lt;/li&gt;
-&lt;li&gt;个人创建团队—输入团队名</summary>
-      
-    
-    
-    
-    <category term="python" scheme="https://19970622.xyz/categories/python/"/>
-    
-    
-    <category term="python" scheme="https://19970622.xyz/tags/python/"/>
-    
-    <category term="企业微信" scheme="https://19970622.xyz/tags/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1/"/>
-    
-    <category term="自动化" scheme="https://19970622.xyz/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
   </entry>
   
