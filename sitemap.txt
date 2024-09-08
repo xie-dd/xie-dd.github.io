@@ -3,6 +3,7 @@ https://19970622.xyz/google3362a95caf5dfbd9.html
 https://19970622.xyz/categories/index.html
 https://19970622.xyz/tags/index.html
 https://19970622.xyz/404.html
+https://19970622.xyz/posts/145910/
 https://19970622.xyz/posts/194059/
 https://19970622.xyz/posts/212433/
 https://19970622.xyz/posts/191659/
@@ -76,6 +77,7 @@ https://19970622.xyz/tags/gitee/
 https://19970622.xyz/tags/hypermesh/
 https://19970622.xyz/tags/matlab/
 https://19970622.xyz/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/
+https://19970622.xyz/tags/sound/
 https://19970622.xyz/tags/%E9%82%AE%E4%BB%B6/
 https://19970622.xyz/tags/ug/
 https://19970622.xyz/tags/nastran/

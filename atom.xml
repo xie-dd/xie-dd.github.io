@@ -6,7 +6,7 @@
   <link href="https://19970622.xyz/atom.xml" rel="self"/>
   
   <link href="https://19970622.xyz/"/>
-  <updated>2024-09-02T16:00:00.000Z</updated>
+  <updated>2024-09-06T16:00:00.000Z</updated>
   <id>https://19970622.xyz/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Matlab发声函数sound</title>
+    <link href="https://19970622.xyz/posts/145910/"/>
+    <id>https://19970622.xyz/posts/145910/</id>
+    <published>2024-09-06T16:00:00.000Z</published>
+    <updated>2024-09-06T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><ol><li><a href="https://blog.csdn.net/qq_36002089/article/details/128738885">Matlab 发声函数 sound 问题_matlab sound-CSDN 博客</a></li><li>Matlab 官方文档: <a href="https://www.mathworks.com/help/matlab/ref/sound.html">Convert matrix of signal data to sound - MATLAB sound</a></li></ol><h2 id="sound"><a href="#sound" class="headerlink" title="sound"></a>sound</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a><font style="color:rgb(64, 64, 64);">语法</font></h3><p><code>[sound(y)](https://localhost:31516/static/help/matlab/ref/sound.html?snc=6S8IQO&amp;searchsource=mw&amp;container=jshelpbrowser#d123e1201482)</code></p><p><code>[sound(y,Fs)](https://localhost:31516/static/help/matlab/ref/sound.html?snc=6S8IQO&amp;searchsource=mw&amp;container=jshelpbrowser#d123e1201497)</code></p><p><code>[sound(y,Fs,nBits)](https://localhost:31516/static/help/matlab/ref/sound.html?snc=6S8IQO&amp;searchsource=mw&amp;container=jshelpbrowser#d123e1201517)</code></p><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a><font style="color:rgb(64, 64, 64);">说明</font></h3><p><code>sound([y](https://localhost:31516/static/help/matlab/ref/sound.html?snc=6S8IQO&amp;searchsource=mw&amp;container=jshelpbrowser#btj60o3-1_sep_shared-y))</code><font style="color:rgb(64, 64, 64);"> 以默认采样率 8192 赫兹向扬声器发送音频信号 </font><code>y</code></p><p><code>sound([y](https://localhost:31516/static/help/matlab/ref/sound.html?snc=6S8IQO&amp;searchsource=mw&amp;container=jshelpbrowser#btj60o3-1_sep_shared-y),[Fs](https://localhost:31516/static/help/matlab/ref/sound.html?snc=6S8IQO&amp;searchsource=mw&amp;container=jshelpbrowser#btj60o3-1_sep_shared-Fs))</code><font style="color:rgb(64, 64, 64);"> 以采样率 </font><code>Fs</code><font style="color:rgb(64, 64, 64);"> 向扬声器发送音频信号 </font><code>y</code></p><p><code>sound([y](https://localhost:31516/static/help/matlab/ref/sound.html?snc=6S8IQO&amp;searchsource=mw&amp;container=jshelpbrowser#btj60o3-1_sep_shared-y),[Fs](https://localhost:31516/static/help/matlab/ref/sound.html?snc=6S8IQO&amp;searchsource=mw&amp;container=jshelpbrowser#btj60o3-1_sep_shared-Fs),[nBits](https://localhost:31516/static/help/matlab/ref/sound.html?snc=6S8IQO&amp;searchsource=mw&amp;container=jshelpbrowser#btj60o3-1_sep_shared-nBits))</code><font style="color:rgb(64, 64, 64);"> 对音频信号 </font><code>y</code><font style="color:rgb(64, 64, 64);"> 使用 </font><code>nBits</code><font style="color:rgb(64, 64, 64);"> 的采样位数</font></p><p><font style="color:rgb(64, 64, 64);"></font></p><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a><font style="color:rgb(64, 64, 64);">示例</font></h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 锣声</span></span><br><span class="line">load handel</span><br><span class="line">sound(y,Fs)</span><br><span class="line"></span><br><span class="line"><span class="comment">% 笑声</span></span><br><span class="line">load laughter</span><br><span class="line">sound(y,Fs)</span><br><span class="line"></span><br><span class="line"><span class="comment">%鸟声</span></span><br><span class="line">load chirp</span><br><span class="line">sound(y,Fs)</span><br><span class="line"></span><br><span class="line"><span class="comment">%qiu-pa</span></span><br><span class="line">load splat</span><br><span class="line">sound(y,Fs)</span><br><span class="line"></span><br><span class="line"><span class="comment">%火车</span></span><br><span class="line">load train</span><br><span class="line">sound(y,Fs)</span><br><span class="line"></span><br><span class="line"><span class="comment">% 播放 Hallelujah Chorus</span></span><br><span class="line">load handel.mat;</span><br><span class="line">sound(y, Fs);</span><br><span class="line"></span><br><span class="line"><span class="comment">% 以录制的采样率的两倍播放 Hallelujah Chorus</span></span><br><span class="line">load handel.mat;</span><br><span class="line">sound(y, <span class="number">2</span>*Fs);</span><br></pre></td></tr></table></figure><p>播放 do，re，mi，fa，so，la，ti</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fs=<span class="number">44100</span>;</span><br><span class="line">t=<span class="number">0</span>: <span class="number">1</span>/fs: <span class="number">0.5</span>;</span><br><span class="line">do=<span class="built_in">sin</span>(<span class="number">2</span>*<span class="built_in">pi</span>*<span class="number">261.63</span> *t);</span><br><span class="line">re=<span class="built_in">sin</span>(<span class="number">2</span>*<span class="built_in">pi</span>*<span class="number">293.66</span> *t);</span><br><span class="line">mi=<span class="built_in">sin</span>(<span class="number">2</span>*<span class="built_in">pi</span>*<span class="number">329.63</span> *t);</span><br><span class="line">fa=<span class="built_in">sin</span>(<span class="number">2</span>*<span class="built_in">pi</span>*<span class="number">349.23</span> *t);</span><br><span class="line">so=<span class="built_in">sin</span>(<span class="number">2</span>*<span class="built_in">pi</span>*<span class="number">392.00</span> *t);</span><br><span class="line">la=<span class="built_in">sin</span>(<span class="number">2</span>*<span class="built_in">pi</span>*<span class="number">440.00</span> *t);</span><br><span class="line">ti=<span class="built_in">sin</span>(<span class="number">2</span>*<span class="built_in">pi</span>*<span class="number">493.88</span> *t);</span><br><span class="line">Cscale=[do,re,mi,fa,so,la,ti];</span><br><span class="line">sound(Cscale,fs)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;资料&quot;&gt;&lt;a href=&quot;#资料&quot; class=&quot;headerlink&quot; title=&quot;资料&quot;&gt;&lt;/a&gt;资料&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/qq_36002089/article/details/12873</summary>
+      
+    
+    
+    
+    <category term="编程语言" scheme="https://19970622.xyz/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+    <category term="matlab" scheme="https://19970622.xyz/tags/matlab/"/>
+    
+    <category term="sound" scheme="https://19970622.xyz/tags/sound/"/>
+    
+  </entry>
   
   <entry>
     <title>UG使用入门教程</title>
@@ -528,33 +555,6 @@
     <category term="git" scheme="https://19970622.xyz/tags/git/"/>
     
     <category term="sourcetree" scheme="https://19970622.xyz/tags/sourcetree/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>drawio使用指南</title>
-    <link href="https://19970622.xyz/posts/28932/"/>
-    <id>https://19970622.xyz/posts/28932/</id>
-    <published>2024-04-13T16:00:00.000Z</published>
-    <updated>2024-04-13T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>浏览器在线使用：<a href="https://app.diagrams.net/">draw.io</a></p><p>安装包&#x2F;绿色安装包离线使用：<a href="https://github.com/jgraph/drawio-desktop/releases">https://github.com/jgraph/drawio-desktop/releases</a></p><p>蓝奏云转存：<a href="https://xdd1997.lanzoub.com/ikkyh1a8w2ti">https://xdd1997.lanzoub.com/ikkyh1a8w2ti</a>（不是最新版本）</p><h2 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h2><h3 id="连接方式"><a href="#连接方式" class="headerlink" title="连接方式"></a>连接方式</h3><blockquote><p>视频教程：<a href="https://www.bilibili.com/video/BV1i24y1C7fU">https://www.bilibili.com/video/BV1i24y1C7fU</a> 从 05 分 24 秒开始</p></blockquote><p>框选图形，会发现有些连接点是<font style="background-color:#74B602;">绿色</font>，有些连接点是<font style="background-color:#81BBF8;">蓝色</font>。</p><ul><li><font style="background-color:#74B602;">绿色</font>连接时，移动方框连接点的位置是锁死的，不能自动更改连接位置</li><li><font style="background-color:#81BBF8;">蓝色</font>连接是，移动方框连接点的位置会发生变化（可自动选择上下左右边的中点）</li></ul><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202404140934943.png"></p><p><strong>如何获得绿色连接点&#x2F;蓝色连接点?</strong></p><ul><li>从方框绿色点拉出的线，连接线<code>左端</code>是<code>&lt;font style=&quot;background-color:#74B602;&quot;&gt;绿色&lt;/font&gt;</code></li><li>从方框蓝色箭头点拉出的线，连接线<code>左端</code>是<code>&lt;font style=&quot;background-color:#81BBF8;&quot;&gt;蓝色&lt;/font&gt;</code></li><li>终点放到方框的绿色点上，连接线<code>右端</code>是<code>&lt;font style=&quot;background-color:#8CCF17;&quot;&gt;绿色&lt;/font&gt;</code></li><li>终点放到方框出现蓝色阴影时，连接线<code>右端</code>是<code>&lt;font style=&quot;background-color:#81BBF8;&quot;&gt;蓝色&lt;/font&gt;</code></li></ul><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202404141002571.png"></p><h3 id="如何获得高清图片"><a href="#如何获得高清图片" class="headerlink" title="如何获得高清图片"></a>如何获得高清图片</h3><h4 id="方法-1"><a href="#方法-1" class="headerlink" title="方法 1"></a>方法 1</h4><ol><li>导出 PDF</li><li>打开 PDF—缩放到合适位置—截图</li></ol><h4 id="方法-2"><a href="#方法-2" class="headerlink" title="方法 2"></a>方法 2</h4><p>导出 SVG 矢量图</p><h4 id="方法-3"><a href="#方法-3" class="headerlink" title="方法 3"></a>方法 3</h4><ol><li>文件—导出—PNG—缩放 <code>1000%</code></li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202404301905014.png"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;使用方式&quot;&gt;&lt;a href=&quot;#使用方式&quot; class=&quot;headerlink&quot; title=&quot;使用方式&quot;&gt;&lt;/a&gt;使用方式&lt;/h2&gt;&lt;p&gt;浏览器在线使用：&lt;a href=&quot;https://app.diagrams.net/&quot;&gt;draw.io&lt;/a&gt;&lt;/p&gt;
-&lt;p</summary>
-      
-    
-    
-    
-    <category term="未分类" scheme="https://19970622.xyz/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-    
-    <category term="drawio" scheme="https://19970622.xyz/tags/drawio/"/>
-    
-    <category term="流程图" scheme="https://19970622.xyz/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/"/>
     
   </entry>
   
