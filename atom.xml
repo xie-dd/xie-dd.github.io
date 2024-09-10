@@ -6,7 +6,7 @@
   <link href="https://19970622.xyz/atom.xml" rel="self"/>
   
   <link href="https://19970622.xyz/"/>
-  <updated>2024-09-06T16:00:00.000Z</updated>
+  <updated>2024-09-07T16:00:00.000Z</updated>
   <id>https://19970622.xyz/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PyQt的线程类QThread与计时器类Qtimer</title>
+    <link href="https://19970622.xyz/posts/142701/"/>
+    <id>https://19970622.xyz/posts/142701/</id>
+    <published>2024-09-07T16:00:00.000Z</published>
+    <updated>2024-09-07T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>pyqt5 使用多线程避免程序假死 - 蔚蓝色の天空 - 博客园</p><p><a href="https://www.cnblogs.com/future-dream/p/14749132.html">https://www.cnblogs.com/future-dream/p/14749132.html</a></p><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>在下面这样一个界面，我们希望实现点击<code>按钮1</code>之后，在标签上依次打印 1,2,3,4，…</p><p><img src="https://cdn.nlark.com/yuque/0/2024/png/1488614/1725951830020-5312a8b9-5e2a-4ceb-bd14-20568e96e412.png"></p><p>下面的代码无法实现，因为单线程的原因，只会在标签上打印最后一个数字，且等待时间会出现意思崩溃的假象，因此我们需要使用多线程。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PyQt5.Qt <span class="keyword">import</span> QApplication, QWidget, QPushButton, QLabel</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyWinClass</span>(<span class="title class_ inherited__">QWidget</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line"></span><br><span class="line">        self.btn_1 = QPushButton(<span class="string">&#x27;按钮1&#x27;</span>, self)</span><br><span class="line">        self.btn_1.move(<span class="number">120</span>, <span class="number">80</span>)</span><br><span class="line">        self.btn_1.clicked.connect(self.btn_1_click)</span><br><span class="line"></span><br><span class="line">        self.label_1 = QLabel(<span class="string">&#x27;标签啊标签&#x27;</span>, self)</span><br><span class="line">        self.label_1.move(<span class="number">120</span>, <span class="number">120</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">btn_1_click</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">for</span> ii <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>):</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            self.label_1.setText(<span class="built_in">str</span>(ii))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    w = MyWinClass()</span><br><span class="line">    w.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><h2 id="QThread"><a href="#QThread" class="headerlink" title="QThread"></a>QThread</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PyQt5.Qt <span class="keyword">import</span> QApplication, QWidget, QPushButton, QLabel</span><br><span class="line"><span class="keyword">from</span> PyQt5.Qt <span class="keyword">import</span> QThread, pyqtSignal</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Thread_1</span>(<span class="title class_ inherited__">QThread</span>):</span><br><span class="line">    signal = pyqtSignal(<span class="built_in">str</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">run</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">for</span> ii <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>):</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">            self.signal.emit(<span class="built_in">str</span>(ii))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyWinClass</span>(<span class="title class_ inherited__">QWidget</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__()</span><br><span class="line"></span><br><span class="line">        self.btn_1 = QPushButton(<span class="string">&#x27;按钮1&#x27;</span>, self)</span><br><span class="line">        self.btn_1.move(<span class="number">120</span>, <span class="number">80</span>)</span><br><span class="line">        self.btn_1.clicked.connect(self.btn_1_click)</span><br><span class="line"></span><br><span class="line">        self.label_1 = QLabel(<span class="string">&#x27;标签啊标签&#x27;</span>, self)</span><br><span class="line">        self.label_1.move(<span class="number">120</span>, <span class="number">120</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">btn_1_click</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># 实例化一个线程-绑定处理线程信号的函数</span></span><br><span class="line">        self.thread = Thread_1()</span><br><span class="line">        self.thread.signal.connect(self.show_msg)</span><br><span class="line">        self.thread.start()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">show_msg</span>(<span class="params">self, str00</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot; 处理线程信号的函数 &quot;&quot;&quot;</span></span><br><span class="line">        self.label_1.setText(str00)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    app = QApplication(sys.argv)</span><br><span class="line">    w = MyWinClass()</span><br><span class="line">    w.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure><ol><li>建立一个继承 QThread 的类 Thread_1，重写 run 函数。在 run 函数中编写耗时或者单线程不便处理的函数，让<code>run</code>函数执行完毕后发出一个信号 signal，在<code>MyWinClass</code>里面编写处理这个信号的函数。</li><li>整个流程的逻辑是：(1) 在主程序中实例化一个 Thread_1 类的线程对象<code>self.thread</code>，(2) 绑定<code>self.thread</code>的槽的处理函数， (3) 执行<code>self.thread.start()</code>，就会执行<code>self.thread.run()</code>，然后发出信号，调用处理槽的函数。</li><li>QThread 缺点是不能自己选择终止进程，也可能是我没找到。对于间隔执行的任务，建议使用计时器<font style="color:rgb(34, 34, 38);">Qtimer，可以自己选择终止任务。</font></li></ol><h2 id="Qtimer"><a href="#Qtimer" class="headerlink" title="Qtimer"></a><font style="color:rgb(34, 34, 38);">Qtimer</font></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Step1 导入模块</span></span><br><span class="line"><span class="keyword">from</span> PyQt5.QtCore <span class="keyword">import</span> QTime</span><br><span class="line"></span><br><span class="line"><span class="comment"># Step2 在初始化的函数里面添加</span></span><br><span class="line">self.time = QTimer(self)                       <span class="comment"># 设置一个计时器</span></span><br><span class="line">self.time.timeout.connect(self.YourFunction)   <span class="comment"># timeout事件的绑定</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Step3 在开始按钮添加</span></span><br><span class="line">self.time.start(<span class="number">1000</span>)  <span class="comment"># 计时开始,单位毫秒</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Step4 在结束按钮添加</span></span><br><span class="line">self.time.stop()  <span class="comment"># 计时结束，只有开始状态才能结束</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;资料&quot;&gt;&lt;a href=&quot;#资料&quot; class=&quot;headerlink&quot; title=&quot;资料&quot;&gt;&lt;/a&gt;资料&lt;/h2&gt;&lt;p&gt;pyqt5 使用多线程避免程序假死 - 蔚蓝色の天空 - 博客园&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.c</summary>
+      
+    
+    
+    
+    <category term="python" scheme="https://19970622.xyz/categories/python/"/>
+    
+    
+    <category term="python" scheme="https://19970622.xyz/tags/python/"/>
+    
+    <category term="QThread" scheme="https://19970622.xyz/tags/QThread/"/>
+    
+    <category term="Qtimer" scheme="https://19970622.xyz/tags/Qtimer/"/>
+    
+  </entry>
   
   <entry>
     <title>Matlab发声函数sound</title>
@@ -529,32 +558,6 @@
     <category term="mkdocs" scheme="https://19970622.xyz/tags/mkdocs/"/>
     
     <category term="文档" scheme="https://19970622.xyz/tags/%E6%96%87%E6%A1%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sourcetree-多人协作</title>
-    <link href="https://19970622.xyz/posts/154515/"/>
-    <id>https://19970622.xyz/posts/154515/</id>
-    <published>2024-05-17T16:00:00.000Z</published>
-    <updated>2024-05-17T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h2><p>Git-2.45.1-64-bit.exe 蓝奏云：<a href="https://xdd1997.lanzoue.com/iCsEt1z4cbze">https://xdd1997.lanzoue.com/iCsEt1z4cbze</a></p><p>SourceTreeSetup-3.4.18.exe 蓝奏云：<a href="https://xdd1997.lanzoue.com/indJQ1z4chuf">https://xdd1997.lanzoue.com/indJQ1z4chuf</a></p><h2 id="Step1-准备修改前"><a href="#Step1-准备修改前" class="headerlink" title="Step1 准备修改前"></a>Step1 准备修改前</h2><p>01：点击<strong>获取</strong>按钮—点击<strong>History</strong>, 查看远程仓库状况</p><p>02：点击<strong>拉取</strong>按钮—点击<strong>History</strong>, 使本地文件与远程仓库相同</p><h2 id="Step2-修改代码"><a href="#Step2-修改代码" class="headerlink" title="Step2 修改代码"></a>Step2 修改代码</h2><p>更新自己的代码</p><h2 id="Step2-修改代码后"><a href="#Step2-修改代码后" class="headerlink" title="Step2 修改代码后"></a>Step2 修改代码后</h2><p>点击<strong>获取</strong>—点击<strong>History</strong>, 查看远程仓库状况</p><h4 id="分析图谱"><a href="#分析图谱" class="headerlink" title="分析图谱"></a>分析图谱</h4><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408092125869.png"></p><p>本图谱表明：</p><ul><li>大家的代码在<code>-2</code>版本时是相同的，然后有人基于<code>-2</code>版本修改后提交了<code>-3</code>版本，然后又有人基于<code>-3</code>版本修改后提交了<code>-4</code>版本。而你基于<code>-2</code>版本进行了修改，现在准备提交。</li><li>所以，有可能你们的修改是冲突的（冲突表示修改了同一个文件）</li><li>你需要点击图谱上的<code>-3</code>版本与<code>-4</code>版本，看看他们修改的文件与你修改的文件<strong>有没有</strong>冲突</li></ul><h4 id="没有冲突"><a href="#没有冲突" class="headerlink" title="没有冲突"></a>没有冲突</h4><ul><li>点击<strong>拉取</strong>—本地其他文件被远程替代，但是你修改的文件不会被替代</li><li>点击<strong>文件状态</strong>—点击<strong>暂存所有</strong>—写上标注—点击右下角<strong>提交</strong>—点击<strong>推送</strong>—确认</li></ul><h4 id="确有冲突：-如下图所示）"><a href="#确有冲突：-如下图所示）" class="headerlink" title="确有冲突：(如下图所示）"></a>确有冲突：(如下图所示）</h4><ul><li>点击<strong>文件状态</strong>—点击<strong>取消暂存所有</strong></li><li>点击冲突的文件—右键—移覆文件改动（这表示让远程文件覆盖本地，因此你需要记住你的改动）</li><li>点击<strong>文件状态</strong>—点击<strong>暂存所有</strong>—写上标注—点击右下角<strong>提交</strong>—确认</li><li>此时可以再修改那些原本冲突的文件—再提交与推送</li></ul><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202405182048016.png"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;软件下载&quot;&gt;&lt;a href=&quot;#软件下载&quot; class=&quot;headerlink&quot; title=&quot;软件下载&quot;&gt;&lt;/a&gt;软件下载&lt;/h2&gt;&lt;p&gt;Git-2.45.1-64-bit.exe 蓝奏云：&lt;a href=&quot;https://xdd1997.lanzoue.com</summary>
-      
-    
-    
-    
-    <category term="git" scheme="https://19970622.xyz/categories/git/"/>
-    
-    
-    <category term="git" scheme="https://19970622.xyz/tags/git/"/>
-    
-    <category term="sourcetree" scheme="https://19970622.xyz/tags/sourcetree/"/>
     
   </entry>
   
