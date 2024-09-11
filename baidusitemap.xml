@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://19970622.xyz/posts/160701/</loc>
+    <lastmod>2024-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://19970622.xyz/posts/104026/</loc>
+    <lastmod>2024-09-10</lastmod>
+  </url>
+  <url>
     <loc>https://19970622.xyz/posts/142701/</loc>
     <lastmod>2024-09-07</lastmod>
   </url>
@@ -31,10 +39,6 @@
   <url>
     <loc>https://19970622.xyz/posts/105525/</loc>
     <lastmod>2024-08-22</lastmod>
-  </url>
-  <url>
-    <loc>https://19970622.xyz/posts/160701/</loc>
-    <lastmod>2024-08-13</lastmod>
   </url>
   <url>
     <loc>https://19970622.xyz/posts/serverless/</loc>
