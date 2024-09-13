@@ -11,15 +11,6 @@
   </url>
   
   <url>
-    <loc>https://19970622.xyz/baidu_verify_codeva-TIu5oC7xqo.html</loc>
-    
-    <lastmod>2024-09-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://19970622.xyz/google3362a95caf5dfbd9.html</loc>
     
     <lastmod>2024-09-13</lastmod>
@@ -39,6 +30,15 @@
   
   <url>
     <loc>https://19970622.xyz/tags/index.html</loc>
+    
+    <lastmod>2024-09-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://19970622.xyz/baidu_verify_codeva-TIu5oC7xqo.html</loc>
     
     <lastmod>2024-09-13</lastmod>
     
@@ -634,20 +634,6 @@
   </url>
   
   <url>
-    <loc>https://19970622.xyz/tags/github/</loc>
-    <lastmod>2024-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://19970622.xyz/tags/github-action/</loc>
-    <lastmod>2024-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://19970622.xyz/tags/git/</loc>
     <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -656,6 +642,20 @@
   
   <url>
     <loc>https://19970622.xyz/tags/error/</loc>
+    <lastmod>2024-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://19970622.xyz/tags/github/</loc>
+    <lastmod>2024-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://19970622.xyz/tags/github-action/</loc>
     <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -865,14 +865,14 @@
   </url>
   
   <url>
-    <loc>https://19970622.xyz/tags/latex/</loc>
+    <loc>https://19970622.xyz/tags/vscode/</loc>
     <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://19970622.xyz/tags/vscode/</loc>
+    <loc>https://19970622.xyz/tags/latex/</loc>
     <lastmod>2024-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
