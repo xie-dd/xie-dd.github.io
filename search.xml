@@ -485,13 +485,13 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> gitee </tag>
             
-            <tag> 企业微信 </tag>
+            <tag> github </tag>
             
             <tag> 钉钉 </tag>
+            
+            <tag> 企业微信 </tag>
             
             <tag> 机器人 </tag>
             
@@ -570,11 +570,11 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> git </tag>
             
             <tag> gitee </tag>
+            
+            <tag> github </tag>
             
             <tag> sourcetree </tag>
             
@@ -1160,11 +1160,11 @@
       
         <tags>
             
-            <tag> github </tag>
-            
             <tag> hexo </tag>
             
             <tag> gitee </tag>
+            
+            <tag> github </tag>
             
         </tags>
       
@@ -1554,11 +1554,11 @@
       
         <tags>
             
+            <tag> hexo </tag>
+            
             <tag> github </tag>
             
             <tag> github action </tag>
-            
-            <tag> hexo </tag>
             
             <tag> github page </tag>
             
