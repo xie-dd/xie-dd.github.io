@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>HyperMesh-Python-API | 有限元分析与编程</title><meta name="author" content="Xdd"><meta name="copyright" content="Xdd"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="no-referrer"><meta name="description" content="资料官方文档：https:&#x2F;&#x2F;help.altair.com&#x2F;hwdesktop&#x2F;pythonapi&#x2F;hypermesh.html 我的理解Session and Model class此功能允许用户在单个会话中使用多个 HyperMesh 模型，并通过多窗口布局将它们并排组织在单个页面上。设置了 Session 和 Model 两个类来提供管理此场景的机制。 对于我们常用的情境，只有一个模型，比">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HyperMesh-Python-API">
+<meta property="og:url" content="https://19970622.xyz/posts/104026/index.html">
+<meta property="og:site_name" content="有限元分析与编程">
+<meta property="og:description" content="资料官方文档：https:&#x2F;&#x2F;help.altair.com&#x2F;hwdesktop&#x2F;pythonapi&#x2F;hypermesh.html 我的理解Session and Model class此功能允许用户在单个会话中使用多个 HyperMesh 模型，并通过多窗口布局将它们并排组织在单个页面上。设置了 Session 和 Model 两个类来提供管理此场景的机制。 对于我们常用的情境，只有一个模型，比">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202409112117869.jpg">
+<meta property="article:published_time" content="2024-09-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-10T16:00:00.000Z">
+<meta property="article:author" content="Xdd">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="hypermesh">
+<meta property="article:tag" content="tcl">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202409112117869.jpg"><link rel="shortcut icon" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310230930281.png"><link rel="canonical" href="https://19970622.xyz/posts/104026/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"NQD8RF9R39","apiKey":"3d4e0abab4490c03a3480485272bd1f7","indexName":"blog_hexo","hits":{"per_page":10},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'HyperMesh-Python-API',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-11 00:00:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/source/css/fonts/font.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="有限元分析与编程" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202409112117869.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="有限元分析与编程"><span class="site-name">有限元分析与编程</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">HyperMesh-Python-API</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-09-10T16:00:00.000Z" title="发表于 2024-09-11 00:00:00">2024-09-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-10T16:00:00.000Z" title="更新于 2024-09-11 00:00:00">2024-09-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/CAE/">CAE</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="HyperMesh-Python-API"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>官方文档：<a target="_blank" rel="noopener" href="https://help.altair.com/hwdesktop/pythonapi/hypermesh.html">https://help.altair.com/hwdesktop/pythonapi/hypermesh.html</a></p>
+<h2 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h2><h3 id="Session-and-Model-class"><a href="#Session-and-Model-class" class="headerlink" title="Session and Model class"></a>Session and Model class</h3><p>此功能允许用户在单个会话中使用多个 HyperMesh 模型，并通过多窗口布局将它们并排组织在单个页面上。设置了 Session 和 Model 两个类来提供管理此场景的机制。</p>
+<p>对于我们常用的情境，只有一个模型，比较简单。</p>
+<p><code>hm.Session()</code></p>
+<p><code>hm.Model()</code></p>
+<h3 id="Entity-Classes"><a href="#Entity-Classes" class="headerlink" title="Entity Classes"></a>Entity Classes</h3><p>每个 HyperMesh 实体类型(e.g. node, line, element, property)都由 hm.entities 模块中的相应类表示。因此，每个 HyperMesh 实体都可以表示为 Python 对象。所有的可用对象可以在下面网址查到：</p>
+<p><a target="_blank" rel="noopener" href="https://help.altair.com/hwdesktop/pythonapi/hypermesh/hm_entities.html#">https://help.altair.com/hwdesktop/pythonapi/hypermesh/hm_entities.html</a></p>
+<h3 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h3><p>在操作时各种命令都会有一个操作对象的范围，比如删除 1~10 号单元，复制所有结点等操作。这些对象的范围指定就需要使用 Collections 类。例如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">% 选择<span class="number">1</span>,<span class="number">2</span>号Component</span><br><span class="line">hm.Collection(model, ent.Component, [<span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line"></span><br><span class="line">% 选择<span class="built_in">id</span>=<span class="number">1</span>,<span class="number">2</span>的component里面的单元</span><br><span class="line">elems = hm.Collection(model, ent.Element, hm.Collection(m, ent.Component, [<span class="number">1</span>,<span class="number">2</span>]))</span><br><span class="line"></span><br><span class="line">% 特别的,如果需要所有单元,就不需要第<span class="number">3</span>项了</span><br><span class="line">elems = hm.Collection(model,ent.Element)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 空的选集</span></span><br><span class="line">empty_elem_col = hm.Collection(model,ent.Element,populate=<span class="literal">False</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>关于选集，有 4 个特别的函数: CollectionByAdjacent, CollectionByAttached, <strong>CollectionByDisplayed</strong>, CollectionByFace</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Collection of displayed elements</span></span><br><span class="line">elm_disp = hm.CollectionByDisplayed(model, ent.Element)</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询与修改函数"><a href="#查询与修改函数" class="headerlink" title="查询与修改函数"></a>查询与修改函数</h3><h4 id="Model-Class-Query-Functions"><a href="#Model-Class-Query-Functions" class="headerlink" title="Model Class Query Functions"></a><font style="color:rgb(34, 40, 50);">Model Class Query Functions</font></h4><p>所有可用的查询函数：<a target="_blank" rel="noopener" href="https://help.altair.com/hwdesktop/pythonapi/hypermesh/hm_query_funcs.html">https://help.altair.com/hwdesktop/pythonapi/hypermesh/hm_query_funcs.html</a></p>
+<p>查询函数使用说明：<a target="_blank" rel="noopener" href="https://help.altair.com/hwdesktop/pythonapi/hypermesh/hm_user_guide/hypermesh_funcs.html#query-functions">https://help.altair.com/hwdesktop/pythonapi/hypermesh/hm_user_guide&#x2F;hypermesh_funcs.html#query-functions</a></p>
+<blockquote>
+<p>所有 HyperMesh 函数都返回一个状态对象。大多数查询函数还返回一个结果对象。通过状态对象，您可以查看函数返回的消息以及告诉函数是否成功的状态。状态值 0 表示成功，非零值表示失败。</p>
+<p>查询函数的名称总是以“hm_”开头。它们的特点是，它们中的大多数除了返回状态对象外，还返回携带查询信息的结果对象。有两种类型的结果对象&#x2F;类——HmQueryResult 和 HmQueryResultList。</p>
+<p>HmQueryResult 是一种 HyperMesh 数据类型，默认情况下具有属性键<code>result.key</code>，该属性键返回携带函数返回的信息的所有属性的列表。</p>
+<p>HmQueryResultList 表示 HmQueryResult 对象的列表。<code>len(result)</code>,<code>result[0].key</code></p>
+</blockquote>
+<h4 id="Model-Class-Modify-Functions"><a href="#Model-Class-Modify-Functions" class="headerlink" title="Model Class Modify Functions"></a><font style="color:rgb(34, 40, 50);">Model Class Modify Functions</font></h4><p><a target="_blank" rel="noopener" href="https://help.altair.com/hwdesktop/pythonapi/hypermesh/hm_mod_funcs.html">https://help.altair.com/hwdesktop/pythonapi/hypermesh/hm_mod_funcs.html</a></p>
+<p>比如连直线，多个直线围成面，移动复制单元等</p>
+<h3 id="牛刀小试"><a href="#牛刀小试" class="headerlink" title="牛刀小试"></a>牛刀小试</h3><p>好，大致知识点就上面那些，下面我们要创建一个面并计算面积，步骤应该是：点-线-面-计算面积。</p>
+<p><strong>Step1: 创建 4 个角结点</strong></p>
+<p>要先找点的 Class, 好，找到了，叫<code>Nodes</code>, 下面是 Nodes 类的定义文档。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Node</span>(amodel: Model, *args, **kwargs)</span><br><span class="line"></span><br><span class="line">Parameters: 几乎所有的Entity Class都是这种格式</span><br><span class="line">amodel (Model) – HyperMesh model <span class="built_in">object</span>.</span><br><span class="line">args (<span class="built_in">dict</span>) – User can specify internal entity ID to create an entity <span class="built_in">object</span></span><br><span class="line">              <span class="keyword">for</span> an existing entity.</span><br><span class="line">kwargs (<span class="built_in">dict</span>) – <span class="type">Optional</span> name-value pair arguments defining attributes of a new entity.</span><br></pre></td></tr></table></figure>
+
+<p>根据文档，需要输入 Model 对象，还需要一些参数。args 是 ID，kwargs 是一些键值对。这些键值对需要去 DateName 里面找：<a target="_blank" rel="noopener" href="https://help.altair.com/hwdesktop/hwd/topics/reference/hm/data_names-nodes.htm">data_names-nodes.htm</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># creat node</span></span><br><span class="line"><span class="keyword">import</span> hm</span><br><span class="line"><span class="keyword">import</span> hm.entities <span class="keyword">as</span> ent</span><br><span class="line"></span><br><span class="line">model = hm.Model()</span><br><span class="line"></span><br><span class="line">nodeNew = ent.Node(model)</span><br><span class="line">nodeNew.localcoordinates =[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">nodeNew.<span class="built_in">id</span></span><br><span class="line">nodeNew.coordinates</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>下面创建四个 node</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hm</span><br><span class="line"><span class="keyword">import</span> hm.entities <span class="keyword">as</span> ent</span><br><span class="line"></span><br><span class="line">model = hm.Model()</span><br><span class="line"></span><br><span class="line">N1 = ent.Node(model)</span><br><span class="line">N1.localcoordinates =[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">N2 = ent.Node(model)</span><br><span class="line">N2.localcoordinates =[<span class="number">2</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">N3 = ent.Node(model)</span><br><span class="line">N3.localcoordinates =[<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>]</span><br><span class="line">N4 = ent.Node(model)</span><br><span class="line">N4.localcoordinates =[<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>Step2: 连直线</strong></p>
+<p>想着肯定是使用 Line Class, 再去找 Line 的 DataName: <a target="_blank" rel="noopener" href="https://help.altair.com/hwdesktop/hwd/topics/reference/hm/data_names-lines.htm">data_names-lines.htm</a>, 应该需要 startcoords 与 endcoords。实验一下：上面的 Line Class 好像不能创建直线。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hm</span><br><span class="line"><span class="keyword">import</span> hm.entities <span class="keyword">as</span> ent</span><br><span class="line">model = hm.Model()</span><br><span class="line">L1 = ent.Line(model)</span><br><span class="line"><span class="comment"># RuntimeError: Invalid uid</span></span><br></pre></td></tr></table></figure>
+
+<p>使用 Model 的修改函数可以，如下。但是 L1 不能直接拿到 id。可使用<code>hm_entitymaxid</code>查询并记录编号</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hm</span><br><span class="line"><span class="keyword">import</span> hm.entities <span class="keyword">as</span> ent</span><br><span class="line"></span><br><span class="line">model = hm.Model()</span><br><span class="line"></span><br><span class="line"><span class="comment"># *linecreatestraight x1 y1 z1 x2 y2 z2</span></span><br><span class="line">L1 = model.linecreatestraight(x1=<span class="number">0</span>,y1=<span class="number">0</span>,z1=<span class="number">0</span>, x2=<span class="number">2</span>,y2=<span class="number">0</span>,z2=<span class="number">0</span>)</span><br><span class="line">L2 = model.linecreatestraight(x1=<span class="number">2</span>,y1=<span class="number">0</span>,z1=<span class="number">0</span>, x2=<span class="number">2</span>,y2=<span class="number">1</span>,z2=<span class="number">0</span>)</span><br><span class="line">L3 = model.linecreatestraight(x1=<span class="number">2</span>,y1=<span class="number">1</span>,z1=<span class="number">0</span>, x2=<span class="number">0</span>,y2=<span class="number">1</span>,z2=<span class="number">0</span>)</span><br><span class="line">L4 = model.linecreatestraight(x1=<span class="number">0</span>,y1=<span class="number">1</span>,z1=<span class="number">0</span>, x2=<span class="number">0</span>,y2=<span class="number">0</span>,z2=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">status,result = model.hm_entitymaxid(ent.Line)</span><br><span class="line">L4_id = result.maxInternalID</span><br><span class="line"></span><br><span class="line">lines = hm.Collection(model, ent.Line)</span><br><span class="line"><span class="keyword">for</span> it <span class="keyword">in</span> lines:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Line ID:<span class="subst">&#123;it.<span class="built_in">id</span>&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(it.startcoords)</span><br><span class="line">    <span class="built_in">print</span>(it.endcoords)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;xdd&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>现在的问题是这些修改函数怎么能知道，最简单的方法还是在 HyperMesh 操作一遍，然后看 command.tcl 文件</p>
+</blockquote>
+<p><strong>Step3: 创建面</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hm</span><br><span class="line"><span class="keyword">import</span> hm.entities <span class="keyword">as</span> ent</span><br><span class="line"></span><br><span class="line">model = hm.Model()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建直线  *linecreatestraight x1 y1 z1 x2 y2 z2</span></span><br><span class="line">L1 = model.linecreatestraight(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>, <span class="number">2</span>,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line">L2 = model.linecreatestraight(<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>, <span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>)</span><br><span class="line">L3 = model.linecreatestraight(<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>, <span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>)</span><br><span class="line">L4 = model.linecreatestraight(<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>, <span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建选集</span></span><br><span class="line">lines = hm.Collection(model, ent.Line)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建面  *surfacesplineonlinesloop mark_id fill_gaps use_surfs options</span></span><br><span class="line">model.surfacesplineonlinesloop(lines,<span class="number">1</span>,<span class="number">1</span>,<span class="number">67</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看面积</span></span><br><span class="line">status,result = model.hm_entitymaxid(ent.Surface)</span><br><span class="line">face1_id = result.maxInternalID</span><br><span class="line">face1_class = ent.Surface(model, face1_id)</span><br><span class="line">face1_class.area</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><p>官方案例：<a target="_blank" rel="noopener" href="https://help.altair.com/hwdesktop/pythonapi/hypermesh/examples/hm_examples.html#">https://help.altair.com/hwdesktop/pythonapi/hypermesh/examples/hm_examples.html#</a></p>
+<h3 id="获取某-entity-最大编号"><a href="#获取某-entity-最大编号" class="headerlink" title="获取某 entity 最大编号"></a>获取某 entity 最大编号</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hm</span><br><span class="line"><span class="keyword">import</span> hm.entities <span class="keyword">as</span> ent</span><br><span class="line"></span><br><span class="line">model = hm.Model()</span><br><span class="line"></span><br><span class="line">N1 = ent.Node(model)</span><br><span class="line">N1.localcoordinates =[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">N2 = ent.Node(model)</span><br><span class="line">N2.localcoordinates =[<span class="number">2</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取结点最大编号</span></span><br><span class="line">status,result = model.hm_entitymaxid(ent.Node)</span><br><span class="line">result.maxInternalID</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在此强调：要善于使用 Tab 键</p>
+</blockquote>
+<h3 id="查看-X-号结点的坐标"><a href="#查看-X-号结点的坐标" class="headerlink" title="查看 X 号结点的坐标"></a>查看 X 号结点的坐标</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hm</span><br><span class="line"><span class="keyword">import</span> hm.entities <span class="keyword">as</span> ent</span><br><span class="line"></span><br><span class="line">model = hm.Model()</span><br><span class="line"><span class="built_in">id</span> = <span class="number">2</span></span><br><span class="line">node = ent.Node(model, <span class="built_in">id</span>)</span><br><span class="line">node.coordinates</span><br><span class="line">node.y</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建并指定材料与属性"><a href="#创建并指定材料与属性" class="headerlink" title="创建并指定材料与属性"></a>创建并指定材料与属性</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hm</span><br><span class="line"><span class="keyword">import</span> hm.entities <span class="keyword">as</span> ent</span><br><span class="line"></span><br><span class="line">model = hm.Model()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建材料</span></span><br><span class="line">mat1 = ent.Material(model)</span><br><span class="line">mat1.name = <span class="string">&quot;Steel&quot;</span></span><br><span class="line">mat1.cardimage = <span class="string">&quot;MAT1&quot;</span></span><br><span class="line">mat1.E = <span class="number">21e04</span></span><br><span class="line">mat1.Nu = <span class="number">0.3</span></span><br><span class="line">mat1.Rho = <span class="number">7850</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建属性,并为属性添加材料</span></span><br><span class="line">prop1 = ent.Property(model)</span><br><span class="line">prop1.name = <span class="string">&quot;Prop&quot;</span></span><br><span class="line">prop1.cardimage = <span class="string">&quot;PSOLID&quot;</span></span><br><span class="line">prop1.materialid = mat1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 为某个Component指定属性</span></span><br><span class="line">compID = <span class="number">5</span></span><br><span class="line">comp1 = ent.Component(model, compID)</span><br><span class="line">comp1.<span class="built_in">property</span> = prop1</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建一个矢量用于移动单元"><a href="#创建一个矢量用于移动单元" class="headerlink" title="创建一个矢量用于移动单元"></a>创建一个矢量用于移动单元</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hm</span><br><span class="line"><span class="keyword">import</span> hm.entities <span class="keyword">as</span> ent</span><br><span class="line"></span><br><span class="line">model = hm.Model()</span><br><span class="line"></span><br><span class="line">elems = hm.Collection(model,ent.Element)</span><br><span class="line">model.translatemark(collection=elems,vector_id=hm.hwTriple(<span class="number">0.0</span>,<span class="number">0.0</span>,<span class="number">1.0</span>),distance=<span class="number">500.0</span>)</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://19970622.xyz">Xdd</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://19970622.xyz/posts/104026/">https://19970622.xyz/posts/104026/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://19970622.xyz" target="_blank">有限元分析与编程</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/python/">python</a><a class="post-meta__tags" href="/tags/hypermesh/">hypermesh</a><a class="post-meta__tags" href="/tags/tcl/">tcl</a></div><div class="post_share"><div class="social-share" data-image="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202409112117869.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956863.png" target="_blank"><img class="post-qr-code-img" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956863.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956689.png" target="_blank"><img class="post-qr-code-img" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956689.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/191922/" title="FreeCAD界面及Python操作入门知识"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101927182.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">FreeCAD界面及Python操作入门知识</div></div></a></div><div class="next-post pull-right"><a href="/posts/142701/" title="PyQt的线程类QThread与计时器类Qtimer"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101927152.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">PyQt的线程类QThread与计时器类Qtimer</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/8412/" title="Anaconda新建并使用新环境"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310231638488.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-23</div><div class="title">Anaconda新建并使用新环境</div></div></a></div><div><a href="/posts/191922/" title="FreeCAD界面及Python操作入门知识"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101927182.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-12</div><div class="title">FreeCAD界面及Python操作入门知识</div></div></a></div><div><a href="/posts/142701/" title="PyQt的线程类QThread与计时器类Qtimer"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101927152.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-08</div><div class="title">PyQt的线程类QThread与计时器类Qtimer</div></div></a></div><div><a href="/posts/1043/" title="PySide6的入门配置"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403291056730.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-12</div><div class="title">PySide6的入门配置</div></div></a></div><div><a href="/posts/3180/" title="Pycharm如何使用某一个Python的环境"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403291058206.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-20</div><div class="title">Pycharm如何使用某一个Python的环境</div></div></a></div><div><a href="/posts/191723/" title="Pycharm配置与若干问题"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403152008101.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-19</div><div class="title">Pycharm配置与若干问题</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Xdd</div><div class="author-info__description">为往圣继绝学</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xie-dd"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><center><b>--- 联系方式 ---<br><font color="#5ea6e5">xdd2026@qq.com</font></b></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%96%99"><span class="toc-number">1.</span> <span class="toc-text">资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">我的理解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Session-and-Model-class"><span class="toc-number">2.1.</span> <span class="toc-text">Session and Model class</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Entity-Classes"><span class="toc-number">2.2.</span> <span class="toc-text">Entity Classes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Collections"><span class="toc-number">2.3.</span> <span class="toc-text">Collections</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E4%B8%8E%E4%BF%AE%E6%94%B9%E5%87%BD%E6%95%B0"><span class="toc-number">2.4.</span> <span class="toc-text">查询与修改函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Model-Class-Query-Functions"><span class="toc-number">2.4.1.</span> <span class="toc-text">Model Class Query Functions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Model-Class-Modify-Functions"><span class="toc-number">2.4.2.</span> <span class="toc-text">Model Class Modify Functions</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%9B%E5%88%80%E5%B0%8F%E8%AF%95"><span class="toc-number">2.5.</span> <span class="toc-text">牛刀小试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">案例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%9F%90-entity-%E6%9C%80%E5%A4%A7%E7%BC%96%E5%8F%B7"><span class="toc-number">3.1.</span> <span class="toc-text">获取某 entity 最大编号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B-X-%E5%8F%B7%E7%BB%93%E7%82%B9%E7%9A%84%E5%9D%90%E6%A0%87"><span class="toc-number">3.2.</span> <span class="toc-text">查看 X 号结点的坐标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%B9%B6%E6%8C%87%E5%AE%9A%E6%9D%90%E6%96%99%E4%B8%8E%E5%B1%9E%E6%80%A7"><span class="toc-number">3.3.</span> <span class="toc-text">创建并指定材料与属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%9F%A2%E9%87%8F%E7%94%A8%E4%BA%8E%E7%A7%BB%E5%8A%A8%E5%8D%95%E5%85%83"><span class="toc-number">3.4.</span> <span class="toc-text">创建一个矢量用于移动单元</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Xdd</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span> | 豫ICP备<a href="https://beian.miit.gov.cn/" target="_blank">2023031381</a>号</span>
+<span> | <img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311231912584.png" height="16" width="16" style="display:inline-block;"> 豫公网安备<a href="https://beian.mps.gov.cn/#/query/webSearch?code=41140002000710\" target="_blank">41140002000710</a>号</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(()=>{
+  const getGiscusTheme = theme => {
+    return theme === 'dark' ? 'dark' : 'light'
+  }
+
+  const loadGiscus = () => {
+    const config = Object.assign({
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'xie-dd/blog_hexo_comment',
+      'data-repo-id': 'R_kgDOKjyVRg',
+      'data-category-id': 'DIC_kwDOKjyVRs4Car4o',
+      'data-mapping': 'pathname',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true
+    },null)
+
+    const ele = document.createElement('script')
+    for (let key in config) {
+      ele.setAttribute(key, config[key])
+    }
+    document.getElementById('giscus-wrap').appendChild(ele)
+  }
+
+  const changeGiscusTheme = theme => {
+    const sendMessage = message => {
+      const iframe = document.querySelector('iframe.giscus-frame')
+      if (!iframe) return
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app')
+    }
+
+    sendMessage({
+      setConfig: {
+        theme: getGiscusTheme(theme)
+      }
+    });
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if ('Giscus' === 'Giscus' || !false) {
+    if (false) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment= loadGiscus
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>

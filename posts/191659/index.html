@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Python与Excel交互-xlwings | 有限元分析与编程</title><meta name="author" content="Xdd"><meta name="copyright" content="Xdd"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="no-referrer"><meta name="description" content="资料xlwings 官网：https:&#x2F;&#x2F;docs.xlwings.org&#x2F;en&#x2F;stable&#x2F;index.html 运营学 Python ｜ Python&amp;Excel 联动(上) 注意：使用这个模型需要安装 Excel，相较于 openpyxl 可能效率不足，但是可实时看到结果 操作流程 打开 Jupyter Notebook—新建 Python 文件 安装模块 !pip3 instal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python与Excel交互-xlwings">
+<meta property="og:url" content="https://19970622.xyz/posts/191659/index.html">
+<meta property="og:site_name" content="有限元分析与编程">
+<meta property="og:description" content="资料xlwings 官网：https:&#x2F;&#x2F;docs.xlwings.org&#x2F;en&#x2F;stable&#x2F;index.html 运营学 Python ｜ Python&amp;Excel 联动(上) 注意：使用这个模型需要安装 Excel，相较于 openpyxl 可能效率不足，但是可实时看到结果 操作流程 打开 Jupyter Notebook—新建 Python 文件 安装模块 !pip3 instal">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407131524393.png">
+<meta property="article:published_time" content="2024-08-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-08-23T16:00:00.000Z">
+<meta property="article:author" content="Xdd">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="excel">
+<meta property="article:tag" content="xlwings">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407131524393.png"><link rel="shortcut icon" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310230930281.png"><link rel="canonical" href="https://19970622.xyz/posts/191659/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"NQD8RF9R39","apiKey":"3d4e0abab4490c03a3480485272bd1f7","indexName":"blog_hexo","hits":{"per_page":10},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Python与Excel交互-xlwings',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-24 00:00:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/source/css/fonts/font.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="有限元分析与编程" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407131524393.png')"><nav id="nav"><span id="blog-info"><a href="/" title="有限元分析与编程"><span class="site-name">有限元分析与编程</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Python与Excel交互-xlwings</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-23T16:00:00.000Z" title="发表于 2024-08-24 00:00:00">2024-08-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-23T16:00:00.000Z" title="更新于 2024-08-24 00:00:00">2024-08-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/python/">python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Python与Excel交互-xlwings"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>xlwings 官网：<a target="_blank" rel="noopener" href="https://docs.xlwings.org/en/stable/index.html">https://docs.xlwings.org/en/stable/index.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/j-VhxycCjJDyHLwX3RRRiA">运营学 Python ｜ Python&amp;Excel 联动(上)</a></p>
+<p>注意：使用这个模型需要安装 Excel，相较于 openpyxl 可能效率不足，但是<strong>可实时看到结果</strong></p>
+<h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><ol>
+<li>打开 Jupyter Notebook—新建 Python 文件</li>
+<li>安装模块 <code>!pip3 install xlwings --user</code></li>
+<li>xlwings 的操作逻辑依次为 App—Book—Sheet—Range</li>
+</ol>
+<h3 id="创建场景"><a href="#创建场景" class="headerlink" title="创建场景"></a>创建场景</h3><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408242030745.png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xlwings <span class="keyword">as</span> xw</span><br><span class="line"></span><br><span class="line"><span class="comment"># app应用 Excel程序</span></span><br><span class="line">app = xw.App(visible=<span class="literal">True</span>, add_book=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 工作簿 book</span></span><br><span class="line">wb = app.books.add()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 表 sheet</span></span><br><span class="line"><span class="comment"># sht = wb.sheets.add(&#x27;first_sht&#x27;)  # 增</span></span><br><span class="line">sht = wb.sheets(<span class="string">&#x27;Sheet1&#x27;</span>)         <span class="comment"># 选</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 单元格</span></span><br><span class="line">sht.<span class="built_in">range</span>(<span class="string">&#x27;A1&#x27;</span>).value = <span class="string">&#x27;简说 Python&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存与退出</span></span><br><span class="line">wb.save(<span class="string">&#x27;xlwings_wb.xlsx&#x27;</span>)</span><br><span class="line">wb.close()</span><br><span class="line">app.quit()</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改场景"><a href="#修改场景" class="headerlink" title="修改场景"></a>修改场景</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> xlwings <span class="keyword">as</span> xw</span><br><span class="line"></span><br><span class="line">app = xw.App(visible=<span class="literal">True</span>, add_book=<span class="literal">False</span>)</span><br><span class="line">book = app.books.<span class="built_in">open</span>(<span class="string">&#x27;xlwings_wb.xlsx&#x27;</span>)  <span class="comment"># 打开excel文件</span></span><br><span class="line">sheet = book.sheets(<span class="string">&#x27;Sheet1&#x27;</span>)             <span class="comment"># 选择sheet</span></span><br><span class="line">sheet.<span class="built_in">range</span>(<span class="string">&#x27;B2&#x27;</span>).value = <span class="string">&#x27;简说Python&#x27;</span></span><br><span class="line"></span><br><span class="line">book.save(book.fullname)</span><br><span class="line">book.close()</span><br><span class="line">app.quit()</span><br></pre></td></tr></table></figure>
+
+<h2 id="xlwings-语法"><a href="#xlwings-语法" class="headerlink" title="xlwings 语法"></a>xlwings 语法</h2><p><a target="_blank" rel="noopener" href="https://docs.xlwings.org/en/stable/api/index.html">https://docs.xlwings.org/en/stable/api/index.html</a></p>
+<h3 id="Books-Book"><a href="#Books-Book" class="headerlink" title="Books&#x2F;Book"></a>Books&#x2F;Book</h3><p>Book: <a target="_blank" rel="noopener" href="https://docs.xlwings.org/en/stable/api/book.html">https://docs.xlwings.org/en/stable/api/book.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Books.active</span><br><span class="line">Books.add()</span><br><span class="line">Books.<span class="built_in">open</span>()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Book.activate()</span><br><span class="line">Book.api</span><br><span class="line">Book.app</span><br><span class="line">Book.caller()</span><br><span class="line">Book.close()</span><br><span class="line">Book.fullname</span><br><span class="line">Book.json()</span><br><span class="line">Book.macro()</span><br><span class="line">Book.name</span><br><span class="line">Book.names</span><br><span class="line">Book.render_template()</span><br><span class="line">Book.save()</span><br><span class="line">Book.selection</span><br><span class="line">Book.set_mock_caller()</span><br><span class="line">Book.sheet_names</span><br><span class="line">Book.sheets</span><br><span class="line">Book.to_pdf()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sheets-Sheet"><a href="#Sheets-Sheet" class="headerlink" title="Sheets&#x2F;Sheet"></a>Sheets&#x2F;Sheet</h3><p>Sheet: <a target="_blank" rel="noopener" href="https://docs.xlwings.org/en/stable/api/sheet.html">https://docs.xlwings.org/en/stable/api/sheet.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Sheets.active</span><br><span class="line">Sheets.add()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">Sheet.activate()</span><br><span class="line">Sheet.api</span><br><span class="line">Sheet.autofit()</span><br><span class="line">Sheet.book</span><br><span class="line">Sheet.cells</span><br><span class="line">Sheet.charts</span><br><span class="line">Sheet.clear()</span><br><span class="line">Sheet.clear_contents()</span><br><span class="line">Sheet.clear_formats()</span><br><span class="line">Sheet.copy()</span><br><span class="line">Sheet.delete()</span><br><span class="line">Sheet.freeze_panes</span><br><span class="line">Sheet.index</span><br><span class="line">Sheet.name</span><br><span class="line">Sheet.names</span><br><span class="line">Sheet.page_setup</span><br><span class="line">Sheet.pictures</span><br><span class="line">Sheet.<span class="built_in">range</span>()</span><br><span class="line">Sheet.render_template()</span><br><span class="line">Sheet.select()</span><br><span class="line">Sheet.shapes</span><br><span class="line">Sheet.tables</span><br><span class="line">Sheet.to_html()</span><br><span class="line">Sheet.to_pdf()</span><br><span class="line">Sheet.used_range</span><br><span class="line">Sheet.visible</span><br></pre></td></tr></table></figure>
+
+<h3 id="Range"><a href="#Range" class="headerlink" title="Range"></a>Range</h3><p>range:<a target="_blank" rel="noopener" href="https://docs.xlwings.org/en/stable/api/range.html">https://docs.xlwings.org/en/stable/api/range.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Range.add_hyperlink()         Range.address</span><br><span class="line">Range.adjust_indent()         Range.api</span><br><span class="line">Range.autofill()              Range.autofit()</span><br><span class="line">Range.clear()                 Range.clear_contents()</span><br><span class="line">Range.clear_formats()         Range.color</span><br><span class="line">Range.column                  Range.column_width</span><br><span class="line">Range.columns                 Range.copy()</span><br><span class="line">Range.copy_picture()          Range.count</span><br><span class="line">Range.current_region          Range.delete()</span><br><span class="line">Range.end()                   Range.expand()</span><br><span class="line">Range.formula                 Range.formula2</span><br><span class="line">Range.formula_array           Range.get_address()</span><br><span class="line">Range.group()                 Range.has_array</span><br><span class="line">Range.height                  Range.hyperlink</span><br><span class="line">Range.insert()                Range.last_cell</span><br><span class="line">Range.left                    Range.merge()</span><br><span class="line">Range.merge_area              Range.merge_cells</span><br><span class="line">Range.name                    Range.note</span><br><span class="line">Range.number_format           Range.offset()</span><br><span class="line">Range.options()               Range.paste()</span><br><span class="line">Range.raw_value               Range.resize()</span><br><span class="line">Range.row                     Range.row_height</span><br><span class="line">Range.rows                    Range.select()</span><br><span class="line">Range.shape                   Range.sheet</span><br><span class="line">Range.size                    Range.table</span><br><span class="line">Range.to_pdf()                Range.to_png()</span><br><span class="line">Range.top                     Range.ungroup()</span><br><span class="line">Range.unmerge()               Range.value</span><br><span class="line">Range.width                   Range.wrap_text</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="一些功能"><a href="#一些功能" class="headerlink" title="一些功能"></a>一些功能</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">sheet1.<span class="built_in">range</span>(<span class="string">&quot;A1&quot;</span>)</span><br><span class="line">sheet1.<span class="built_in">range</span>(<span class="string">&quot;A1:C3&quot;</span>)</span><br><span class="line">sheet1.<span class="built_in">range</span>((<span class="number">1</span>,<span class="number">1</span>))</span><br><span class="line">sheet1.<span class="built_in">range</span>((<span class="number">1</span>,<span class="number">1</span>), (<span class="number">3</span>,<span class="number">3</span>))</span><br><span class="line">sheet1.<span class="built_in">range</span>(<span class="string">&quot;NamedRange&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Or using index/slice notation</span></span><br><span class="line">sheet1[<span class="string">&quot;A1&quot;</span>]</span><br><span class="line">sheet1[<span class="string">&quot;A1:C3&quot;</span>]</span><br><span class="line">sheet1[<span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">sheet1[<span class="number">0</span>:<span class="number">4</span>, <span class="number">0</span>:<span class="number">4</span>]</span><br><span class="line">sheet1[<span class="string">&quot;NamedRange&quot;</span>]</span><br><span class="line"></span><br><span class="line">sheet1.<span class="built_in">range</span>(<span class="string">&#x27;A1&#x27;</span>).color = (<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>)  <span class="comment"># or &#x27;#ffffff</span></span><br><span class="line">sheet1.<span class="built_in">range</span>(<span class="string">&#x27;A2&#x27;</span>).color = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">sheet[<span class="string">&#x27;A1&#x27;</span>].font.name = <span class="string">&#x27;Calibri&#x27;</span></span><br><span class="line">sheet[<span class="string">&#x27;A1&#x27;</span>].font.bold = <span class="literal">True</span></span><br><span class="line">sheet[<span class="string">&#x27;A1&#x27;</span>].font.color = (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>)  <span class="comment"># or &#x27;#ff0000&#x27;</span></span><br><span class="line">sheet[<span class="string">&#x27;A1&#x27;</span>].font.italic = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://19970622.xyz">Xdd</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://19970622.xyz/posts/191659/">https://19970622.xyz/posts/191659/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://19970622.xyz" target="_blank">有限元分析与编程</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/python/">python</a><a class="post-meta__tags" href="/tags/excel/">excel</a><a class="post-meta__tags" href="/tags/xlwings/">xlwings</a></div><div class="post_share"><div class="social-share" data-image="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407131524393.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956863.png" target="_blank"><img class="post-qr-code-img" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956863.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956689.png" target="_blank"><img class="post-qr-code-img" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956689.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/212433/" title="Matlab发送邮件"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101927231.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Matlab发送邮件</div></div></a></div><div class="next-post pull-right"><a href="/posts/160701/" title="VSCODE各种环境设置"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407281417709.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">VSCODE各种环境设置</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/8412/" title="Anaconda新建并使用新环境"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310231638488.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-23</div><div class="title">Anaconda新建并使用新环境</div></div></a></div><div><a href="/posts/191922/" title="FreeCAD界面及Python操作入门知识"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101927182.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-12</div><div class="title">FreeCAD界面及Python操作入门知识</div></div></a></div><div><a href="/posts/104026/" title="HyperMesh-Python-API"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202409112117869.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-11</div><div class="title">HyperMesh-Python-API</div></div></a></div><div><a href="/posts/142701/" title="PyQt的线程类QThread与计时器类Qtimer"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101927152.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-08</div><div class="title">PyQt的线程类QThread与计时器类Qtimer</div></div></a></div><div><a href="/posts/1043/" title="PySide6的入门配置"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403291056730.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-12</div><div class="title">PySide6的入门配置</div></div></a></div><div><a href="/posts/3180/" title="Pycharm如何使用某一个Python的环境"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202403291058206.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-03-20</div><div class="title">Pycharm如何使用某一个Python的环境</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Xdd</div><div class="author-info__description">为往圣继绝学</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xie-dd"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><center><b>--- 联系方式 ---<br><font color="#5ea6e5">xdd2026@qq.com</font></b></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%96%99"><span class="toc-number">1.</span> <span class="toc-text">资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">操作流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%9C%BA%E6%99%AF"><span class="toc-number">2.1.</span> <span class="toc-text">创建场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%9C%BA%E6%99%AF"><span class="toc-number">2.2.</span> <span class="toc-text">修改场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xlwings-%E8%AF%AD%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">xlwings 语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Books-Book"><span class="toc-number">3.1.</span> <span class="toc-text">Books&#x2F;Book</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sheets-Sheet"><span class="toc-number">3.2.</span> <span class="toc-text">Sheets&#x2F;Sheet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Range"><span class="toc-number">3.3.</span> <span class="toc-text">Range</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%8A%9F%E8%83%BD"><span class="toc-number">3.4.</span> <span class="toc-text">一些功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">案例</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Xdd</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span> | 豫ICP备<a href="https://beian.miit.gov.cn/" target="_blank">2023031381</a>号</span>
+<span> | <img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311231912584.png" height="16" width="16" style="display:inline-block;"> 豫公网安备<a href="https://beian.mps.gov.cn/#/query/webSearch?code=41140002000710\" target="_blank">41140002000710</a>号</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(()=>{
+  const getGiscusTheme = theme => {
+    return theme === 'dark' ? 'dark' : 'light'
+  }
+
+  const loadGiscus = () => {
+    const config = Object.assign({
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'xie-dd/blog_hexo_comment',
+      'data-repo-id': 'R_kgDOKjyVRg',
+      'data-category-id': 'DIC_kwDOKjyVRs4Car4o',
+      'data-mapping': 'pathname',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true
+    },null)
+
+    const ele = document.createElement('script')
+    for (let key in config) {
+      ele.setAttribute(key, config[key])
+    }
+    document.getElementById('giscus-wrap').appendChild(ele)
+  }
+
+  const changeGiscusTheme = theme => {
+    const sendMessage = message => {
+      const iframe = document.querySelector('iframe.giscus-frame')
+      if (!iframe) return
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app')
+    }
+
+    sendMessage({
+      setConfig: {
+        theme: getGiscusTheme(theme)
+      }
+    });
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if ('Giscus' === 'Giscus' || !false) {
+    if (false) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment= loadGiscus
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>

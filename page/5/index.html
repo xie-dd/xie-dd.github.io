@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>有限元分析与编程</title><meta name="author" content="Xdd"><meta name="copyright" content="Xdd"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="no-referrer"><meta name="description" content="为往圣继绝学">
+<meta property="og:type" content="website">
+<meta property="og:title" content="有限元分析与编程">
+<meta property="og:url" content="https://19970622.xyz/page/5/index.html">
+<meta property="og:site_name" content="有限元分析与编程">
+<meta property="og:description" content="为往圣继绝学">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg">
+<meta property="article:author" content="Xdd">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg"><link rel="shortcut icon" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310230930281.png"><link rel="canonical" href="https://19970622.xyz/page/5/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"NQD8RF9R39","apiKey":"3d4e0abab4490c03a3480485272bd1f7","indexName":"blog_hexo","hits":{"per_page":10},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '有限元分析与编程',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-10-20 22:17:09'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/source/css/fonts/font.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="有限元分析与编程" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="有限元分析与编程"><span class="site-name">有限元分析与编程</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover right"><a href="/posts/26366/" title="Texlive + TeX studio 安装"><img class="post-bg" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031808558.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Texlive + TeX studio 安装"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/26366/" title="Texlive + TeX studio 安装">Texlive + TeX studio 安装</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-07T16:00:00.000Z" title="发表于 2023-12-08 00:00:00">2023-12-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a></span></div><div class="content">安装 Texlive
+下载：texlive.iso
+装载 iso 文件，管理员身份运行 install-tl-windows.bat
+可以默认安装到 C 盘，也可以更改安装路径
+耐心等待，安装界面会显示已用&#x2F;安装预计时间，我的显示预计 1 小时 34 分钟
+
+12Installing [2165/4490, time/total: 43:49/01:34:05]: l2tabu-italian [252k]Installing [2166/4490, time/total: 43:50/01:34:06]: l2tabu-spanish [223k]
+
+
+安装完成后会显示
+
+1234567欢迎进入 TeX Live 的世界！See C:/texlive/2023/index.html for links to documentation.The TeX Live web site (https://tug.org/texlive/) contains any updates and corrections. TeX Live is a joint project of the ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/61991/" title="为hexo添加404页面"><img class="post-bg" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031812999.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为hexo添加404页面"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/61991/" title="为hexo添加404页面">为hexo添加404页面</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-07T16:00:00.000Z" title="发表于 2023-12-08 00:00:00">2023-12-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/hexo/">hexo</a></span></div><div class="content">
+下载一个 404.html，放置到文件夹 blog_hexo\source 里面
+在 404.html 文件第一行前面添加如下三行代码，不然 404.html 文件会被 hexo 渲染
+
+123---layout: false---
+
+
+完成
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/7106/" title="obsidian阿里云OSS同步"><img class="post-bg" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031805222.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="obsidian阿里云OSS同步"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/7106/" title="obsidian阿里云OSS同步">obsidian阿里云OSS同步</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-30T16:00:00.000Z" title="发表于 2023-12-01 00:00:00">2023-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a></span></div><div class="content">创建阿里云用户设置权限
+点击阿里云右上角的用户头像—点击 AccessKey 管理—点击”使用子用户 AccessKey”
+创建一个用户，登录名称和显示名称任意—勾选 Open API 调用访问—点击确定
+创建完成后可看到 AccessKey ID 与 AccessKey Secret，这两个信息只会显示这一次，务必保存好
+
+
+创建 Bucket
+在阿里云创建 Bucket，推荐：标准存储，私有，其它默认即可
+记录 bucket 的 Endpoint（地域节点），类似：oss-cn-beijing.aliyuncs.com
+点击 Bucket 列表—进入你的 Bucket—权限控制—Bucket 授权策略—新增授权
+授权用户：子账号—上面创建的账户
+授权操作：完全控制
+
+
+点击 Bucket 列表—进入你的 Bucket—数据安全—跨域设置
+来源：*
+允许 Methods：全部勾选
+Headers：*
+其它默认
+
+
+
+配置 obsidian
+安装并打开 Remotely Save 插件
+选择远程服务：S3 或兼容 S3 的服务
+服务地址(Endpoint) ：oss-cn-beijin ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/52673/" title="obsidian多设备同步"><img class="post-bg" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311022053530.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="obsidian多设备同步"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/52673/" title="obsidian多设备同步">obsidian多设备同步</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-26T16:00:00.000Z" title="发表于 2023-11-27 00:00:00">2023-11-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a></span></div><div class="content">更新203-12-23：建议使用 obsidian+OSS
+需求obsidian 需要在 Windows 与 Android 同步
+真心没有语雀好用，希望语雀不要倒闭
+实现方法：坚果云+FolderSync
+FolderSync 支持双向，单项向左，单项向右，三种方式同步
+用着用着发现不能同步了，可能是坚果云同步文件个数&#x2F;时间有限制，需要等一会才行
+
+
+在 Windows 本地建立 obsidian 的根目录 AAA，将 AAA 设置为自动同步到坚果云
+开启坚果云的 webdav, 获得第三方客户端密码
+在 Android 下载 obsidian 与 FolderSync
+打开 FolderSync 设置安卓手机本地的文件夹 AAA 与坚果云同步，详细参考：https://help.jianguoyun.com/?p=2887
+打开 Android 的 obsidian，将 AAA 设置为根目录即可
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/29869/" title="Hexo自动部署到Gitee Page"><img class="post-bg" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311031806360.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo自动部署到Gitee Page"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/29869/" title="Hexo自动部署到Gitee Page">Hexo自动部署到Gitee Page</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-24T16:00:00.000Z" title="发表于 2023-11-25 00:00:00">2023-11-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/hexo/">hexo</a></span></div><div class="content">gitee page 功能维护中，可能凉凉了
+
+
+分析这里有两个步骤：
+
+将代码推送到 Gitee 仓库
+部署到 Gitee Page
+
+第 1 步的方法有：
+
+本地 git 定时提交
+使用 Github Action 镜像 Github 仓库：
+手动同步
+自动同步
+
+
+
+第 2 步的方法有：
+
+开通 Gitee Page Pro 功能（收费）
+使用 Gitee Pages Action
+
+代码将 Github 仓库内容自动同步到 Gitee基于 hub-mirror-action
+https://github.com/Yikun/hub-mirror-action
+
+
+生成公钥与私钥文件：https://www.yuque.com/xdd1997/blog/ru4eumc62yqwhle4
+将公钥文件内容添加到 Gitee，生成 Gitee 的 Token
+在 blog_hexo 的仓库添加两个变量
+
+
+GITEE_TOKEN：上一步获得的 Gitee Token
+GITEE_RSA_PRIVATE_KEY：私钥文件内容
+
+
+在 Github Action 的自动化文件 yaml 中 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/17016/" title="Zotero CSL的更改"><img class="post-bg" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271837520.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Zotero CSL的更改"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/17016/" title="Zotero CSL的更改">Zotero CSL的更改</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-14T16:00:00.000Z" title="发表于 2023-11-15 00:00:00">2023-11-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a></span></div><div class="content">在线网站版网站：https://editor.citationstyles.org/visualEditor/
+大致思路
+获取新的 csl—导入到网站 https://editor.citationstyles.org/visualEditor/
+在 Zotero 选中多个典型文献—导出条目—CSL JSON—复制 json 文件内容
+在网站中 Visual editor—Style—Load Style
+右上角 Exanple citations— Citations 1—Advanced—粘贴 json 文件内容—Add new reference
+可以修改并Style—Save Style导出新的csl了
+
+文献类别
+article-journal：期刊论文，强调了学术期刊中的研究性文章
+Article in a Periodical：指涉任何类型的期刊中的文章，不论是学术性的还是非学术性的（一般不用）
+patent：专利
+paper-conference：会议论文
+
+修改的详细细节（已 IJMS 为例）导入文件
+使用 Everything 搜索本地文件：china-nation ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/53142/" title="Git知识点与常见错误"><img class="post-bg" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311092024512.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git知识点与常见错误"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/53142/" title="Git知识点与常见错误">Git知识点与常见错误</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-13T16:00:00.000Z" title="发表于 2023-11-14 00:00:00">2023-11-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/git/">git</a></span></div><div class="content">Git 初相识安装
+去官网下载安装包：https://git-scm.com/downloads
+全部选择默认安装即可
+
+使用
+在 gitee.com 上注册一个账号 xdd1997
+在 gitee.com 上建立一个仓库 python_project，见下图，不要勾选其他框框
+获得 git 链接 https://gitee.com/xdd1997/python_project.git
+打开 AA 文件夹—右键—Open Git Bash here
+
+12345678910git config --global user.name &quot;xdd1997&quot;git config --global user.email &quot;xdd2026@qq.com&quot;mkdir python_projectcd python_projectgit initgit add .git commit -m &quot;first commit&quot;git remote add origin https://gitee.com/xdd1997/python_project. ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/35646/" title="Matlab|Fortran二进制文件读写"><img class="post-bg" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271834863.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Matlab|Fortran二进制文件读写"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/35646/" title="Matlab|Fortran二进制文件读写">Matlab|Fortran二进制文件读写</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-30T16:00:00.000Z" title="发表于 2023-10-31 00:00:00">2023-10-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a></span></div><div class="content">Matlab 生成二进制文件
+https://ww2.mathworks.cn/help/matlab/ref/fwrite.html#d126e493019
+
+
+fwrite(fileID,A,precision)，按列顺序写入矩阵 A 二进制文件
+
+precision 主要选项：
+
+
+
+值类型
+精度
+位（字节）
+范围
+
+
+
+有符号整数
+‘int32’
+32 (4)
+2147483648(约 21 亿)
+
+
+有符号整数
+‘int64’
+64 (8)
+2^63
+
+
+浮点数
+‘single’
+32 (4)
+约 10^-38) 与 10^(+38)
+
+
+浮点数
+‘double’
+64 (8)
+约 10^-308) 与 10^(+308)
+
+
+字符
+‘char*1’
+8 (1)
+-
+
+
+123fileID = fopen(&#x27;magic5.bin&#x27;,&#x27;w&#x27;);fwrite(fileID,magic(5),&#x27;int32&#x27;);fclose(fileID);
+
+Matlab 读取二进制文件
+https://ww2.mathworks.cn/ ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/53105/" title="阿里云服务器ECS配置"><img class="post-bg" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271835559.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="阿里云服务器ECS配置"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/53105/" title="阿里云服务器ECS配置">阿里云服务器ECS配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-30T16:00:00.000Z" title="发表于 2023-10-31 00:00:00">2023-10-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a></span></div><div class="content">资料https://blog.csdn.net/qq_43554335&#x2F;article&#x2F;details&#x2F;123648620
+配置
+领券：https://university.aliyun.com/?spm=5176.28508143.J_9220772140.20.e939154ai9z1WC
+搜索云服务器ECS-&gt;购买（2 核 2G)-&gt;建议 Windows
+搜索云服务器ECS-&gt;实例-&gt;可以看到自己的服务器
+
+
+
+点击三个竖点-&gt;重置实例密码-&gt;修改密码-&gt;重启
+点击 VNC 远程链接-&gt;点击发送远程命令-&gt;点击 CTRL+ALT+DELETE-&gt;输入密码即可
+注意使用网络或者使用 windows 的远程桌面连接，需要开通官网 IP
+开通官网 IP 后，就可以使用 windows 远程桌面连接，远程桌面连接时：
+IP: 官网 IP
+用户名：Administrator
+密码：你的 Windows 账户密码，如果忘记，可以**重置实例密码**
+
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/57491/" title="Fortran编译并调用dll"><img class="post-bg" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271832779.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Fortran编译并调用dll"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/57491/" title="Fortran编译并调用dll">Fortran编译并调用dll</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-28T16:00:00.000Z" title="发表于 2023-10-29 00:00:00">2023-10-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a></span></div><div class="content">编译 dll
+设置成 Release x64，且项目属性页和 VS 主界面两处都需要设置
+
+
+要注意在每个函数添加一行：(test1 是函数名)
+
+1!DEC$ ATTRIBUTES DLLEXPORT::test1
+
+
+编译时，要选择：项目—属性—配置属性—Fortran—Libraries—Runtime Library—Multithread
+会生成 dll 与 lib 两个文件，都需要
+
+Fortran 调用 dll
+把上面生成的 lib 与 dll 拷贝到项目路径，添加到 Resource Files 即可使用里面的函数
+注意不要在项目属性页多此一举添加 dll 与 lib 相关路径，反而可能出错
+
+案例</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/4/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/6/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Xdd</div><div class="author-info__description">为往圣继绝学</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">59</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xie-dd"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><center><b>--- 联系方式 ---<br><font color="#5ea6e5">xdd2026@qq.com</font></b></center></div></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/CAE/"><span class="card-category-list-name">CAE</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/git/"><span class="card-category-list-name">git</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/office/"><span class="card-category-list-name">office</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">12</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/windows/"><span class="card-category-list-name">windows</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"><span class="card-category-list-name">未分类</span><span class="card-category-list-count">16</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"><span class="card-category-list-name">编程语言</span><span class="card-category-list-count">4</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E4%BA%91%E5%9B%BE/" style="font-size: 1.1em; color: #999">云图</a> <a href="/tags/Qtimer/" style="font-size: 1.1em; color: #999">Qtimer</a> <a href="/tags/%E9%92%89%E9%92%89/" style="font-size: 1.2em; color: #999da3">钉钉</a> <a href="/tags/tcl/" style="font-size: 1.1em; color: #999">tcl</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.1em; color: #999">自动化</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 1.1em; color: #999">网盘</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 1.1em; color: #999">备份</a> <a href="/tags/%E6%97%8B%E8%BD%AC/" style="font-size: 1.1em; color: #999">旋转</a> <a href="/tags/%E5%BD%B1%E8%A7%86/" style="font-size: 1.1em; color: #999">影视</a> <a href="/tags/obsidian/" style="font-size: 1.2em; color: #999da3">obsidian</a> <a href="/tags/excel/" style="font-size: 1.1em; color: #999">excel</a> <a href="/tags/hexo/" style="font-size: 1.5em; color: #99a9bf">hexo</a> <a href="/tags/csl/" style="font-size: 1.1em; color: #999">csl</a> <a href="/tags/sourcetree/" style="font-size: 1.2em; color: #999da3">sourcetree</a> <a href="/tags/test/" style="font-size: 1.1em; color: #999">test</a> <a href="/tags/nastran/" style="font-size: 1.2em; color: #999da3">nastran</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 1.2em; color: #999da3">网站</a> <a href="/tags/%E6%96%87%E6%A1%A3/" style="font-size: 1.2em; color: #999da3">文档</a> <a href="/tags/%E5%9B%BE%E7%89%87/" style="font-size: 1.2em; color: #999da3">图片</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 1.1em; color: #999">软件</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/" style="font-size: 1.1em; color: #999">机器人</a> <a href="/tags/selenium/" style="font-size: 1.3em; color: #99a1ac">selenium</a> <a href="/tags/fortran/" style="font-size: 1.2em; color: #999da3">fortran</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 1.1em; color: #999">总结</a> <a href="/tags/windows/" style="font-size: 1.1em; color: #999">windows</a> <a href="/tags/pycharm/" style="font-size: 1.1em; color: #999">pycharm</a> <a href="/tags/%E9%82%AE%E4%BB%B6/" style="font-size: 1.1em; color: #999">邮件</a> <a href="/tags/%E7%8E%AF%E5%A2%83/" style="font-size: 1.1em; color: #999">环境</a> <a href="/tags/vscode/" style="font-size: 1.1em; color: #999">vscode</a> <a href="/tags/%E9%99%80%E8%9E%BA/" style="font-size: 1.1em; color: #999">陀螺</a> <a href="/tags/word/" style="font-size: 1.2em; color: #999da3">word</a> <a href="/tags/%E6%AF%8F%E6%97%A5/" style="font-size: 1.1em; color: #999">每日</a> <a href="/tags/%E8%A3%85%E6%9C%BA/" style="font-size: 1.1em; color: #999">装机</a> <a href="/tags/%E5%B0%8F%E7%B1%B3%E6%89%8B%E7%8E%AF/" style="font-size: 1.1em; color: #999">小米手环</a> <a href="/tags/mkdocs/" style="font-size: 1.1em; color: #999">mkdocs</a> <a href="/tags/%E8%93%9D%E5%A5%8F%E4%BA%91/" style="font-size: 1.1em; color: #999">蓝奏云</a> <a href="/tags/git/" style="font-size: 1.4em; color: #99a5b6">git</a> <a href="/tags/latex/" style="font-size: 1.1em; color: #999">latex</a> <a href="/tags/404/" style="font-size: 1.1em; color: #999">404</a> <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" style="font-size: 1.1em; color: #999">二进制</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">6</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">59</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-10-21T00:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-10-20T14:17:08.887Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By Xdd</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span> | 豫ICP备<a href="https://beian.miit.gov.cn/" target="_blank">2023031381</a>号</span>
+<span> | <img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311231912584.png" height="16" width="16" style="display:inline-block;"> 豫公网安备<a href="https://beian.mps.gov.cn/#/query/webSearch?code=41140002000710\" target="_blank">41140002000710</a>号</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>
