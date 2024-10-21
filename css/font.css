@@ -1,5 +1,5 @@
 @font-face {
   font-family: 'YaHei_Consolas_Hybrid'; 
   font-display: swap;
-  src: url('YaHei_Consolas_Hybrid.ttf') format('truetype'); 
+  src: url('../font/YaHei_Consolas_Hybrid.ttf') format('truetype'); 
 }

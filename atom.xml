@@ -6,7 +6,7 @@
   <link href="https://19970622.xyz/atom.xml" rel="self"/>
   
   <link href="https://19970622.xyz/"/>
-  <updated>2024-10-17T16:00:00.000Z</updated>
+  <updated>2024-10-20T16:00:00.000Z</updated>
   <id>https://19970622.xyz/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo|Butterfly|修改字体</title>
+    <link href="https://19970622.xyz/posts/10212010/"/>
+    <id>https://19970622.xyz/posts/10212010/</id>
+    <published>2024-10-20T16:00:00.000Z</published>
+    <updated>2024-10-20T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202410212004008.png"></p><h2 id="修改方法"><a href="#修改方法" class="headerlink" title="修改方法"></a>修改方法</h2><ol><li>下载一个 ttf 字体，放在<code>themes\butterfly\source\font\YaHei_Consolas_Hybrid.ttf</code></li><li>在<code>themes/butterfly/source/css/</code>下创建<code>font.css</code>文件，内容如下：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">  font-family: &#x27;YaHei_Consolas_Hybrid&#x27;;</span><br><span class="line">  font-display: swap;</span><br><span class="line">  src: url(&#x27;/fonts/YaHei_Consolas_Hybrid.ttf&#x27;) format(&#x27;truetype&#x27;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="3"><li>修改<code>_config.butterfly.yml</code>文件，代码如下：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/font.css&quot;&gt;</span><br><span class="line">  bottom:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">font:</span><br><span class="line">  global-font-size:</span><br><span class="line">  code-font-size:</span><br><span class="line">  font-family: &#x27;YaHei_Consolas_Hybrid&#x27;</span><br><span class="line">  code-font-family: &#x27;YaHei_Consolas_Hybrid&#x27;</span><br></pre></td></tr></table></figure><ol start="4"><li>大功告成</li></ol><h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><ol><li>建议只修改代码字体，因为默认的代码字体不是等宽字体</li><li>css 文件中的<code>font-family</code>后面的参数可以随意，正确引用即可</li><li>css 文件中可以定义多种字体</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;预览&quot;&gt;&lt;a href=&quot;#预览&quot; class=&quot;headerlink&quot; title=&quot;预览&quot;&gt;&lt;/a&gt;预览&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/20241021</summary>
+      
+    
+    
+    
+    <category term="hexo" scheme="https://19970622.xyz/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://19970622.xyz/tags/hexo/"/>
+    
+    <category term="字体" scheme="https://19970622.xyz/tags/%E5%AD%97%E4%BD%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Tecplot数据格式</title>
@@ -228,6 +254,31 @@
     <category term="excel" scheme="https://19970622.xyz/tags/excel/"/>
     
     <category term="xlwings" scheme="https://19970622.xyz/tags/xlwings/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HyperMesh坐标系</title>
+    <link href="https://19970622.xyz/posts/202939/"/>
+    <id>https://19970622.xyz/posts/202939/</id>
+    <published>2024-08-18T16:00:00.000Z</published>
+    <updated>2024-08-18T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><ol><li><a href="https://2021.help.altair.com/2021.1/hwdesktop/hwx/topics/panels/user_defined_coordinate_systems_r.htm">https://2021.help.altair.com/2021.1/hwdesktop/hwx/topics/panels/user_defined_coordinate_systems_r.htm</a></li><li>06 坐标系-HyperMesh 坐标系：<a href="https://mp.weixin.qq.com/s/sx27cjIyfblxTT61BUSuyA">https://mp.weixin.qq.com/s/sx27cjIyfblxTT61BUSuyA</a></li><li>视频本地备份：<code>06 坐标系-HyperMesh坐标系.mp4</code></li></ol><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol><li>注意：坐标系编号不是浏览器里面的 ID；在使用时不用使用坐标系编号，需要时直接使用鼠标点击坐标系即可，局部与全局坐标系都可点击</li><li>显示局部坐标系编号：Tool—&gt;numbers—&gt;systs—&gt;all—&gt;on</li><li>创建坐标系、指定结点坐标参考坐标系、指定自由度参考坐标系：Analysis—&gt;system</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408192043742.png"></p><p>其中第 1 个 cteate 是创建一个不随结点变化的固定坐标系，第 2 个 create 是创建一个随 node 变化的坐标系</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408192046935.png"></p><ol start="4"><li>查看某个结点的坐标参考坐标系与自由度(位移)参考坐标系：Card—Edit</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408192054970.png"></p><ol start="5"><li>只有用户定义的坐标系才能被修改或删除。输入文件(input deck)中的坐标系统不能被修改或删除，它们只能被检查</li></ol><h2 id="将模型的坐标系都改为全局笛卡尔坐标系"><a href="#将模型的坐标系都改为全局笛卡尔坐标系" class="headerlink" title="将模型的坐标系都改为全局笛卡尔坐标系"></a>将模型的坐标系都改为全局笛卡尔坐标系</h2><ol><li>导入模型</li><li>Analysis—&gt;system—&gt;assign</li><li>nodes—&gt;all—&gt;system—&gt;使用鼠标点击全局坐标系—&gt;set reference</li><li>nodes—&gt;all—&gt;system—&gt;使用鼠标点击全局坐标系—&gt;set displacement</li><li>preview unuse—&gt;delete unuse</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;资料&quot;&gt;&lt;a href=&quot;#资料&quot; class=&quot;headerlink&quot; title=&quot;资料&quot;&gt;&lt;/a&gt;资料&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://2021.help.altair.com/2021.1/hwdesktop/hwx/topic</summary>
+      
+    
+    
+    
+    <category term="CAE" scheme="https://19970622.xyz/categories/CAE/"/>
+    
+    
+    <category term="hypermesh" scheme="https://19970622.xyz/tags/hypermesh/"/>
     
   </entry>
   
@@ -497,62 +548,6 @@
     <category term="vitepress" scheme="https://19970622.xyz/tags/vitepress/"/>
     
     <category term="网站" scheme="https://19970622.xyz/tags/%E7%BD%91%E7%AB%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为GITEE绑定钉钉机器人/企业微信机器人</title>
-    <link href="https://19970622.xyz/posts/23193/"/>
-    <id>https://19970622.xyz/posts/23193/</id>
-    <published>2024-06-20T16:00:00.000Z</published>
-    <updated>2024-06-20T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="GITEE-与钉钉"><a href="#GITEE-与钉钉" class="headerlink" title="GITEE 与钉钉"></a>GITEE 与钉钉</h2><h4 id="钉钉获得-webhook-地址与签名密钥"><a href="#钉钉获得-webhook-地址与签名密钥" class="headerlink" title="钉钉获得 webhook 地址与签名密钥"></a>钉钉获得 webhook 地址与签名密钥</h4><ol><li>钉钉群—设置—机器人—添加机器人—自定义—添加</li><li>设置机器人名称，安全设置选择<code>加签</code>—复制加签的内容(签名密钥)备用</li><li>点击完成获得 webhook 地址</li></ol><h4 id="为-Gitee-添加钉钉-WebHooks"><a href="#为-Gitee-添加钉钉-WebHooks" class="headerlink" title="为 Gitee 添加钉钉 WebHooks"></a>为 Gitee 添加钉钉 WebHooks</h4><ol><li>在 gitee 某仓库<code>设置/管理</code>里面—WebHooks—添加 WebHooks</li><li>URL 中粘贴 webhook 地址—选择签名密钥—粘贴签名密钥</li><li>完成</li></ol><h2 id="GITEE-与企业微信"><a href="#GITEE-与企业微信" class="headerlink" title="GITEE 与企业微信"></a>GITEE 与企业微信</h2><h4 id="企业微信获得-webhook-地址与签名密钥"><a href="#企业微信获得-webhook-地址与签名密钥" class="headerlink" title="企业微信获得 webhook 地址与签名密钥"></a>企业微信获得 webhook 地址与签名密钥</h4><ol><li>手机企业微信—群—群机器人—添加—新建—起个名称</li><li>完成—获得 Webhook 地址</li></ol><h4 id="为-Gitee-添加企业微信-WebHooks"><a href="#为-Gitee-添加企业微信-WebHooks" class="headerlink" title="为 Gitee 添加企业微信 WebHooks"></a>为 Gitee 添加企业微信 WebHooks</h4><ol><li>在 gitee 某仓库<code>设置/管理</code>里面—WebHooks—添加 WebHooks</li><li>URL 中粘贴 webhook 地址—选择 WebHook 密码—WebHook 密码空着即可</li><li>完成</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;GITEE-与钉钉&quot;&gt;&lt;a href=&quot;#GITEE-与钉钉&quot; class=&quot;headerlink&quot; title=&quot;GITEE 与钉钉&quot;&gt;&lt;/a&gt;GITEE 与钉钉&lt;/h2&gt;&lt;h4 id=&quot;钉钉获得-webhook-地址与签名密钥&quot;&gt;&lt;a href=&quot;#钉钉获得-</summary>
-      
-    
-    
-    
-    <category term="未分类" scheme="https://19970622.xyz/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-    
-    <category term="github" scheme="https://19970622.xyz/tags/github/"/>
-    
-    <category term="gitee" scheme="https://19970622.xyz/tags/gitee/"/>
-    
-    <category term="企业微信" scheme="https://19970622.xyz/tags/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1/"/>
-    
-    <category term="钉钉" scheme="https://19970622.xyz/tags/%E9%92%89%E9%92%89/"/>
-    
-    <category term="机器人" scheme="https://19970622.xyz/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HyperMesh查看结构质心形心质量惯性矩</title>
-    <link href="https://19970622.xyz/posts/17154/"/>
-    <id>https://19970622.xyz/posts/17154/</id>
-    <published>2024-06-15T16:00:00.000Z</published>
-    <updated>2024-06-15T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="知识来源"><a href="#知识来源" class="headerlink" title="知识来源"></a>知识来源</h2><p><a href="https://www.leanwind.com/archives/5201.html">https://www.leanwind.com/archives/5201.html</a></p><h2 id="查看流程"><a href="#查看流程" class="headerlink" title="查看流程"></a>查看流程</h2><ol><li>Hypermesh 的 Post 面板中点击 summary 命令，进入 summary 面板</li><li>点击 load，在 Hypermesh 的安装路径 Altair&#x2F;templates&#x2F;summary&#x2F;common 中选择<code>ctr_of_gravity</code>&#x2F;<code>mom_of_inertia</code>统计模板</li><li>在 output file 中选择统计结果的输出路径，在右侧可以选择 displayed 或 all 来指定统计的范围</li><li>点击 summary 按钮即可得到每个部件的质量和质心坐标位置及整个模型的质量和质心坐标位置。</li></ol><h2 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Moment of Inertia <span class="keyword">for</span> Model (Using Origin As Center):模型转动惯量(以原点为中心)</span><br><span class="line"> --                                                                             --</span><br><span class="line"> | <span class="number">3.504321E+03</span>  <span class="number">0.00000E+00</span>  <span class="number">0.00000E+00</span>  <span class="number">0.00000E+00</span> <span class="number">-5.29360E+00</span> <span class="number">-5.26603E+00</span> |</span><br><span class="line"> |  <span class="number">0.00000E+00</span> <span class="number">3.504321E+03</span>  <span class="number">0.00000E+00</span> <span class="number">5.293599E+00</span>  <span class="number">0.00000E+00</span> <span class="number">-1.79866E+04</span> |</span><br><span class="line"> |  <span class="number">0.00000E+00</span>  <span class="number">0.00000E+00</span> <span class="number">3.504321E+03</span> <span class="number">5.266034E+00</span> <span class="number">1.798658E+04</span>  <span class="number">0.00000E+00</span> |</span><br><span class="line"> |  <span class="number">0.00000E+00</span> <span class="number">5.293599E+00</span> <span class="number">5.266034E+00</span> <span class="number">3.134881E+03</span> <span class="number">2.531469E+01</span> <span class="number">-2.94484E+01</span> |</span><br><span class="line"> | <span class="number">-5.29360E+00</span>  <span class="number">0.00000E+00</span> <span class="number">1.798658E+04</span> <span class="number">2.531469E+01</span> <span class="number">9.914202E+04</span> <span class="number">-1.56029E+00</span> |</span><br><span class="line"> | <span class="number">-5.26603E+00</span> <span class="number">-1.79866E+04</span>  <span class="number">0.00000E+00</span> <span class="number">-2.94484E+01</span> <span class="number">-1.56029E+00</span> <span class="number">9.913859E+04</span> |</span><br><span class="line"> --                                                                             --</span><br><span class="line"></span><br><span class="line">Moment of Inertia <span class="keyword">for</span> Model (Using Center of Gravity As Center):模型转动惯量(以重心为中心)</span><br><span class="line"> --                                                                             --</span><br><span class="line"> | <span class="number">3.504321E+03</span>  <span class="number">0.00000E+00</span>  <span class="number">0.00000E+00</span>  <span class="number">0.00000E+00</span> <span class="number">-5.29360E+00</span> <span class="number">-5.26603E+00</span> |</span><br><span class="line"> |  <span class="number">0.00000E+00</span> <span class="number">3.504321E+03</span>  <span class="number">0.00000E+00</span> <span class="number">5.293599E+00</span>  <span class="number">0.00000E+00</span> <span class="number">-1.79866E+04</span> |</span><br><span class="line"> |  <span class="number">0.00000E+00</span>  <span class="number">0.00000E+00</span> <span class="number">3.504321E+03</span> <span class="number">5.266034E+00</span> <span class="number">1.798658E+04</span>  <span class="number">0.00000E+00</span> |</span><br><span class="line"> |  <span class="number">0.00000E+00</span> <span class="number">5.293599E+00</span> <span class="number">5.266034E+00</span> <span class="number">3.134865E+03</span> <span class="number">1.714209E+00</span> <span class="number">2.278043E+00</span> |</span><br><span class="line"> | <span class="number">-5.29360E+00</span>  <span class="number">0.00000E+00</span> <span class="number">1.798658E+04</span> <span class="number">1.714209E+00</span> <span class="number">6.822587E+03</span> <span class="number">1.568249E+00</span> |</span><br><span class="line"> | <span class="number">-5.26603E+00</span> <span class="number">-1.79866E+04</span>  <span class="number">0.00000E+00</span> <span class="number">2.278043E+00</span> <span class="number">1.568249E+00</span> <span class="number">6.819156E+03</span> |</span><br><span class="line"> --                                                                             --</span><br></pre></td></tr></table></figure><p>上面输出结果是什么意思不清楚，但是 optiStruct 中，CONM2 单元帮助文档里面有下面这个公式，可以对照参考</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202406162211825.png"></p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202406162207343.svg"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;知识来源&quot;&gt;&lt;a href=&quot;#知识来源&quot; class=&quot;headerlink&quot; title=&quot;知识来源&quot;&gt;&lt;/a&gt;知识来源&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.leanwind.com/archives/5201.html&quot;&gt;https://</summary>
-      
-    
-    
-    
-    <category term="CAE" scheme="https://19970622.xyz/categories/CAE/"/>
-    
-    
-    <category term="hypermesh" scheme="https://19970622.xyz/tags/hypermesh/"/>
     
   </entry>
   

@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Hexo|Butterfly|修改字体</title>
+      <link href="/posts/10212010/"/>
+      <url>/posts/10212010/</url>
+      
+        <content type="html"><![CDATA[<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202410212004008.png"></p><h2 id="修改方法"><a href="#修改方法" class="headerlink" title="修改方法"></a>修改方法</h2><ol><li>下载一个 ttf 字体，放在<code>themes\butterfly\source\font\YaHei_Consolas_Hybrid.ttf</code></li><li>在<code>themes/butterfly/source/css/</code>下创建<code>font.css</code>文件，内容如下：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">  font-family: &#x27;YaHei_Consolas_Hybrid&#x27;;</span><br><span class="line">  font-display: swap;</span><br><span class="line">  src: url(&#x27;/fonts/YaHei_Consolas_Hybrid.ttf&#x27;) format(&#x27;truetype&#x27;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="3"><li>修改<code>_config.butterfly.yml</code>文件，代码如下：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">inject:</span><br><span class="line">  head:</span><br><span class="line">    - &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/font.css&quot;&gt;</span><br><span class="line">  bottom:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">font:</span><br><span class="line">  global-font-size:</span><br><span class="line">  code-font-size:</span><br><span class="line">  font-family: &#x27;YaHei_Consolas_Hybrid&#x27;</span><br><span class="line">  code-font-family: &#x27;YaHei_Consolas_Hybrid&#x27;</span><br></pre></td></tr></table></figure><ol start="4"><li>大功告成</li></ol><h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><ol><li>建议只修改代码字体，因为默认的代码字体不是等宽字体</li><li>css 文件中的<code>font-family</code>后面的参数可以随意，正确引用即可</li><li>css 文件中可以定义多种字体</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> 字体 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Tecplot数据格式</title>
       <link href="/posts/10181029/"/>
       <url>/posts/10181029/</url>
@@ -216,6 +243,31 @@
             <tag> excel </tag>
             
             <tag> xlwings </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HyperMesh坐标系</title>
+      <link href="/posts/202939/"/>
+      <url>/posts/202939/</url>
+      
+        <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><ol><li><a href="https://2021.help.altair.com/2021.1/hwdesktop/hwx/topics/panels/user_defined_coordinate_systems_r.htm">https://2021.help.altair.com/2021.1/hwdesktop/hwx/topics/panels/user_defined_coordinate_systems_r.htm</a></li><li>06 坐标系-HyperMesh 坐标系：<a href="https://mp.weixin.qq.com/s/sx27cjIyfblxTT61BUSuyA">https://mp.weixin.qq.com/s/sx27cjIyfblxTT61BUSuyA</a></li><li>视频本地备份：<code>06 坐标系-HyperMesh坐标系.mp4</code></li></ol><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol><li>注意：坐标系编号不是浏览器里面的 ID；在使用时不用使用坐标系编号，需要时直接使用鼠标点击坐标系即可，局部与全局坐标系都可点击</li><li>显示局部坐标系编号：Tool—&gt;numbers—&gt;systs—&gt;all—&gt;on</li><li>创建坐标系、指定结点坐标参考坐标系、指定自由度参考坐标系：Analysis—&gt;system</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408192043742.png"></p><p>其中第 1 个 cteate 是创建一个不随结点变化的固定坐标系，第 2 个 create 是创建一个随 node 变化的坐标系</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408192046935.png"></p><ol start="4"><li>查看某个结点的坐标参考坐标系与自由度(位移)参考坐标系：Card—Edit</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408192054970.png"></p><ol start="5"><li>只有用户定义的坐标系才能被修改或删除。输入文件(input deck)中的坐标系统不能被修改或删除，它们只能被检查</li></ol><h2 id="将模型的坐标系都改为全局笛卡尔坐标系"><a href="#将模型的坐标系都改为全局笛卡尔坐标系" class="headerlink" title="将模型的坐标系都改为全局笛卡尔坐标系"></a>将模型的坐标系都改为全局笛卡尔坐标系</h2><ol><li>导入模型</li><li>Analysis—&gt;system—&gt;assign</li><li>nodes—&gt;all—&gt;system—&gt;使用鼠标点击全局坐标系—&gt;set reference</li><li>nodes—&gt;all—&gt;system—&gt;使用鼠标点击全局坐标系—&gt;set displacement</li><li>preview unuse—&gt;delete unuse</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> CAE </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hypermesh </tag>
             
         </tags>
       
@@ -1399,7 +1451,7 @@
       <link href="/posts/43836/"/>
       <url>/posts/43836/</url>
       
-        <content type="html"><![CDATA[<p>小狗系列</p><p><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101928986.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101928986.png</a><br><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101928330.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101928330.png</a><br><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101929408.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101929408.png</a><br><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101929649.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101929649.png</a></p><p><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101931152.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101931152.png</a></p>]]></content>
+        <content type="html"><![CDATA[<p>小狗系列</p><p><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101928330.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101928330.png</a><br><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101929408.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101929408.png</a><br><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101929649.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101929649.png</a></p><p><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101931152.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408101931152.png</a></p>]]></content>
       
       
       <categories>
