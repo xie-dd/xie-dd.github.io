@@ -3,6 +3,7 @@ https://19970622.xyz/google3362a95caf5dfbd9.html
 https://19970622.xyz/categories/index.html
 https://19970622.xyz/tags/index.html
 https://19970622.xyz/404.html
+https://19970622.xyz/posts/104034/
 https://19970622.xyz/posts/160127/
 https://19970622.xyz/posts/10212010/
 https://19970622.xyz/posts/10181029/
@@ -108,6 +109,7 @@ https://19970622.xyz/tags/API/
 https://19970622.xyz/tags/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1/
 https://19970622.xyz/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/
 https://19970622.xyz/tags/%E9%92%89%E9%92%89/
+https://19970622.xyz/tags/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/
 https://19970622.xyz/tags/sourcetree/
 https://19970622.xyz/tags/tecplot/
 https://19970622.xyz/tags/%E4%BA%91%E5%9B%BE/
