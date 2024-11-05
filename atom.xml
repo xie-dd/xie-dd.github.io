@@ -44,6 +44,32 @@
   </entry>
   
   <entry>
+    <title>证件照开源项目HivisionIDPhotos</title>
+    <link href="https://19970622.xyz/posts/160000/"/>
+    <id>https://19970622.xyz/posts/160000/</id>
+    <published>2024-11-01T16:00:00.000Z</published>
+    <updated>2024-11-01T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>代码仓库：<a href="https://github.com/Zeyi-Lin/HivisionIDPhotos">https://github.com/Zeyi-Lin/HivisionIDPhotos</a></p><p>SwanHub 相关模型：<a href="https://swanhub.co/ZeYiLin/HivisionIDPhotos_models/tree/main">https://swanhub.co/ZeYiLin/HivisionIDPhotos_models&#x2F;tree&#x2F;main</a></p><h2 id="配置教程"><a href="#配置教程" class="headerlink" title="配置教程"></a>配置教程</h2><ol><li>随便找到一个文件夹，执行下面代码，或直接将 Github 仓库代码下载解压</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Zeyi-Lin/HivisionIDPhotos.git</span><br></pre></td></tr></table></figure><ol start="2"><li>通过 cmd 进入文件夹，下载 Python 依赖文件</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">win+r ---&gt; cmd</span><br><span class="line">cd  HivisionIDPhotos</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">pip install -r requirements-app.txt</span><br></pre></td></tr></table></figure><ol start="3"><li>前往<a href="https://swanhub.co/ZeYiLin/HivisionIDPhotos_models/tree/main">SwanHub</a>下载 5 个模型，下载后其中四个<font style="color:rgb(31, 35, 40);">模型存到项目的</font><code>&lt;font style=&quot;color:rgb(31, 35, 40);&quot;&gt;hivision/creator/weights&lt;/font&gt;</code><font style="color:rgb(31, 35, 40);">目录下</font></li></ol><p><img src="https://cdn.nlark.com/yuque/0/2024/png/1488614/1730815444171-d705f8e8-3ee6-46a5-a5a6-da097e02cd94.png"></p><ol start="4"><li>模型<code>retinaface-resnet50.onnx</code>，放在文件夹 hivision\creator\retinaface\weights</li><li>在 cmd 中执行<code>python app.py</code>，得到一个网址，在浏览器打开即可</li></ol><p><img src="https://cdn.nlark.com/yuque/0/2024/png/1488614/1730815444222-cc8e394f-af65-4cf9-98f2-8ce1002b1abe.png"><img src="https://cdn.nlark.com/yuque/0/2024/png/1488614/1730815444199-f7909fed-1998-4e66-98d9-c2af6ed19298.png"></p><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ol><li>人脸检测模型：retinaface-resnet50</li><li>抠图模型：一般使用 birefnet-v1-lite，如果只换底色<strong>要</strong>使用 hivision_modnet</li><li>更多使用方法参考：<a href="https://github.com/Zeyi-Lin/HivisionIDPhotos">https://github.com/Zeyi-Lin/HivisionIDPhotos</a></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;资料&quot;&gt;&lt;a href=&quot;#资料&quot; class=&quot;headerlink&quot; title=&quot;资料&quot;&gt;&lt;/a&gt;资料&lt;/h2&gt;&lt;p&gt;代码仓库：&lt;a href=&quot;https://github.com/Zeyi-Lin/HivisionIDPhotos&quot;&gt;https://gi</summary>
+      
+    
+    
+    
+    <category term="未分类" scheme="https://19970622.xyz/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="证件照" scheme="https://19970622.xyz/tags/%E8%AF%81%E4%BB%B6%E7%85%A7/"/>
+    
+    <category term="抠图" scheme="https://19970622.xyz/tags/%E6%8A%A0%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>markdown转微信公众号项目-md</title>
     <link href="https://19970622.xyz/posts/160127/"/>
     <id>https://19970622.xyz/posts/160127/</id>
@@ -521,35 +547,6 @@
     
     
     <category term="word" scheme="https://19970622.xyz/tags/word/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>语雀+云函数Serverless+Github Action</title>
-    <link href="https://19970622.xyz/posts/serverless/"/>
-    <id>https://19970622.xyz/posts/serverless/</id>
-    <published>2024-07-05T16:00:00.000Z</published>
-    <updated>2024-08-09T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="note warning flat"><p>20240701：腾讯云函数不再支持 API 网关触发器, 建议使用阿里云 Serverless</p></div><h2 id="语雀-Github-Action-Hexo"><a href="#语雀-Github-Action-Hexo" class="headerlink" title="语雀+Github Action+Hexo"></a>语雀+Github Action+Hexo</h2><p>见《Hexo+Github Page+Github Action+语雀》</p><p>网址 1：<a href="https://19970622.xyz/posts/63230/">https://19970622.xyz/posts/63230/</a></p><p>网址 2：<a href="https://xie-dd.github.io/posts/63230/">https://xie-dd.github.io/posts/63230/</a></p><h2 id="语雀-云函数-Github-Action"><a href="#语雀-云函数-Github-Action" class="headerlink" title="语雀+云函数+Github Action"></a>语雀+云函数+Github Action</h2><h4 id="修改-Github-Action-的-main-yml-文件"><a href="#修改-Github-Action-的-main-yml-文件" class="headerlink" title="修改 Github Action 的 main.yml 文件"></a>修改 Github Action 的 main.yml 文件</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">Hexo</span> <span class="string">Blog</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">master</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">&quot;0 23 * * *&quot;</span></span><br><span class="line">  <span class="attr">repository_dispatch:</span></span><br><span class="line">    <span class="attr">types:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">start</span></span><br></pre></td></tr></table></figure><h4 id="基于腾讯云函数"><a href="#基于腾讯云函数" class="headerlink" title="基于腾讯云函数"></a>基于腾讯云函数</h4><p>参考：<a href="https://blog.lisongqian.cn/2022/02/06/yuque/eizdmx/">https://blog.lisongqian.cn/2022/02/06/yuque/eizdmx/</a></p><ol><li>点击<a href="https://cloud.tencent.com/product/scf">网址</a>进入 Serverless—从头开始—事件函数—Python 3.6(不要选择其它版本）</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407061812367.png"></p><ol start="2"><li>将下面代码粘贴到写代码的编辑器里面</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf8 -*-</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main_handler</span>(<span class="params">event, context</span>):</span><br><span class="line">    r = requests.post(<span class="string">&quot;https://api.github.com/repos/xie-dd/blog_hexo/dispatches&quot;</span>,</span><br><span class="line">                      json = &#123;<span class="string">&quot;event_type&quot;</span>: <span class="string">&quot;start&quot;</span>&#125;,</span><br><span class="line">                      headers = &#123;<span class="string">&quot;User-Agent&quot;</span>:<span class="string">&#x27;curl/7.52.1&#x27;</span>,</span><br><span class="line">                                 <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span>,</span><br><span class="line">                                 <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;application/vnd.github.everest-preview+json&#x27;</span>,</span><br><span class="line">                                 <span class="string">&#x27;Authorization&#x27;</span>: <span class="string">&#x27;token ghp_L3*********78rURQ1F0Gtvzn&#x27;</span>&#125;)</span><br><span class="line">    <span class="keyword">if</span> r.status_code == <span class="number">204</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;This&#x27;s OK!&quot;</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> r.status_code</span><br></pre></td></tr></table></figure><ol start="3"><li>在编辑器里面—运行—安装 Python 扩展</li><li>浏览器滑到最后—点击测试—可以在编辑器输出栏看到”This’s OK!”—然后 Github Action 也会被触发</li><li>点击部署</li><li>创建 API 网关触发器即可，完了（<strong>腾讯云函数 20240701 后不再支持 API 网关触发器了，新的方法还不会</strong>）</li></ol><h4 id="基于阿里云函数"><a href="#基于阿里云函数" class="headerlink" title="基于阿里云函数"></a>基于阿里云函数</h4><p>参考：<a href="https://www.xiayinchang.top/post/b2362878.html">https://www.xiayinchang.top/post/b2362878.html</a></p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408092124828.png"></p><ol><li>进入这个<a href="https://fcnext.console.aliyun.com/cn-hangzhou/functions">网址</a>—函数—创建函数—事件函数—运行环境：Python 3.6—实例代码—创建—在代码编辑器中替换下面代码</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">OK = <span class="string">b&#x27;ok\n&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">handler</span>(<span class="params">environ, start_response</span>):</span><br><span class="line">    status = <span class="string">&#x27;200 OK&#x27;</span></span><br><span class="line">    response_headers = [(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;text/plain&#x27;</span>)]</span><br><span class="line">    sync_yuque()</span><br><span class="line">    start_response(status, response_headers)</span><br><span class="line">    <span class="keyword">return</span> [OK]</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sync_yuque</span>():</span><br><span class="line">    requests.post(<span class="string">&quot;https://api.github.com/repos/xie-dd/blog_hexo/dispatches&quot;</span>,</span><br><span class="line">                      json = &#123;<span class="string">&quot;event_type&quot;</span>: <span class="string">&quot;start&quot;</span>&#125;,</span><br><span class="line">                      headers = &#123;<span class="string">&quot;User-Agent&quot;</span>:<span class="string">&#x27;curl/7.52.1&#x27;</span>,</span><br><span class="line">                                 <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span>,</span><br><span class="line">                                 <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;application/vnd.github.everest-preview+json&#x27;</span>,</span><br><span class="line">                                 <span class="string">&#x27;Authorization&#x27;</span>: <span class="string">&#x27;token ghp_******Gtvzn&#x27;</span>&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="2"><li>点击代码编辑器左上角的测试函数—在 Github 确认 Github Action 已经被触发（可能显示测试失败，但实际 Github Action 已经被触发）</li><li>配置—触发器—HTTP 触发器—全部默认—确定—得到一个公网访问地址，公网访问地址大致如下所示</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://***.cn-hangzhou.fcapp.run</span><br></pre></td></tr></table></figure><ol start="4"><li>将上面的公网访问地址粘贴到语雀的 webhook 里面就行了，现在有个小问题，粘贴完毕后点击测试，显示部署失败，但是实际已经触发了 Github Action，先这样吧。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;div class=&quot;note warning flat&quot;&gt;&lt;p&gt;20240701：腾讯云函数不再支持 API 网关触发器, 建议使用阿里云 Serverless&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;语雀-Github-Action-Hexo&quot;&gt;&lt;a href=&quot;#语雀-G</summary>
-      
-    
-    
-    
-    <category term="hexo" scheme="https://19970622.xyz/categories/hexo/"/>
-    
-    
-    <category term="hexo" scheme="https://19970622.xyz/tags/hexo/"/>
-    
-    <category term="云函数" scheme="https://19970622.xyz/tags/%E4%BA%91%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   
