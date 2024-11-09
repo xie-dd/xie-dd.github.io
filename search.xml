@@ -35,7 +35,7 @@
       <link href="/posts/160000/"/>
       <url>/posts/160000/</url>
       
-        <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>代码仓库：<a href="https://github.com/Zeyi-Lin/HivisionIDPhotos">https://github.com/Zeyi-Lin/HivisionIDPhotos</a></p><p>SwanHub 相关模型：<a href="https://swanhub.co/ZeYiLin/HivisionIDPhotos_models/tree/main">https://swanhub.co/ZeYiLin/HivisionIDPhotos_models&#x2F;tree&#x2F;main</a></p><h2 id="配置教程"><a href="#配置教程" class="headerlink" title="配置教程"></a>配置教程</h2><ol><li>随便找到一个文件夹，执行下面代码，或直接将 Github 仓库代码下载解压</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Zeyi-Lin/HivisionIDPhotos.git</span><br></pre></td></tr></table></figure><ol start="2"><li>通过 cmd 进入文件夹，下载 Python 依赖文件</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">win+r ---&gt; cmd</span><br><span class="line">cd  HivisionIDPhotos</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">pip install -r requirements-app.txt</span><br></pre></td></tr></table></figure><ol start="3"><li>前往<a href="https://swanhub.co/ZeYiLin/HivisionIDPhotos_models/tree/main">SwanHub</a>下载 5 个模型，下载后其中四个<font style="color:rgb(31, 35, 40);">模型存到项目的</font><code>&lt;font style=&quot;color:rgb(31, 35, 40);&quot;&gt;hivision/creator/weights&lt;/font&gt;</code><font style="color:rgb(31, 35, 40);">目录下</font></li></ol><p><img src="https://cdn.nlark.com/yuque/0/2024/png/1488614/1730815444171-d705f8e8-3ee6-46a5-a5a6-da097e02cd94.png"></p><ol start="4"><li>模型<code>retinaface-resnet50.onnx</code>，放在文件夹 hivision\creator\retinaface\weights</li><li>在 cmd 中执行<code>python app.py</code>，得到一个网址，在浏览器打开即可</li></ol><p><img src="https://cdn.nlark.com/yuque/0/2024/png/1488614/1730815444222-cc8e394f-af65-4cf9-98f2-8ce1002b1abe.png"><img src="https://cdn.nlark.com/yuque/0/2024/png/1488614/1730815444199-f7909fed-1998-4e66-98d9-c2af6ed19298.png"></p><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ol><li>人脸检测模型：retinaface-resnet50</li><li>抠图模型：一般使用 birefnet-v1-lite，如果只换底色<strong>要</strong>使用 hivision_modnet</li><li>更多使用方法参考：<a href="https://github.com/Zeyi-Lin/HivisionIDPhotos">https://github.com/Zeyi-Lin/HivisionIDPhotos</a></li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>代码仓库：<a href="https://github.com/Zeyi-Lin/HivisionIDPhotos">https://github.com/Zeyi-Lin/HivisionIDPhotos</a></p><p>SwanHub 相关模型：<a href="https://swanhub.co/ZeYiLin/HivisionIDPhotos_models/tree/main">https://swanhub.co/ZeYiLin/HivisionIDPhotos_models&#x2F;tree&#x2F;main</a></p><h2 id="配置教程"><a href="#配置教程" class="headerlink" title="配置教程"></a>配置教程</h2><ol><li>随便找到一个文件夹，执行下面代码，或直接将 Github 仓库代码下载解压</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Zeyi-Lin/HivisionIDPhotos.git</span><br></pre></td></tr></table></figure><ol start="2"><li>通过 cmd 进入文件夹，下载 Python 依赖文件</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">win+r ---&gt; cmd</span><br><span class="line">cd  HivisionIDPhotos</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">pip install -r requirements-app.txt</span><br></pre></td></tr></table></figure><ol start="3"><li>前往<a href="https://swanhub.co/ZeYiLin/HivisionIDPhotos_models/tree/main">SwanHub</a>下载 5 个模型，下载后其中四个模型存到项目的<code>hivision/creator/weights</code>目录下</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202411091346756.png"></p><ol start="4"><li>模型<code>retinaface-resnet50.onnx</code>，放在文件夹 hivision\creator\retinaface\weights</li><li>在 cmd 中执行<code>python app.py</code>，得到一个网址，在浏览器打开即可</li></ol><p><img src="https://cdn.nlark.com/yuque/0/2024/png/1488614/1730815444222-cc8e394f-af65-4cf9-98f2-8ce1002b1abe.png"></p><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ol><li>人脸检测模型：retinaface-resnet50</li><li>抠图模型：一般使用 birefnet-v1-lite，如果只换底色<strong>要</strong>使用 hivision_modnet</li><li>更多使用方法参考：<a href="https://github.com/Zeyi-Lin/HivisionIDPhotos">https://github.com/Zeyi-Lin/HivisionIDPhotos</a></li></ol>]]></content>
       
       
       <categories>
@@ -1113,6 +1113,35 @@
         <tags>
             
             <tag> nastran </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HyperMesh模态分析</title>
+      <link href="/posts/57316/"/>
+      <url>/posts/57316/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>《HyperMesh2Nastran 模态分析》讲的是全部在 HyperMesh 进行，不需要使用 Patran</p><p>《HyperMesh|Nastran|模态分析》 讲的是网格在 HyperMesh 进行，其它大部分在 Patran 中操作</p></blockquote><h2 id="分析流程"><a href="#分析流程" class="headerlink" title="分析流程"></a>分析流程</h2><ol><li>打开 HyperMesh—设置小人模板为 OptiStruct</li><li>划分网格</li><li>设置材料</li><li>右键—Create—<strong>Load Collectors</strong>—设置名称为<code>Fix01</code>—右键 Make Current—Analysis—constraints—选择结点并施加约束</li><li>右键—Create—<strong>Load Step Inputs</strong>—设置名称为<code>Input01</code>—Type:EIGRL—ND:10</li><li>右键—Create—<strong>Load Steps</strong>—第一行设置求解类型：Normal modes—SPC:<code>Fix01</code>—Method(struct):<code>Input01</code></li><li>导出 bdf—打开 bdf 文件—在 CEND 前面添加一行<code>SOL 103</code></li><li>打开 Nastran—选择 bdf 文件—RUN</li></ol><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>如果有多个约束几何，需要使用 Load Add</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CAE </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hypermesh </tag>
+            
+            <tag> nastran </tag>
+            
+            <tag> 模态分析 </tag>
             
         </tags>
       
