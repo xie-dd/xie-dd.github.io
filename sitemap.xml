@@ -2,25 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://19970622.xyz/baidu_verify_codeva-TIu5oC7xqo.html</loc>
-    
-    <lastmod>2024-11-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://19970622.xyz/google3362a95caf5dfbd9.html</loc>
-    
-    <lastmod>2024-11-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://19970622.xyz/categories/index.html</loc>
     
     <lastmod>2024-11-25</lastmod>
     
@@ -39,6 +21,24 @@
   
   <url>
     <loc>https://19970622.xyz/404.html</loc>
+    
+    <lastmod>2024-11-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://19970622.xyz/baidu_verify_codeva-TIu5oC7xqo.html</loc>
+    
+    <lastmod>2024-11-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://19970622.xyz/categories/index.html</loc>
     
     <lastmod>2024-11-25</lastmod>
     
@@ -811,13 +811,6 @@
   </url>
   
   <url>
-    <loc>https://19970622.xyz/tags/%E9%82%AE%E4%BB%B6/</loc>
-    <lastmod>2024-11-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://19970622.xyz/tags/sound/</loc>
     <lastmod>2024-11-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -826,6 +819,13 @@
   
   <url>
     <loc>https://19970622.xyz/tags/%E5%A3%B0%E9%9F%B3/</loc>
+    <lastmod>2024-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://19970622.xyz/tags/%E9%82%AE%E4%BB%B6/</loc>
     <lastmod>2024-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
