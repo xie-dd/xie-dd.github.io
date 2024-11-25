@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>第1篇文章</title>
-      <link href="/posts/143239/"/>
-      <url>/posts/143239/</url>
-      
-        <content type="html"><![CDATA[<p>‍</p><p>‍</p><h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目 1"></a>题目 1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br></pre></td></tr></table></figure><table><thead><tr><th>01 02 03 04 05 06</th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td></tr><tr><td>01</td><td>02</td><td>03</td><td></td></tr><tr><td>04</td><td>05</td><td>06</td><td></td></tr></tbody></table><p>‍</p><h2 id="题目-2"><a href="#题目-2" class="headerlink" title="题目 2"></a>题目 2</h2><p>$ x_2&#x3D;\frac{1}{2} $</p><p>‍</p><p>‍</p><p>x<code>x</code>x</p><p>d<code>fg</code>h</p><h3 id="AS"><a href="#AS" class="headerlink" title="AS"></a>AS</h3><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/network-asset-20241123215600-20241124134723-99iy1x6.png" alt="01"></p><p>‍</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/image-20241023210741-6t3z7wj.png"></p><p>–</p><p>‍</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 未分类 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> A </tag>
-            
-            <tag> B </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Patran/Nastran壳单元静力分析和模态分析</title>
       <link href="/posts/232213/"/>
       <url>/posts/232213/</url>
