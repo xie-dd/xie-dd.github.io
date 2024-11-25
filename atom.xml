@@ -6,7 +6,7 @@
   <link href="https://19970622.xyz/atom.xml" rel="self"/>
   
   <link href="https://19970622.xyz/"/>
-  <updated>2024-11-25T08:56:04.289Z</updated>
+  <updated>2024-11-23T16:00:00.000Z</updated>
   <id>https://19970622.xyz/</id>
   
   <author>
@@ -17,23 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://19970622.xyz/posts/0/"/>
-    <id>https://19970622.xyz/posts/0/</id>
-    <published>2024-11-25T08:55:59.001Z</published>
-    <updated>2024-11-25T08:56:04.289Z</updated>
+    <title>第1篇文章</title>
+    <link href="https://19970622.xyz/posts/143239/"/>
+    <id>https://19970622.xyz/posts/143239/</id>
+    <published>2024-11-23T16:00:00.000Z</published>
+    <updated>2024-11-23T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="第-1-篇文章"><a href="#第-1-篇文章" class="headerlink" title="第 1 篇文章"></a>第 1 篇文章</h1><hr><p>title: 第 1 篇文章<br>categories: [未分类]<br>tags: [A, B]<br>date: 2024-11-24<br>updated: 2024-11-24<br>cover: <a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202411171444846.png">https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202411171444846.png</a><br>abbrlink: 143239</p><hr><p>‍</p><p>‍</p><h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目 1"></a>题目 1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br></pre></td></tr></table></figure><table><thead><tr><th>01 02 03 04 05 06</th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td></tr><tr><td>01</td><td>02</td><td>03</td><td></td></tr><tr><td>04</td><td>05</td><td>06</td><td></td></tr></tbody></table><p>‍</p><h2 id="题目-2"><a href="#题目-2" class="headerlink" title="题目 2"></a>题目 2</h2><p>$ x_2&#x3D;\frac{1}{2} $</p><p>‍</p><p>‍</p><p>x<code>x</code>x</p><p>d<code>fg</code>h</p><h3 id="AS"><a href="#AS" class="headerlink" title="AS"></a>AS</h3><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/network-asset-20241123215600-20241124134723-99iy1x6.png" alt="01"></p><p>‍</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/image-20241023210741-6t3z7wj.png"></p><p>–</p><p>‍</p>]]></content>
+    <content type="html"><![CDATA[<p>‍</p><p>‍</p><h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目 1"></a>题目 1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clc</span><br><span class="line">clear</span><br></pre></td></tr></table></figure><table><thead><tr><th>01 02 03 04 05 06</th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td></tr><tr><td>01</td><td>02</td><td>03</td><td></td></tr><tr><td>04</td><td>05</td><td>06</td><td></td></tr></tbody></table><p>‍</p><h2 id="题目-2"><a href="#题目-2" class="headerlink" title="题目 2"></a>题目 2</h2><p>$ x_2&#x3D;\frac{1}{2} $</p><p>‍</p><p>‍</p><p>x<code>x</code>x</p><p>d<code>fg</code>h</p><h3 id="AS"><a href="#AS" class="headerlink" title="AS"></a>AS</h3><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/network-asset-20241123215600-20241124134723-99iy1x6.png" alt="01"></p><p>‍</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/image-20241023210741-6t3z7wj.png"></p><p>–</p><p>‍</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;第-1-篇文章&quot;&gt;&lt;a href=&quot;#第-1-篇文章&quot; class=&quot;headerlink&quot; title=&quot;第 1 篇文章&quot;&gt;&lt;/a&gt;第 1 篇文章&lt;/h1&gt;&lt;hr&gt;
-&lt;p&gt;title: 第 1 篇文章&lt;br&gt;categories: [未分类]&lt;br&gt;tags: </summary>
+    <summary type="html">&lt;p&gt;‍&lt;/p&gt;
+&lt;p&gt;‍&lt;/p&gt;
+&lt;h3 id=&quot;题目-1&quot;&gt;&lt;a href=&quot;#题目-1&quot; class=&quot;headerlink&quot; title=&quot;题目 1&quot;&gt;&lt;/a&gt;题目 1&lt;/h3&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;</summary>
       
     
     
     
+    <category term="未分类" scheme="https://19970622.xyz/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="A" scheme="https://19970622.xyz/tags/A/"/>
+    
+    <category term="B" scheme="https://19970622.xyz/tags/B/"/>
     
   </entry>
   
