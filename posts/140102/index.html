@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>使用vtk作为OCCT的图形显示 | 有限元分析与编程</title><meta name="author" content="Xdd"><meta name="copyright" content="Xdd"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="referrer" content="no-referrer"><meta name="description" content="资料 OpenCASCADE(OCC)_使用 VTK 显示(视频)：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1BL411Y7Ee 编译 vtk 与配置(视频)：https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;kZpr4ocnavA 编译 vtk(文本): https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;RaQLRVKoAQKY2gf4lHmejw">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用vtk作为OCCT的图形显示">
+<meta property="og:url" content="https://19970622.xyz/posts/140102/index.html">
+<meta property="og:site_name" content="有限元分析与编程">
+<meta property="og:description" content="资料 OpenCASCADE(OCC)_使用 VTK 显示(视频)：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1BL411Y7Ee 编译 vtk 与配置(视频)：https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;kZpr4ocnavA 编译 vtk(文本): https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;RaQLRVKoAQKY2gf4lHmejw">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202501071404796.png">
+<meta property="article:published_time" content="2025-01-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-01-06T16:00:00.000Z">
+<meta property="article:author" content="Xdd">
+<meta property="article:tag" content="vs">
+<meta property="article:tag" content="occt">
+<meta property="article:tag" content="vtk">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202501071404796.png"><link rel="shortcut icon" href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310230930281.png"><link rel="canonical" href="https://19970622.xyz/posts/140102/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"NQD8RF9R39","apiKey":"3d4e0abab4490c03a3480485272bd1f7","indexName":"blog_hexo","hits":{"per_page":10},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '使用vtk作为OCCT的图形显示',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-01-07 00:00:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/font.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="有限元分析与编程" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">68</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">89</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202501071404796.png')"><nav id="nav"><span id="blog-info"><a href="/" title="有限元分析与编程"><span class="site-name">有限元分析与编程</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">使用vtk作为OCCT的图形显示</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-06T16:00:00.000Z" title="发表于 2025-01-07 00:00:00">2025-01-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-01-06T16:00:00.000Z" title="更新于 2025-01-07 00:00:00">2025-01-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/CAE/">CAE</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="使用vtk作为OCCT的图形显示"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><ol>
+<li>OpenCASCADE(OCC)_使用 VTK 显示(视频)：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1BL411Y7Ee">https://www.bilibili.com/video/BV1BL411Y7Ee</a></li>
+<li>编译 vtk 与配置(视频)：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=kZpr4ocnavA">https://www.youtube.com/watch?v=kZpr4ocnavA</a></li>
+<li>编译 vtk(文本): <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/RaQLRVKoAQKY2gf4lHmejw">https://mp.weixin.qq.com/s/RaQLRVKoAQKY2gf4lHmejw</a></li>
+</ol>
+<h2 id="编译-VTK"><a href="#编译-VTK" class="headerlink" title="编译 VTK"></a>编译 VTK</h2><ol>
+<li>进入<a target="_blank" rel="noopener" href="https://gitlab.kitware.com/vtk/vtk%EF%BC%8C%E4%B8%8B%E8%BD%BD9.2.0%E7%89%88%E6%9C%AC%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%8C%E8%A7%A3%E5%8E%8B%EF%BC%8C%E5%BE%97%E5%88%B0%60vtk-v9.2.0%60%E2%80%8B%E6%96%87%E4%BB%B6%E5%A4%B9">https://gitlab.kitware.com/vtk/vtk，下载 9.2.0 版本源代码，解压，得到<code>vtk-v9.2.0</code>文件夹</a></li>
+<li>进入<a target="_blank" rel="noopener" href="https://cmake.org/download/%EF%BC%8C%E6%89%BE%E5%88%B0Windows">https://cmake.org/download/，找到 Windows</a> x64 Installer 进行下载，然后安装</li>
+<li>打开 cmake, 源代码目录选择 vtk-v9.2.0 文件夹，再新建一个 vtk-v9.2.0-bulid 目录存放编译内容，点击 Configure，弹出一个框，选择 VS2019 和 x64，点击 Finish，开始编译</li>
+<li>弹出一个框，新建 vtk-v9.2.0-install 目录配置给 cmake_install_prefix，然后依次点击 Configure—Generate—Open Project，进入 VS2019</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202412311937561.png"></p>
+<ol start="4">
+<li>在解决方案中找到 INSTALL—右键—生成，时间较长需等待</li>
+<li>编译完成后在 vtk-v9.2.0-install 文件夹下有 bin&#x2F;include&#x2F;lib 三个文件夹</li>
+</ol>
+<p>‍</p>
+<p>‍</p>
+<h2 id="编译-OCCT"><a href="#编译-OCCT" class="headerlink" title="编译 OCCT"></a>编译 OCCT</h2><ol>
+<li>下载 occt 7.7.0 源码 <strong>opencascade-7.7.0.tgz</strong> ：<a target="_blank" rel="noopener" href="https://dev.opencascade.org/release%EF%BC%8C%E8%A7%A3%E5%8E%8B%E5%BE%97%E5%88%B0%60opencascade-7.7.0%60%E2%80%8B%E6%96%87%E4%BB%B6%E5%A4%B9">https://dev.opencascade.org/release，解压得到<code>opencascade-7.7.0</code>文件夹</a></li>
+<li>进入<a target="_blank" rel="noopener" href="https://dev.opencascade.org/resources/download/3rd-party-components%EF%BC%8C">https://dev.opencascade.org/resources/download/3rd-party-components，</a><ul>
+<li>下载 Freeimage, vc14, x64</li>
+<li>下载 Freetype, vc14, x64</li>
+<li>下载 tcltk,vc12, x64</li>
+</ul>
+</li>
+<li>新建一个 OCCT-7.7.0 的文件夹，把 occt 的源码文件夹<code>opencascade-7.7.0</code>拷贝进去</li>
+<li>在 OCCT-7.7.0 文件夹下面新建<code>opencascade-7.7.0-build</code>, <code>opencascade-7.7.0-install</code>和<code>products</code>三个文件夹，将解压后的 Freeimage，Freetype，tcltk 文件夹拷贝到<code>products</code>文件夹内</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">D:\OCCT-<span class="number">7.7</span>.<span class="number">0</span></span><br><span class="line">|____opencascade-<span class="number">7.7</span>.<span class="number">0</span></span><br><span class="line">|____opencascade-<span class="number">7.7</span>.<span class="number">0</span>-build</span><br><span class="line">|____opencascade-<span class="number">7.7</span>.<span class="number">0</span>-install</span><br><span class="line">|____products</span><br><span class="line">     |____freeimage-<span class="number">3.17</span>.<span class="number">0</span>-vc14-<span class="number">64</span></span><br><span class="line">     |____freetype-<span class="number">2.5</span>.<span class="number">5</span>-vc14-<span class="number">64</span></span><br><span class="line">     |____tcltk-<span class="number">86</span>-<span class="number">64</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>打开 cmake 软件，配置好 OCCT 源码目录与 build 目录，点击 Generate</li>
+<li>出现一堆红色的内容，开始配置环境，按照之前放置的路径进行配置即可</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202412312121932.png"></p>
+<ol start="7">
+<li>点击 Configure 会弹出错误，再配置 VTK 的目录，再点击 Configure</li>
+</ol>
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202412312125474.png"></p>
+<ol start="8">
+<li>弹出下面错误，解决方法是取消勾选 <code>BUILD_MODULE_Draw</code>，再点击 Configure</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">VTK <span class="title function_ invoke__">version</span> (<span class="number">9.2</span>.<span class="number">0</span>)</span><br><span class="line">CMake <span class="built_in">Error</span> at CMakeLists.txt:<span class="number">858</span> (message):</span><br><span class="line">  Could not find headers of used third-party products:</span><br><span class="line">  <span class="number">3</span>RDPARTY_TCL_INCLUDE_DIR <span class="number">3</span>RDPARTY_TK_INCLUDE_DIR</span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>点击 Generate—Open Project，进入 VS2019</li>
+<li>在解决方案右键—生成解决方案—耐心等待【注意要 debug 还是 release】</li>
+<li>在解决方案中找到 INSTALL—右键—生成</li>
+<li>编译完成后，在 opencascade-7.7.0-install 文件夹就会有 occt 的 inc, bind, libd 文件夹。d 是因为 debug 模式</li>
+</ol>
+<p>‍</p>
+<p>‍</p>
+<h2 id="在-OCCT-项目中使用-VTK"><a href="#在-OCCT-项目中使用-VTK" class="headerlink" title="在 OCCT 项目中使用 VTK"></a>在 OCCT 项目中使用 VTK</h2><ol>
+<li>打开 VS2019，新建一个 c++项目</li>
+<li>右键—属性，开始配置 occ 与 vtk<ul>
+<li>改成 Dedug x64 平台</li>
+<li>调试—环境—增加 occ 的 bin 目录,vtk 的 bin 目录和 freetype 的 bin 目录: PATH&#x3D;%PATH%;D:\OCCT-7.7.0\opencascade-7.7.0-install\win64\vc14\bind;D:\vtk-v9.2.0-install\bin;D:\OCCT-7.7.0\products\freetype-2.5.5-vc14-64\bin;</li>
+<li><code>C/C++</code>—常规—附加包含目录—增加 occ, vtk 头文件目录:D:\OCCT-7.7.0\opencascade-7.7.0-install\inc;D:\vtk-v9.2.0-install\include\vtk-9.2;</li>
+<li>链接器—常规—增加 occ, vtk 的 lib 所在目录:D:\OCCT-7.7.0\opencascade-7.7.0-install\win64\vc14\libd;D:\vtk-v9.2.0-install\lib;</li>
+<li>链接器—输入—附加依赖项目，增加 occ, vtk 的 lib 文件名称</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line">DRAWEXE.lib</span><br><span class="line">ExpToCasExe.lib</span><br><span class="line">TKBin.lib</span><br><span class="line">TKBinL.lib</span><br><span class="line">TKBinTObj.lib</span><br><span class="line">TKBinXCAF.lib</span><br><span class="line">TKBO.lib</span><br><span class="line">TKBool.lib</span><br><span class="line">TKBRep.lib</span><br><span class="line">TKCAF.lib</span><br><span class="line">TKCDF.lib</span><br><span class="line">TKD3DHost.lib</span><br><span class="line">TKD3DHostTest.lib</span><br><span class="line">TKDCAF.lib</span><br><span class="line">TKDFBrowser.lib</span><br><span class="line">TKDraw.lib</span><br><span class="line">TKernel.lib</span><br><span class="line">TKExpress.lib</span><br><span class="line">TKFeat.lib</span><br><span class="line">TKFillet.lib</span><br><span class="line">TKG2d.lib</span><br><span class="line">TKG3d.lib</span><br><span class="line">TKGeomAlgo.lib</span><br><span class="line">TKGeomBase.lib</span><br><span class="line">TKHLR.lib</span><br><span class="line">TKIGES.lib</span><br><span class="line">TKIVtk.lib</span><br><span class="line">TKIVtkDraw.lib</span><br><span class="line">TKLCAF.lib</span><br><span class="line">TKMath.lib</span><br><span class="line">TKMesh.lib</span><br><span class="line">TKMeshVS.lib</span><br><span class="line">TKMessageModel.lib</span><br><span class="line">TKMessageView.lib</span><br><span class="line">TKOffset.lib</span><br><span class="line">TKOpenGl.lib</span><br><span class="line">TKOpenGles.lib</span><br><span class="line">TKOpenGlesTest.lib</span><br><span class="line">TKOpenGlTest.lib</span><br><span class="line">TKPrim.lib</span><br><span class="line">TKQADraw.lib</span><br><span class="line">TKRWMesh.lib</span><br><span class="line">TKService.lib</span><br><span class="line">TKShapeView.lib</span><br><span class="line">TKShHealing.lib</span><br><span class="line">TKStd.lib</span><br><span class="line">TKStdL.lib</span><br><span class="line">TKSTEP.lib</span><br><span class="line">TKSTEP209.lib</span><br><span class="line">TKSTEPAttr.lib</span><br><span class="line">TKSTEPBase.lib</span><br><span class="line">TKSTL.lib</span><br><span class="line">TKTInspector.lib</span><br><span class="line">TKTInspectorAPI.lib</span><br><span class="line">TKTObj.lib</span><br><span class="line">TKTObjDRAW.lib</span><br><span class="line">TKToolsDraw.lib</span><br><span class="line">TKTopAlgo.lib</span><br><span class="line">TKTopTest.lib</span><br><span class="line">TKTreeModel.lib</span><br><span class="line">TKV3d.lib</span><br><span class="line">TKVCAF.lib</span><br><span class="line">TKView.lib</span><br><span class="line">TKViewerTest.lib</span><br><span class="line">TKVInspector.lib</span><br><span class="line">TKVRML.lib</span><br><span class="line">TKXCAF.lib</span><br><span class="line">TKXDE.lib</span><br><span class="line">TKXDECascade.lib</span><br><span class="line">TKXDEDRAW.lib</span><br><span class="line">TKXDEIGES.lib</span><br><span class="line">TKXDESTEP.lib</span><br><span class="line">TKXMesh.lib</span><br><span class="line">TKXml.lib</span><br><span class="line">TKXmlL.lib</span><br><span class="line">TKXmlTObj.lib</span><br><span class="line">TKXmlXCAF.lib</span><br><span class="line">TKXSBase.lib</span><br><span class="line">TKXSDRAW.lib</span><br><span class="line"></span><br><span class="line">vtkInteractionStyle-<span class="number">9.2</span>d.lib</span><br><span class="line">vtkRenderingOpenGL2-<span class="number">9.2</span>d.lib</span><br><span class="line">vtkCommonCore-<span class="number">9.2</span>d.lib</span><br><span class="line">vtkRenderingCore-<span class="number">9.2</span>d.lib</span><br><span class="line">vtkCommonExecutionModel-<span class="number">9.2</span>d.lib</span><br><span class="line">vtksys-<span class="number">9.2</span>d.lib</span><br><span class="line">TKMath.lib</span><br><span class="line">TKV3d.lib</span><br><span class="line">TKIVtk.lib</span><br><span class="line">TKernel.lib</span><br><span class="line">TKTopAlgo.lib</span><br><span class="line">TKPrim.lib</span><br></pre></td></tr></table></figure>
+
+<p>‍</p>
+<ol start="3">
+<li>测试代码<code>main.cpp</code></li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;BRepPrimAPI_MakeBox.hxx&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#include &lt;IVtkTools_ShapeDataSource.hxx&gt;</span></span><br><span class="line"><span class="comment">#include &lt;vtkAutoInit.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;vtkRenderer.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;VtkRenderWindow.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;vtkRenderWindowInteractor.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;vtkInteractorStyleTrackballCamera.h&gt;</span></span><br><span class="line"><span class="comment">#include &lt;vtkPolyDataMapper.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="title function_ invoke__">VTK_MODULE_INIT</span>(vtkRenderingOpenGL2)</span><br><span class="line"><span class="title function_ invoke__">VTK_MODULE_INIT</span>(vtkInteractionStyle)</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> <span class="title function_ invoke__">main</span>() &#123;</span><br><span class="line">    BRepPrimAPI_MakeBox <span class="title function_ invoke__">box</span>(<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">    <span class="keyword">const</span> <span class="variable constant_">TopoDS_Shape</span>&amp; ashape = box.<span class="title function_ invoke__">Shape</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//==============================================================================================</span></span><br><span class="line">    <span class="comment">// Source-&gt;mapper-&gt;actor-&gt;render</span></span><br><span class="line">    vtkNew&lt;IVtkTools_ShapeDataSource&gt; occSource;    <span class="comment">//创建一个可以被VTK使用的OCC数据源</span></span><br><span class="line">    occSource-&gt;<span class="title function_ invoke__">SetShape</span>(<span class="keyword">new</span> <span class="title class_">IVtkOCC_Shape</span>(ashape)); <span class="comment">//将ashape添加到数据源中</span></span><br><span class="line"></span><br><span class="line">    vtkNew&lt;vtkPolyDataMapper&gt; mapper;               <span class="comment">//创建一个VTK数据类型</span></span><br><span class="line">    mapper-&gt;<span class="title function_ invoke__">SetInputConnection</span>(occSource-&gt;<span class="title function_ invoke__">GetOutputPort</span>()); <span class="comment">//创建管道，将occ数据导入到VTK</span></span><br><span class="line"></span><br><span class="line">    vtkNew&lt;vtkActor&gt; actor;   <span class="comment">//创建 actor</span></span><br><span class="line">    actor-&gt;<span class="title function_ invoke__">SetMapper</span>(mapper); <span class="comment">//将vtk数据交给actor</span></span><br><span class="line"></span><br><span class="line">    vtkNew&lt;vtkRenderWindow&gt; renderWindow; <span class="comment">//创建窗口</span></span><br><span class="line">    vtkNew&lt;vtkRenderer&gt; render;           <span class="comment">//创建渲染器</span></span><br><span class="line">    renderWindow-&gt;<span class="title function_ invoke__">AddRenderer</span>(render);    <span class="comment">//在窗口中加入渲染器</span></span><br><span class="line">    render-&gt;<span class="title function_ invoke__">AddActor</span>(actor);              <span class="comment">//在渲染器中加入actor</span></span><br><span class="line">    render-&gt;<span class="title function_ invoke__">SetBackground</span>(<span class="number">0.302</span>, <span class="number">0.302</span>, <span class="number">0.302</span>);<span class="comment">//设置窗口背景颜色</span></span><br><span class="line"></span><br><span class="line">    vtkNew&lt;vtkRenderWindowInteractor&gt; iren;           <span class="comment">//创建一个vtk交互器</span></span><br><span class="line">    vtkNew&lt;vtkInteractorStyleTrackballCamera&gt; istyle; <span class="comment">//创建vtk相机交互器样式</span></span><br><span class="line">    iren-&gt;<span class="title function_ invoke__">SetRenderWindow</span>(renderWindow);              <span class="comment">//设置渲染窗口</span></span><br><span class="line">    iren-&gt;<span class="title function_ invoke__">SetInteractorStyle</span>(istyle);                 <span class="comment">//设置交互器样式</span></span><br><span class="line"></span><br><span class="line">    iren-&gt;<span class="title function_ invoke__">Initialize</span>(); <span class="comment">//初始化交互器</span></span><br><span class="line">    iren-&gt;<span class="title function_ invoke__">Start</span>();      <span class="comment">//开始运行交互器</span></span><br><span class="line">    <span class="comment">//==============================================================================================</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202412312210740.png"></p>
+<p>‍</p>
+<p>‍</p>
+<h2 id="vtk-资料"><a href="#vtk-资料" class="headerlink" title="vtk 资料"></a>vtk 资料</h2><p>书籍</p>
+<p>《<a target="_blank" rel="noopener" href="https://vtk.org/vtk-users-guide/">VTK User&apos;s Guide</a>》搜 <code>VTK_Users_Guide_v11.pdf</code></p>
+<p>《VTK 用户手册–中文翻译版》搜 <code>VTK用户手册--中文翻译版.pdf</code></p>
+<p>《VTK 图形图像开发进阶》搜 <code>VTK图形图像开发进阶</code></p>
+<p>《数据可视化技术》林勇 暂无 PDF</p>
+<p>‍</p>
+<p>‍</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://19970622.xyz">Xdd</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://19970622.xyz/posts/140102/">https://19970622.xyz/posts/140102/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://19970622.xyz" target="_blank">有限元分析与编程</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/vs/">vs</a><a class="post-meta__tags" href="/tags/occt/">occt</a><a class="post-meta__tags" href="/tags/vtk/">vtk</a></div><div class="post_share"><div class="social-share" data-image="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202501071404796.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956863.png" target="_blank"><img class="post-qr-code-img" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956863.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956689.png" target="_blank"><img class="post-qr-code-img" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220956689.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/140101/" title="VS2019配置OCCT7.7.0环境-AIS显示形状"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/1736229503899.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">VS2019配置OCCT7.7.0环境-AIS显示形状</div></div></a></div><div class="next-post pull-right"><a href="/posts/232213/" title="Patran/Nastran壳单元静力分析和模态分析"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202411261020869.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Patran/Nastran壳单元静力分析和模态分析</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/140101/" title="VS2019配置OCCT7.7.0环境-AIS显示形状"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/1736229503899.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-07</div><div class="title">VS2019配置OCCT7.7.0环境-AIS显示形状</div></div></a></div><div><a href="/posts/57491/" title="Fortran编译并调用dll"><img class="cover" src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310271832779.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-29</div><div class="title">Fortran编译并调用dll</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202310220936690.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Xdd</div><div class="author-info__description">为往圣继绝学</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">68</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">89</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xie-dd"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><center><b>--- 联系方式 ---<br><font color="#5ea6e5">xdd2026@qq.com</font></b></center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%96%99"><span class="toc-number">1.</span> <span class="toc-text">资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91-VTK"><span class="toc-number">2.</span> <span class="toc-text">编译 VTK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91-OCCT"><span class="toc-number">3.</span> <span class="toc-text">编译 OCCT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-OCCT-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8-VTK"><span class="toc-number">4.</span> <span class="toc-text">在 OCCT 项目中使用 VTK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vtk-%E8%B5%84%E6%96%99"><span class="toc-number">5.</span> <span class="toc-text">vtk 资料</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2025 By Xdd</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span> | 豫ICP备<a href="https://beian.miit.gov.cn/" target="_blank">2023031381</a>号</span>
+<span> | <img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202311231912584.png" height="16" width="16" style="display:inline-block;"> 豫公网安备<a href="https://beian.mps.gov.cn/#/query/webSearch?code=41140002000710\" target="_blank">41140002000710</a>号</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(()=>{
+  const getGiscusTheme = theme => {
+    return theme === 'dark' ? 'dark' : 'light'
+  }
+
+  const loadGiscus = () => {
+    const config = Object.assign({
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'xie-dd/blog_hexo_comment',
+      'data-repo-id': 'R_kgDOKjyVRg',
+      'data-category-id': 'DIC_kwDOKjyVRs4Car4o',
+      'data-mapping': 'pathname',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true
+    },null)
+
+    const ele = document.createElement('script')
+    for (let key in config) {
+      ele.setAttribute(key, config[key])
+    }
+    document.getElementById('giscus-wrap').appendChild(ele)
+  }
+
+  const changeGiscusTheme = theme => {
+    const sendMessage = message => {
+      const iframe = document.querySelector('iframe.giscus-frame')
+      if (!iframe) return
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app')
+    }
+
+    sendMessage({
+      setConfig: {
+        theme: getGiscusTheme(theme)
+      }
+    });
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if ('Giscus' === 'Giscus' || !false) {
+    if (false) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment= loadGiscus
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>
