@@ -786,9 +786,9 @@
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> github </tag>
+            
+            <tag> git </tag>
             
             <tag> gitee </tag>
             
@@ -1405,9 +1405,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> github </tag>
+            
+            <tag> hexo </tag>
             
             <tag> gitee </tag>
             
@@ -1799,13 +1799,13 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> github </tag>
             
-            <tag> github page </tag>
-            
             <tag> github action </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> github page </tag>
             
             <tag> 语雀 </tag>
             
