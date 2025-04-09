@@ -6,7 +6,7 @@
   <link href="https://19970622.xyz/atom.xml" rel="self"/>
   
   <link href="https://19970622.xyz/"/>
-  <updated>2025-01-06T16:00:00.000Z</updated>
+  <updated>2025-04-08T16:00:00.000Z</updated>
   <id>https://19970622.xyz/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ParaView使用与VTK文件格式</title>
+    <link href="https://19970622.xyz/posts/250409/"/>
+    <id>https://19970622.xyz/posts/250409/</id>
+    <published>2025-04-08T16:00:00.000Z</published>
+    <updated>2025-04-08T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>paraview 案例(中英字幕): <a href="https://www.bilibili.com/video/BV1Jt4y1Q7wW">https://www.bilibili.com/video/BV1Jt4y1Q7wW</a></p><h2 id="绘制云图"><a href="#绘制云图" class="headerlink" title="绘制云图"></a>绘制云图</h2><h2 id="VTK-相关"><a href="#VTK-相关" class="headerlink" title="VTK 相关"></a>VTK 相关</h2><p>vtk 官网：<a href="https://vtk.org/">https://vtk.org/</a></p><p>vtk 文件格式：<a href="https://www.princeton.edu/~efeibush/viscourse/vtk.pdf">https://www.princeton.edu/~efeibush&#x2F;viscourse&#x2F;vtk.pdf</a></p><h4 id="一个案例"><a href="#一个案例" class="headerlink" title="一个案例"></a>一个案例</h4><p>来源：<a href="https://www.bilibili.com/opus/914557193439674403">https://www.bilibili.com/opus/914557193439674403</a></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># vtk DataFile Version 3.1</span></span><br><span class="line">USELESS LINE</span><br><span class="line">ASCII</span><br><span class="line">DATASET UNSTRUCTURED_GRID</span><br><span class="line">POINTS    <span class="number">12</span> <span class="type">float</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">2</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">2</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">2</span> <span class="number">0</span> <span class="number">1</span></span><br><span class="line"><span class="number">2</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line">CELLS    <span class="number">2</span>   <span class="number">18</span></span><br><span class="line">      <span class="number">8</span>      <span class="number">0</span>      <span class="number">1</span>      <span class="number">2</span>      <span class="number">3</span>      <span class="number">4</span>      <span class="number">5</span>      <span class="number">6</span>      <span class="number">7</span></span><br><span class="line">      <span class="number">8</span>      <span class="number">1</span>      <span class="number">8</span>      <span class="number">9</span>      <span class="number">2</span>      <span class="number">5</span>     <span class="number">10</span>     <span class="number">11</span>      <span class="number">6</span></span><br><span class="line">CELL_TYPES    <span class="number">2</span></span><br><span class="line"><span class="number">12</span></span><br><span class="line"><span class="number">12</span></span><br><span class="line">POINT_DATA    <span class="number">12</span></span><br><span class="line">SCALARS v <span class="type">float</span></span><br><span class="line">LOOKUP_TABLE <span class="keyword">default</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure><p><strong>CELL_TYPES</strong></p><p>vtk 文件格式：<a href="https://www.princeton.edu/~efeibush/viscourse/vtk.pdf">https://www.princeton.edu/~efeibush&#x2F;viscourse&#x2F;vtk.pdf</a></p><p>蓝奏云备份：<a href="https://xdd1997.lanzoue.com/imojH2sxs5jg">https://xdd1997.lanzoue.com/imojH2sxs5jg</a></p><p><img src="/assets/image-20250407210341-89ugcqi.png"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202504091453028.png"></p><p><img src="/assets/image-20250407210440-es8jg87.png"></p><h4 id="LOOKUP-TABLE"><a href="#LOOKUP-TABLE" class="headerlink" title="LOOKUP_TABLE"></a>LOOKUP_TABLE</h4><p>LOOKUP_TABLE 是 RGB 颜色对照表，是可选参数，可以不写</p><h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h4><ul><li>如果 vtk 文件正常，是不用选择 reader 的</li><li>对于矢量 vectors 好像不能指定<code>LOOKUP_TABLE</code>，现在的测试结果是直接不指定这一项就行</li></ul><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># vtk DataFile Version 3.0</span></span><br><span class="line">output2vtkByXdd</span><br><span class="line">ASCII</span><br><span class="line">DATASET UNSTRUCTURED_GRID</span><br><span class="line">POINTS <span class="number">7359</span> <span class="type">double</span></span><br><span class="line">    <span class="number">4.500000000000000e+02</span>    <span class="number">1.800000000000000e-14</span>    <span class="number">0.000000000000000e+00</span></span><br><span class="line">    <span class="number">4.000000000000000e+02</span>    <span class="number">0.000000000000000e+00</span>    <span class="number">0.000000000000000e+00</span></span><br><span class="line">    ...</span><br><span class="line">CELLS <span class="number">11523</span>  <span class="number">103707</span></span><br><span class="line">         <span class="number">8</span>       <span class="number">130</span>       <span class="number">131</span>        <span class="number">30</span>        <span class="number">36</span>       <span class="number">136</span>       <span class="number">141</span>        <span class="number">57</span>        <span class="number">58</span></span><br><span class="line">         <span class="number">8</span>       <span class="number">136</span>       <span class="number">141</span>        <span class="number">57</span>        <span class="number">58</span>       <span class="number">137</span>       <span class="number">143</span>        <span class="number">59</span>        <span class="number">60</span></span><br><span class="line">      ...</span><br><span class="line">CELL_TYPES <span class="number">11523</span></span><br><span class="line">        <span class="number">12</span></span><br><span class="line">        <span class="number">12</span></span><br><span class="line">      ...</span><br><span class="line">POINT_DATA <span class="number">7359</span></span><br><span class="line">Vectors aVectorResu <span class="type">double</span></span><br><span class="line">    <span class="number">1.803581750466487e-01</span>   <span class="number">-1.359527956905437e-05</span>    <span class="number">1.108509172624865e-01</span></span><br><span class="line">    <span class="number">1.953078934248767e-01</span>    <span class="number">1.730515495530002e-05</span>    <span class="number">1.083849176372485e-01</span></span><br><span class="line">    <span class="number">1.725378440953398e-01</span>   <span class="number">-3.540844647028306e-05</span>    <span class="number">1.047790963586464e-01</span></span><br><span class="line">    <span class="number">1.341378080682206e-01</span>   <span class="number">-6.724388260225850e-05</span>    <span class="number">9.539452733010780e-02</span></span><br><span class="line">    <span class="number">8.492348606825371e-02</span>   <span class="number">-1.485343585558120e-05</span>    <span class="number">7.543582496514714e-02</span></span><br><span class="line">    ...</span><br></pre></td></tr></table></figure><ul><li>单元的结点编号要从 0 开始</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;资料&quot;&gt;&lt;a href=&quot;#资料&quot; class=&quot;headerlink&quot; title=&quot;资料&quot;&gt;&lt;/a&gt;资料&lt;/h2&gt;&lt;p&gt;paraview 案例(中英字幕): &lt;a href=&quot;https://www.bilibili.com/video/BV1Jt4y1Q7w</summary>
+      
+    
+    
+    
+    <category term="CAE" scheme="https://19970622.xyz/categories/CAE/"/>
+    
+    
+    <category term="paraview" scheme="https://19970622.xyz/tags/paraview/"/>
+    
+    <category term="vtk" scheme="https://19970622.xyz/tags/vtk/"/>
+    
+  </entry>
   
   <entry>
     <title>VS2019配置OCCT7.7.0环境-AIS显示形状</title>
@@ -65,9 +91,9 @@
     
     <category term="vs" scheme="https://19970622.xyz/tags/vs/"/>
     
-    <category term="occt" scheme="https://19970622.xyz/tags/occt/"/>
-    
     <category term="vtk" scheme="https://19970622.xyz/tags/vtk/"/>
+    
+    <category term="occt" scheme="https://19970622.xyz/tags/occt/"/>
     
   </entry>
   
@@ -525,33 +551,6 @@
     <category term="发送到" scheme="https://19970622.xyz/tags/%E5%8F%91%E9%80%81%E5%88%B0/"/>
     
     <category term="windows" scheme="https://19970622.xyz/tags/windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于Word样式</title>
-    <link href="https://19970622.xyz/posts/word-style/"/>
-    <id>https://19970622.xyz/posts/word-style/</id>
-    <published>2024-07-27T16:00:00.000Z</published>
-    <updated>2024-07-27T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><ol><li><a href="https://www.bilibili.com/video/BV1cv411h7Pj">https://www.bilibili.com/video/BV1cv411h7Pj</a></li><li>给图表附录加序号：<a href="https://www.bilibili.com/video/BV1a64y1a713">https://www.bilibili.com/video/BV1a64y1a713</a></li></ol><h2 id="调整样式显示顺序"><a href="#调整样式显示顺序" class="headerlink" title="调整样式显示顺序"></a>调整样式显示顺序</h2><ol><li>打开样式，Ctrl+Shift+Alt+S，</li><li>点击管理样式</li><li>点击推荐—依靠上移，下移，指定值来调整样式的顺序</li></ol><p>补充：这里也可以控制一个样式是否显示在样式栏里面【显示&#x2F;使用前隐藏&#x2F;隐藏】</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202407281416959.png"></p><h2 id="设置标题序号-多级列表"><a href="#设置标题序号-多级列表" class="headerlink" title="设置标题序号&#x2F;多级列表"></a>设置标题序号&#x2F;多级列表</h2><ol><li>点击多级列表—点击定义新的多级列表</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408141106594.png"></p><ol start="2"><li>点击<strong>更多</strong></li><li>循环下图中的 234 步骤，分别为各个标题设置级别与序号</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408141108688.png"></p><h2 id="设置正文中图表自动编号"><a href="#设置正文中图表自动编号" class="headerlink" title="设置正文中图表自动编号"></a>设置正文中图表自动编号</h2><ol><li>新建个样式名称随意，比如为<code>正文图注</code>，设置好样式，一般居中对齐</li><li>鼠标选中正文的一级标题</li><li>开始菜单—段落—多级列表—定义新的多级列表—选择级别 5—链接到<code>正文图注</code>—确定</li><li>添加图片—在图片下方点击<code>正文图注</code>即可</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202411111840105.png"></p><h2 id="设置附录标题与图标自动标号"><a href="#设置附录标题与图标自动标号" class="headerlink" title="设置附录标题与图标自动标号"></a>设置附录标题与图标自动标号</h2><ol><li>创建第三个附录标题样式：一级附录、二级附录与三级附录</li><li>创建一个附录图注样式</li><li>开始菜单—段落—多级列表—定义新的多级列表—标题与附录图设置如下即可</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202411111859938.png"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;资料&quot;&gt;&lt;a href=&quot;#资料&quot; class=&quot;headerlink&quot; title=&quot;资料&quot;&gt;&lt;/a&gt;资料&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1cv411h7Pj&quot;&gt;https://ww</summary>
-      
-    
-    
-    
-    <category term="office" scheme="https://19970622.xyz/categories/office/"/>
-    
-    
-    <category term="word" scheme="https://19970622.xyz/tags/word/"/>
-    
-    <category term="样式" scheme="https://19970622.xyz/tags/%E6%A0%B7%E5%BC%8F/"/>
     
   </entry>
   
