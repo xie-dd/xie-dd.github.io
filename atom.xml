@@ -6,7 +6,7 @@
   <link href="https://19970622.xyz/atom.xml" rel="self"/>
   
   <link href="https://19970622.xyz/"/>
-  <updated>2025-04-11T23:10:55.394Z</updated>
+  <updated>2025-04-10T16:00:00.000Z</updated>
   <id>https://19970622.xyz/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://19970622.xyz/posts/0/"/>
-    <id>https://19970622.xyz/posts/0/</id>
-    <published>2025-04-11T23:10:50.294Z</published>
-    <updated>2025-04-11T23:10:55.394Z</updated>
+    <title>ParaView使用与VTK文件格式</title>
+    <link href="https://19970622.xyz/posts/250409/"/>
+    <id>https://19970622.xyz/posts/250409/</id>
+    <published>2025-04-08T16:00:00.000Z</published>
+    <updated>2025-04-10T16:00:00.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>paraview 案例(中英字幕): <a href="https://www.bilibili.com/video/BV1Jt4y1Q7wW">https://www.bilibili.com/video/BV1Jt4y1Q7wW</a></p><h2 id="绘制云图"><a href="#绘制云图" class="headerlink" title="绘制云图"></a>绘制云图</h2><h2 id="VTK-相关"><a href="#VTK-相关" class="headerlink" title="VTK 相关"></a>VTK 相关</h2><p>vtk 官网：<a href="https://vtk.org/">https://vtk.org/</a></p><p>vtk 文件格式：<a href="https://www.princeton.edu/~efeibush/viscourse/vtk.pdf">https://www.princeton.edu/~efeibush&#x2F;viscourse&#x2F;vtk.pdf</a></p><h4 id="一个案例"><a href="#一个案例" class="headerlink" title="一个案例"></a>一个案例</h4><p>来源：<a href="https://www.bilibili.com/opus/914557193439674403">https://www.bilibili.com/opus/914557193439674403</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"># vtk DataFile Version 3.1</span><br><span class="line">USELESS LINE</span><br><span class="line">ASCII</span><br><span class="line">DATASET UNSTRUCTURED_GRID</span><br><span class="line">POINTS    12 float</span><br><span class="line">0 0 0</span><br><span class="line">1 0 0</span><br><span class="line">1 1 0</span><br><span class="line">0 1 0</span><br><span class="line">0 0 1</span><br><span class="line">1 0 1</span><br><span class="line">1 1 1</span><br><span class="line">0 1 1</span><br><span class="line">2 0 0</span><br><span class="line">2 1 0</span><br><span class="line">2 0 1</span><br><span class="line">2 1 1</span><br><span class="line">CELLS    2   18</span><br><span class="line">      8      0      1      2      3      4      5      6      7</span><br><span class="line">      8      1      8      9      2      5     10     11      6</span><br><span class="line">CELL_TYPES    2</span><br><span class="line">12</span><br><span class="line">12</span><br><span class="line">POINT_DATA    12</span><br><span class="line">SCALARS v float</span><br><span class="line">LOOKUP_TABLE default</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">0</span><br><span class="line">0</span><br></pre></td></tr></table></figure><h4 id="一个模板"><a href="#一个模板" class="headerlink" title="一个模板"></a>一个模板</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"># vtk DataFile Version 3.0</span><br><span class="line">output2vtkByXdd</span><br><span class="line">ASCII</span><br><span class="line">DATASET UNSTRUCTURED_GRID</span><br><span class="line">POINTS 7359 double</span><br><span class="line">    4.500000000000000e+02    1.800000000000000e-14    0.000000000000000e+00</span><br><span class="line">    4.000000000000000e+02    0.000000000000000e+00    0.000000000000000e+00</span><br><span class="line">    ...</span><br><span class="line">CELLS 11523  103707</span><br><span class="line">         8       130       131        30        36       136       141        57        58</span><br><span class="line">         8       136       141        57        58       137       143        59        60</span><br><span class="line">      ...</span><br><span class="line">CELL_TYPES 11523</span><br><span class="line">        12</span><br><span class="line">        12</span><br><span class="line">      ...</span><br><span class="line">POINT_DATA 7359</span><br><span class="line">SCALARS ux float</span><br><span class="line">    1.803581750466487e-01</span><br><span class="line">    1.953078934248767e-01</span><br><span class="line">    ...</span><br><span class="line">POINT_DATA 7359</span><br><span class="line">Vectors aVectorResu double</span><br><span class="line">    1.803581750466487e-01   -1.359527956905437e-05    1.108509172624865e-01</span><br><span class="line">    1.953078934248767e-01    1.730515495530002e-05    1.083849176372485e-01</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure><h4 id="CELL-TYPES"><a href="#CELL-TYPES" class="headerlink" title="CELL_TYPES"></a>CELL_TYPES</h4><p>vtk 文件格式：<a href="https://www.princeton.edu/~efeibush/viscourse/vtk.pdf">https://www.princeton.edu/~efeibush&#x2F;viscourse&#x2F;vtk.pdf</a></p><p>蓝奏云备份：<a href="https://xdd1997.lanzoue.com/imojH2sxs5jg">https://xdd1997.lanzoue.com/imojH2sxs5jg</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">点 1</span><br><span class="line">线 3</span><br><span class="line"></span><br><span class="line">一阶三角形 5</span><br><span class="line">一阶四边形 9</span><br><span class="line">一阶四面体 10</span><br><span class="line">一阶六面体 12</span><br><span class="line"></span><br><span class="line">二阶三角形 22</span><br><span class="line">二阶四边形 23</span><br><span class="line">二阶四面体 24</span><br><span class="line">二阶六面体 25</span><br></pre></td></tr></table></figure><p><img src="/assets/image-20250407210440-es8jg87.png"><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202504111930986.png"></p><h4 id="LOOKUP-TABLE"><a href="#LOOKUP-TABLE" class="headerlink" title="LOOKUP_TABLE"></a>LOOKUP_TABLE</h4><p>LOOKUP_TABLE 是 RGB 颜色对照表，是可选参数，可以不写</p><h4 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h4><ul><li>如果 vtk 文件正常，是不用选择 reader 的</li><li>对于矢量 vectors 好像不能指定<code>LOOKUP_TABLE</code>，现在的测试结果是直接不指定这一项就行</li><li>单元的结点编号要从 0 开始</li></ul>]]></content>
     
@@ -33,6 +33,12 @@
     
     
     
+    <category term="CAE" scheme="https://19970622.xyz/categories/CAE/"/>
+    
+    
+    <category term="paraview" scheme="https://19970622.xyz/tags/paraview/"/>
+    
+    <category term="vtk" scheme="https://19970622.xyz/tags/vtk/"/>
     
   </entry>
   
@@ -85,9 +91,9 @@
     
     <category term="vs" scheme="https://19970622.xyz/tags/vs/"/>
     
-    <category term="occt" scheme="https://19970622.xyz/tags/occt/"/>
-    
     <category term="vtk" scheme="https://19970622.xyz/tags/vtk/"/>
+    
+    <category term="occt" scheme="https://19970622.xyz/tags/occt/"/>
     
   </entry>
   
