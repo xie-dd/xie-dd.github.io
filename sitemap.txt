@@ -126,9 +126,9 @@ https://19970622.xyz/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/
 https://19970622.xyz/tags/%E9%92%89%E9%92%89/
 https://19970622.xyz/tags/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/
 https://19970622.xyz/tags/sourcetree/
+https://19970622.xyz/tags/latex/
 https://19970622.xyz/tags/tecplot/
 https://19970622.xyz/tags/%E4%BA%91%E5%9B%BE/
-https://19970622.xyz/tags/latex/
 https://19970622.xyz/tags/occt/
 https://19970622.xyz/tags/vscode/
 https://19970622.xyz/tags/oneAPI/
