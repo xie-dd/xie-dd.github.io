@@ -131,7 +131,6 @@ https://19970622.xyz/tags/%E4%BA%91%E5%9B%BE/
 https://19970622.xyz/tags/latex/
 https://19970622.xyz/tags/occt/
 https://19970622.xyz/tags/vscode/
-https://19970622.xyz/tags/oneAPI/
 https://19970622.xyz/tags/%E5%8F%91%E9%80%81%E5%88%B0/
 https://19970622.xyz/tags/windows/
 https://19970622.xyz/tags/word/
@@ -139,6 +138,7 @@ https://19970622.xyz/tags/zotero/
 https://19970622.xyz/tags/csl/
 https://19970622.xyz/tags/drawio/
 https://19970622.xyz/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/
+https://19970622.xyz/tags/oneAPI/
 https://19970622.xyz/tags/markdown/
 https://19970622.xyz/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/
 https://19970622.xyz/tags/mkdocs/
