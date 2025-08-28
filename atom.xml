@@ -6,7 +6,7 @@
   <link href="https://19970622.xyz/atom.xml" rel="self"/>
   
   <link href="https://19970622.xyz/"/>
-  <updated>2025-05-09T16:00:00.000Z</updated>
+  <updated>2025-08-27T16:00:00.000Z</updated>
   <id>https://19970622.xyz/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1panel+python+flask</title>
+    <link href="https://19970622.xyz/posts/250828/"/>
+    <id>https://19970622.xyz/posts/250828/</id>
+    <published>2025-08-27T16:00:00.000Z</published>
+    <updated>2025-08-27T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p><a href="https://www.bilibili.com/video/BV1CoSeYiEeL">1Panel 助力，秒速发布 Python 运行环境网站，竟然如此神速！</a></p><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="开放云服务器端口"><a href="#开放云服务器端口" class="headerlink" title="开放云服务器端口"></a>开放云服务器端口</h3><ol><li>云服务器 ECS—实例—网络与安全组—入方向—添加入方向规则</li><li>开启<code>6221</code>号端口</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202508211929436.png"></p><h3 id="添加-flask-项目"><a href="#添加-flask-项目" class="headerlink" title="添加 flask 项目"></a>添加 flask 项目</h3><p>添加<code>app.py</code>文件</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202508211929641.png"></p><ul><li><code>app.py</code>文件内容，注意端口为<code>6221</code></li></ul><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">from flask <span class="keyword">import</span> Flask, jsonify</span><br><span class="line"></span><br><span class="line">app = <span class="built_in">Flask</span>(__name__)</span><br><span class="line"></span><br><span class="line">@app.<span class="built_in">get</span>(<span class="string">&quot;/&quot;</span>)</span><br><span class="line">def <span class="built_in">index</span>():</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;Hello, Flask!&quot;</span></span><br><span class="line"></span><br><span class="line">@app.<span class="built_in">get</span>(<span class="string">&quot;/health&quot;</span>)</span><br><span class="line">def <span class="built_in">health</span>():</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">jsonify</span>(status=<span class="string">&quot;ok&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    # 默认端口 <span class="number">5000</span>；设置 host=<span class="string">&quot;0.0.0.0&quot;</span> 便于容器/局域网访问</span><br><span class="line">    app.<span class="built_in">run</span>(host=<span class="string">&quot;0.0.0.0&quot;</span>, port=<span class="number">6221</span>, debug=True)</span><br></pre></td></tr></table></figure><h3 id="部署-Python-环境"><a href="#部署-Python-环境" class="headerlink" title="部署 Python 环境"></a>部署 Python 环境</h3><ul><li>创建 python 环境</li></ul><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202508211929497.png"></p><ul><li>点击查看，等待部署完成</li></ul><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202508211930514.png"></p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202508211933426.png"></p><h3 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h3><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202508211933882.png"></p><h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><ol><li>进入 1panel 面板—网站—新建网站—点击反向代理</li><li>主域名：填写你要使用的二级域名，比如<code>demo.19970622.xyz</code></li><li>代理地址：前面选择 http，后面选择你要代理的 ip 加端口，比如 <code>8.152.219.4:6221</code></li><li>在域名解析商处添加解析：主机记录:<code>demo</code>；记录类型:A; 记录值:<code>8.152.219.4</code></li><li>等待一会，现在在浏览器可以使用 <code>http://demo.19970622.xyz</code>访问了</li></ol><h3 id="开启-HTTPS"><a href="#开启-HTTPS" class="headerlink" title="开启 HTTPS"></a>开启 HTTPS</h3><p><img src="https://files.mdnice.com/user/73512/d9a2fbff-2668-4bb9-8bca-fc7620a83ce2.png"></p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202508211932125.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;资料&quot;&gt;&lt;a href=&quot;#资料&quot; class=&quot;headerlink&quot; title=&quot;资料&quot;&gt;&lt;/a&gt;资料&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1CoSeYiEeL&quot;&gt;1Panel 助力，秒速发布 P</summary>
+      
+    
+    
+    
+    <category term="python" scheme="https://19970622.xyz/categories/python/"/>
+    
+    
+    <category term="python" scheme="https://19970622.xyz/tags/python/"/>
+    
+    <category term="flask" scheme="https://19970622.xyz/tags/flask/"/>
+    
+  </entry>
   
   <entry>
     <title>Matlab计算文件或字符串的MD5与SHA256</title>
@@ -528,31 +554,6 @@
     <category term="excel" scheme="https://19970622.xyz/tags/excel/"/>
     
     <category term="xlwings" scheme="https://19970622.xyz/tags/xlwings/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HyperMesh坐标系</title>
-    <link href="https://19970622.xyz/posts/202939/"/>
-    <id>https://19970622.xyz/posts/202939/</id>
-    <published>2024-08-18T16:00:00.000Z</published>
-    <updated>2024-08-18T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><ol><li><a href="https://2021.help.altair.com/2021.1/hwdesktop/hwx/topics/panels/user_defined_coordinate_systems_r.htm">https://2021.help.altair.com/2021.1/hwdesktop/hwx/topics/panels/user_defined_coordinate_systems_r.htm</a></li><li>06 坐标系-HyperMesh 坐标系：<a href="https://mp.weixin.qq.com/s/sx27cjIyfblxTT61BUSuyA">https://mp.weixin.qq.com/s/sx27cjIyfblxTT61BUSuyA</a></li><li>视频本地备份：<code>06 坐标系-HyperMesh坐标系.mp4</code></li></ol><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol><li>注意：坐标系编号不是浏览器里面的 ID；在使用时不用使用坐标系编号，需要时直接使用鼠标点击坐标系即可，局部与全局坐标系都可点击</li><li>显示局部坐标系编号：Tool—&gt;numbers—&gt;systs—&gt;all—&gt;on</li><li>创建坐标系、指定结点坐标参考坐标系、指定自由度参考坐标系：Analysis—&gt;system</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408192043742.png"></p><p>其中第 1 个 cteate 是创建一个不随结点变化的固定坐标系，第 2 个 create 是创建一个随 node 变化的坐标系</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408192046935.png"></p><ol start="4"><li>查看某个结点的坐标参考坐标系与自由度(位移)参考坐标系：Card—Edit</li></ol><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202408192054970.png"></p><ol start="5"><li>只有用户定义的坐标系才能被修改或删除。输入文件(input deck)中的坐标系统不能被修改或删除，它们只能被检查</li></ol><h2 id="将模型的坐标系都改为全局笛卡尔坐标系"><a href="#将模型的坐标系都改为全局笛卡尔坐标系" class="headerlink" title="将模型的坐标系都改为全局笛卡尔坐标系"></a>将模型的坐标系都改为全局笛卡尔坐标系</h2><ol><li>导入模型</li><li>Analysis—&gt;system—&gt;assign</li><li>nodes—&gt;all—&gt;system—&gt;使用鼠标点击全局坐标系—&gt;set reference</li><li>nodes—&gt;all—&gt;system—&gt;使用鼠标点击全局坐标系—&gt;set displacement</li><li>preview unuse—&gt;delete unuse</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;资料&quot;&gt;&lt;a href=&quot;#资料&quot; class=&quot;headerlink&quot; title=&quot;资料&quot;&gt;&lt;/a&gt;资料&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://2021.help.altair.com/2021.1/hwdesktop/hwx/topic</summary>
-      
-    
-    
-    
-    <category term="CAE" scheme="https://19970622.xyz/categories/CAE/"/>
-    
-    
-    <category term="hypermesh" scheme="https://19970622.xyz/tags/hypermesh/"/>
     
   </entry>
   
