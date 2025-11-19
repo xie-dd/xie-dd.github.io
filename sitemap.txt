@@ -78,9 +78,9 @@ https://19970622.xyz/posts/28980/
 https://19970622.xyz/
 https://19970622.xyz/tags/python/
 https://19970622.xyz/tags/flask/
+https://19970622.xyz/tags/anaconda/
 https://19970622.xyz/tags/ansys/
 https://19970622.xyz/tags/%E8%A7%86%E5%9B%BE/
-https://19970622.xyz/tags/anaconda/
 https://19970622.xyz/tags/vs/
 https://19970622.xyz/tags/fortran/
 https://19970622.xyz/tags/dll/
