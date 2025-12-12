@@ -1,7 +1,7 @@
+https://19970622.xyz/tags/index.html
 https://19970622.xyz/baidu_verify_codeva-TIu5oC7xqo.html
 https://19970622.xyz/google3362a95caf5dfbd9.html
 https://19970622.xyz/categories/index.html
-https://19970622.xyz/tags/index.html
 https://19970622.xyz/404.html
 https://19970622.xyz/posts/250828/
 https://19970622.xyz/posts/250510/
@@ -78,9 +78,9 @@ https://19970622.xyz/posts/28980/
 https://19970622.xyz/
 https://19970622.xyz/tags/python/
 https://19970622.xyz/tags/flask/
-https://19970622.xyz/tags/anaconda/
 https://19970622.xyz/tags/ansys/
 https://19970622.xyz/tags/%E8%A7%86%E5%9B%BE/
+https://19970622.xyz/tags/anaconda/
 https://19970622.xyz/tags/vs/
 https://19970622.xyz/tags/fortran/
 https://19970622.xyz/tags/dll/
@@ -110,9 +110,9 @@ https://19970622.xyz/tags/ug/
 https://19970622.xyz/tags/%E9%99%80%E8%9E%BA%E6%95%88%E5%BA%94/
 https://19970622.xyz/tags/noptistruct/
 https://19970622.xyz/tags/%E9%99%80%E8%9E%BA/
+https://19970622.xyz/tags/patran/
 https://19970622.xyz/tags/paraview/
 https://19970622.xyz/tags/vtk/
-https://19970622.xyz/tags/patran/
 https://19970622.xyz/tags/QThread/
 https://19970622.xyz/tags/Qtimer/
 https://19970622.xyz/tags/pyside6/
@@ -139,10 +139,10 @@ https://19970622.xyz/tags/windows/
 https://19970622.xyz/tags/word/
 https://19970622.xyz/tags/zotero/
 https://19970622.xyz/tags/csl/
-https://19970622.xyz/tags/drawio/
-https://19970622.xyz/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/
 https://19970622.xyz/tags/markdown/
 https://19970622.xyz/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/
+https://19970622.xyz/tags/drawio/
+https://19970622.xyz/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/
 https://19970622.xyz/tags/mkdocs/
 https://19970622.xyz/tags/%E6%96%87%E6%A1%A3/
 https://19970622.xyz/tags/obsidian/
