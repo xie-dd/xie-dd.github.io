@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>ANSYS workbench + nCode 疲劳分析</title>
+      <link href="/posts/251231/"/>
+      <url>/posts/251231/</url>
+      
+        <content type="html"><![CDATA[<h3 id="ANSYS-workbench-nCode-疲劳分析"><a href="#ANSYS-workbench-nCode-疲劳分析" class="headerlink" title="ANSYS workbench + nCode 疲劳分析"></a>ANSYS workbench + nCode 疲劳分析</h3><p>资料：书籍《ANSYS nCode DesignLife 疲劳耐久性分析应用案例》P4</p><h4 id="分析预览"><a href="#分析预览" class="headerlink" title="分析预览"></a>分析预览</h4><p>对于下面的模型，在圆柱 1 面施加固定，t&#x3D;1s 在圆柱 2 面施加集中力使圆轴弯曲，t&#x3D;2s 在圆柱 2 面施加沿 X 的力矩使圆轴扭转。分析在两种载荷的交替作用下圆轴的寿命<br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202512311353557.png"></p><h4 id="步骤-1：获得静力分析结果"><a href="#步骤-1：获得静力分析结果" class="headerlink" title="步骤 1：获得静力分析结果"></a>步骤 1：获得静力分析结果</h4><p>打开 Workbench，拖到一个静力分析模块，如下图 2 所示黄色部分，和一般的静力分析基本没有区别，下面介绍一些要点</p><p>(1) 材料方面，因为要进行疲劳分析，所以这里要选择一个带有疲劳数据的材料，我这里材料是 ncode 软件安装目录中<code>nCode_matml.xml</code>里面的<code>Carbon Steel SAE1045_390_QT</code>材料，如下图 3 所示</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202512311354788.png"></p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202512311355836.png"></p><p>(2) 载荷是分两个时间步施加的，如下图 4 所示</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202512311357200.png"></p><h4 id="步骤-2：进行疲劳分析"><a href="#步骤-2：进行疲劳分析" class="headerlink" title="步骤 2：进行疲劳分析"></a>步骤 2：进行疲劳分析</h4><p>在完成结构分析之后，我们已经得到应力结果，可以用于 DesignLife 进行疲劳分析。在 Workbench 页面左侧的 toolbox 中有 8 个 DesignLife 分析系统。这里我们使用 nCode EN TimeSeries，如图 5 所示。</p><ul><li>nCode EN&#x2F;SN Constant 使用起始比例系数和终止比例系数乘以静力分析结果，生成循环应变&#x2F;应力载荷</li><li>nCode EN&#x2F;SN TimeSeries 使用静力分析结果和载荷历程文件匹配，创建疲劳应变&#x2F;应力历程。</li><li>nCode SN VibrationPSD，该方法在频域范围内进行应力疲劳分析。</li><li>nCode SN VibrationSweptSine，处理扫频数据，适用于在不同频率扫动中的疲劳分析</li><li>nCode WeldShellSeam，专注于壳体焊缝的疲劳和强度分析，适用于薄壁结构&amp; nCode</li><li>WeldSolidSeam，适用于更厚的固态焊缝分析，关注焊接接头的性能</li></ul><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202512311358080.png"></p><p><strong>双击 C5 打开，进入下图所示 DesignLift 系统</strong><br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202512311359706.png"></p><p><strong>加载含应力的数据文件：</strong>点击 File—Open Data Files—选择项目文件夹，点击<code>Scan Now</code> —将 s3t 文件移到右边—点击<code>Add To File List</code>退出窗口</p><p><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202512311413892.png"></p><p><strong>加载载荷：</strong> 将 DesugnLift 界面中 Available Data 中的<code>shaft_loads.s3t</code>文件拖到 TimeSeries_Input 窗口中。点击 Simulation_Input 窗口和 TimeSeries_Input 窗口的 Display 可以看到模型与载荷历程。<br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202512311400206.png"></p><p><strong>将仿真结果映射至时间序列</strong>：右键单击 StrainLife_Analysis 模块，选择 Edit Load Mapping，弹出窗口如下图所示。这里我们不用更改，系统自动配置是正确的。其中 Time 1 对应弯曲载荷的结果，Time 2 对应扭矩载荷的结果，点击 OK 退出该窗口。<br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202512311401704.png"></p><p><strong>求解：</strong> 在 DesugnLift 界面，点击最上面的 Run 按钮，执行求解。</p><p><strong>后处理：</strong> 当求解完成以后，Fatigue_Results_Display 显示损伤云图。Data Values Display 以表格形式显示分析结果，点击列头可以排序，可以看到最小的寿命为<code>1.949E+4</code><br><img src="https://mypic2016.oss-cn-beijing.aliyuncs.com/picGo/202512311401218.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CAE </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ansys </tag>
+            
+            <tag> ncode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySQL-docker部署</title>
       <link href="/posts/251224/"/>
       <url>/posts/251224/</url>
