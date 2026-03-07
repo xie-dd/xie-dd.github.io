@@ -168,10 +168,10 @@ https://19970622.xyz/tags/test/
 https://19970622.xyz/tags/%E6%97%8B%E8%BD%AC/
 https://19970622.xyz/tags/%E4%BA%91%E5%87%BD%E6%95%B0/
 https://19970622.xyz/tags/cookie/
-https://19970622.xyz/tags/%E8%BD%AF%E4%BB%B6/
-https://19970622.xyz/tags/%E8%A3%85%E6%9C%BA/
 https://19970622.xyz/tags/%E8%AF%81%E4%BB%B6%E7%85%A7/
 https://19970622.xyz/tags/%E6%8A%A0%E5%9B%BE/
+https://19970622.xyz/tags/%E8%BD%AF%E4%BB%B6/
+https://19970622.xyz/tags/%E8%A3%85%E6%9C%BA/
 https://19970622.xyz/tags/%E6%94%B6%E8%97%8F/
 https://19970622.xyz/tags/%E5%BD%B1%E8%A7%86/
 https://19970622.xyz/tags/%E9%98%BF%E9%87%8C%E4%BA%91/
