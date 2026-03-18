@@ -979,9 +979,9 @@
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> github </tag>
+            
+            <tag> git </tag>
             
             <tag> gitee </tag>
             
@@ -1384,9 +1384,9 @@
       
         <tags>
             
-            <tag> hypermesh </tag>
-            
             <tag> nastran </tag>
+            
+            <tag> hypermesh </tag>
             
             <tag> 模态分析 </tag>
             
